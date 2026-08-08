@@ -23,7 +23,7 @@
 //   3. Yayımlanan konu backlog'da 'published' olur, bir daha seçilmez.
 //
 // Kullanım:
-//   ANTHROPIC_API_KEY=... node scripts/generate-blog-post.mjs      # gerçek üretim
+//   OPENROUTER_API_KEY=... node scripts/generate-blog-post.mjs     # gerçek üretim
 //   node scripts/generate-blog-post.mjs --mock --dry-run           # API'siz uçtan uca prova
 //   node scripts/generate-blog-post.mjs --self-test                # kalite kapısı birim testi
 //   Flags: --dry-run (dosya yazma), --mock (API yerine fixture),
@@ -49,9 +49,10 @@ const PATHS = {
 };
 
 const SITE = 'https://miamigezi.com';
-// Model env ile değiştirilebilir; varsayılan miamili hattıyla aynı tutuluyor ki
-// iki sitenin çıktısı aynı davranışsal temele otursun.
-const MODEL = process.env.BLOG_MODEL || 'claude-opus-4-8';
+// Model env ile değiştirilebilir. Tüm projeler OpenRouter üzerinden çalışır
+// (Metin'in standardı: doğrudan Anthropic API değil, her şey OpenRouter).
+// Varsayılan model panel briefing ile aynı: şema destekli, ucuz, hızlı.
+const MODEL = process.env.BLOG_MODEL || 'google/gemini-2.5-flash';
 
 const args = process.argv.slice(2);
 const FLAGS = {
@@ -401,16 +402,17 @@ async function generateDraft(topic, brandFacts, feedback) {
     log('mock mod: fixtures/mock-post.json kullanılıyor');
     return readJSON(PATHS.mockFixture);
   }
-  if (!process.env.ANTHROPIC_API_KEY) {
+  if (!process.env.OPENROUTER_API_KEY) {
     throw new Error(
-      'ANTHROPIC_API_KEY tanımlı değil. GitHub repo secret olarak eklenmeli ' +
+      'OPENROUTER_API_KEY tanımlı değil. GitHub repo secret olarak eklenmeli ' +
         '(Settings → Secrets and variables → Actions). Bkz. docs/blog-pipeline.md'
     );
   }
-  const { default: Anthropic } = await import('@anthropic-ai/sdk');
-  const client = new Anthropic();
 
-  const messages = [{ role: 'user', content: buildUserPrompt(topic) }];
+  const messages = [
+    { role: 'system', content: buildSystemPrompt(brandFacts) },
+    { role: 'user', content: buildUserPrompt(topic) },
+  ];
   if (feedback) {
     messages.push({
       role: 'user',
@@ -418,20 +420,36 @@ async function generateDraft(topic, brandFacts, feedback) {
     });
   }
 
-  const response = await client.messages.create({
-    model: MODEL,
-    max_tokens: 16000,
-    thinking: { type: 'adaptive' },
-    system: buildSystemPrompt(brandFacts),
-    messages,
-    output_config: { format: { type: 'json_schema', schema: OUTPUT_SCHEMA } },
+  const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
+      'Content-Type': 'application/json',
+      'HTTP-Referer': 'https://miamigezi.com',
+      'X-Title': 'miamigezi-blog',
+    },
+    body: JSON.stringify({
+      model: MODEL,
+      max_tokens: 16000,
+      messages,
+      response_format: {
+        type: 'json_schema',
+        json_schema: { name: 'blog_post', strict: true, schema: OUTPUT_SCHEMA },
+      },
+    }),
   });
-
-  if (response.stop_reason === 'refusal') throw new Error('model isteği reddetti (refusal)');
-  if (response.stop_reason === 'max_tokens') throw new Error('çıktı max_tokens sınırına çarptı');
-  const textBlock = response.content.find((b) => b.type === 'text');
-  if (!textBlock) throw new Error('yanıtta text bloğu yok');
-  return JSON.parse(textBlock.text);
+  if (!res.ok) {
+    const errBody = await res.text().catch(() => '');
+    throw new Error(`OpenRouter ${res.status}: ${errBody.slice(0, 300)}`);
+  }
+  const data = await res.json();
+  const choice = data.choices?.[0];
+  if (!choice) throw new Error(`yanıtta choice yok: ${JSON.stringify(data).slice(0, 300)}`);
+  if (choice.finish_reason === 'length') throw new Error('çıktı max_tokens sınırına çarptı');
+  if (choice.finish_reason === 'content_filter') throw new Error('model isteği reddetti (content_filter)');
+  const text = choice.message?.content;
+  if (!text) throw new Error('yanıtta içerik yok');
+  return JSON.parse(text);
 }
 
 // ── Yayınlama ─────────────────────────────────────────────────────────────

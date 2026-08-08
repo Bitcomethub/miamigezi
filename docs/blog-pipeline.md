@@ -91,7 +91,7 @@ npm run blog:test    # API'siz, saniyeler sürer — CI'da ilk adım
 ```bash
 npm run blog:test        # kalite kapısı birim testi (API yok)
 npm run blog:dry         # fixture taslakla tam akış, dosya YAZMAZ (API yok)
-npm run blog:generate    # gerçek üretim — ANTHROPIC_API_KEY gerekir
+npm run blog:generate    # gerçek üretim — OPENROUTER_API_KEY gerekir
 ```
 
 Bayraklar doğrudan:
@@ -136,7 +136,7 @@ render'da patlar.
 | Belirti | Sebep | Ne yap |
 |---|---|---|
 | Job kırmızı, log'da "İNSAN İNCELEMESİ GEREKLİ" | Taslak kapıdan 2 kez döndü | `content/rejected-drafts/<tarih>-<slug>.json` içindeki `problems` listesini oku. Konu `needs_review`'da; düzelttikten sonra `status`'ü `pending` yap. |
-| Job kırmızı, "ANTHROPIC_API_KEY" hatası | Repo secret eklenmemiş | Settings → Secrets and variables → Actions. |
+| Job kırmızı, "OPENROUTER_API_KEY" hatası | Repo secret eklenmemiş | Settings → Secrets and variables → Actions. |
 | "uygun konu kalmadı" | Kuyrukta `pending` konu yok | Backlog'a yeni konu ekle (yukarıdaki 4 kural). |
 | Kapı meşru bir yazıyı eliyor | Kural fazla dar | Kuralı gevşetmeden ÖNCE `--self-test`'e yanlış-pozitif probu olarak ekle, sonra kuralı düzelt, test yeşile dönsün. |
 | Push çakışması | Aynı anda başka commit | Workflow `git pull --rebase` yapıyor; `concurrency` grubu paralel çalışmayı da engelliyor. Tekrar tetikle. |
