@@ -47,6 +47,10 @@
 - Kırpılan öğe ekran görüntüsünde **görünmez**. Düzen iddiaları (kaydırılabilir
   mi, çakışıyor mu, taşıyor mu) `scrollWidth`/`clientWidth` ve
   `getBoundingClientRect()` ile ÖLÇÜLEREK doğrulanır — bakarak değil.
+- 393px iframe harness'i `public/`e koyup **build'den önce** eklemek ve `next
+  start`'ı **yeniden başlatmak** zorunlu: `next start` public dosyalarını build
+  anındaki manifestten servis eder, sonradan eklenen dosya 404 döner. Harness
+  ölçümden sonra silinir — commit'e girmez.
 - Render edilmiş HTML'de metin ararken karakterin o katmandaki biçimini önce
   doğrula: React, JSX metnindeki düz kesme işaretini `&#x27;` olarak kaçırır,
   ham `'` HTML'de hiç bulunmaz. **"0 eşleşme" bir sonuç değil, ölü arama

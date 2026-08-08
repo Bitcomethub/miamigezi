@@ -5,6 +5,27 @@
 
 ---
 
+## 2026-08-09 — Spec'ten gelen marka renkleri küçük metinde AA'yı geçmiyor (Ocean Drive Sunset geçişi)
+- **Problem:** Yeni palet spec'i hex olarak verildi (#F5317F pembe, #0FB5BA turkuaz)
+  ama beyaz zeminde 3.73:1 / 2.52:1 — küçük metin AA (4.5:1) ve focus ring (3:1)
+  gereksinimlerini taban renkler sağlamıyor.
+- **Eliminated:** (a) Taban rengi koyulaştırmak → marka canlılığı ("Miami pembesi")
+  ölür, spec ihlali. (b) Eski token adlarını (`coral`) tutup değerleri değiştirmek →
+  ad-değer yalanı; CLAUDE.md/dokümantasyon tokene adıyla atıf yapıyor, gelecek oturum
+  yanılır. (c) Focus ring'te çift ton (outline + beyaz shadow) → fazladan karmaşıklık,
+  tek renkle çözülebiliyorken.
+- **Chosen:** Kontrast-katmanlı aile deseni (eski coral mimarisi korunarak):
+  taban = yalnız büyük metin/dekor, `-quiet` (5.33) süs rakamı, `-deep` (6.21) küçük
+  metin/link; focus ring için `lagoon-deep` #0A7379 — beyazda 5.61, lacivertte 3.18,
+  tek renkle iki zeminde ≥3:1. Adlar dürüstçe yenilendi (`flamingo`), sed + grep-sıfır
+  doğrulamasıyla.
+- **Evidence:** scratchpad/contrast.mjs tüm çiftleri ölçtü; Lighthouse a11y 100 (4 sayfa),
+  393px iframe harness 16/16 sayfada sıfır taşma; footer'da miras alınan `/45`, `/40`
+  opaklıkları da AA altında çıktı (4.45 / 3.77) → `/56`, `/52` yapıldı.
+- **Rule:** Spec hex'i = marka katmanı; metin katmanı ondan türetilir, o değildir.
+  Palet değişiminde her aksan için (taban / quiet / deep) üçlüsünü kontrast script'iyle
+  türet, focus ring'i açık VE koyu zeminde ayrı ayrı ölç.
+
 ## 2026-08-08 — Mobilde nav'ın ilk üç bağlantısı yok: `justify-end` + `overflow-x` tuzağı
 
 - **Problem:** Lighthouse `/ucak-bileti` mobilde `target-size` düşürdü ve çakışan

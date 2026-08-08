@@ -12,7 +12,9 @@ export function SiteFooter() {
         <div className="grid gap-10 md:grid-cols-[1fr_2fr]">
           <div>
             <div className="flex items-baseline gap-2 font-display">
-              <Sunburst className="h-3 w-5 translate-y-[1px] text-coral" />
+              {/* Lacivert gece zemininde batan güneş — sarı yalnız burada ve
+                  rehber numaralarında, az dozda */}
+              <Sunburst className="h-3 w-5 translate-y-[1px] text-sun" />
               <span
                 className="text-[1.32rem] leading-none font-semibold tracking-[-0.02em]"
                 style={{ fontStretch: '112%' }}
@@ -23,14 +25,15 @@ export function SiteFooter() {
             <p className="mt-4 max-w-[34ch] text-small text-paper/62">
               {SITE.description}
             </p>
-            <p className="mt-5 max-w-[38ch] text-[0.8125rem] leading-relaxed text-paper/45">
+            {/* /56: lacivert zeminde /45 4.45:1'de kalıyor (AA<4.5), /56 → 6.19:1 */}
+            <p className="mt-5 max-w-[38ch] text-[0.8125rem] leading-relaxed text-paper/56">
               Fiyat, saat ve tarih bilgileri sık değişir. Bu sitedeki rakamlar yön
               göstermek içindir; rezervasyon öncesi resmî kaynaktan teyit edin.
             </p>
           </div>
 
           <nav aria-label="Tüm rehberler">
-            <h2 className="font-display text-label font-semibold tracking-[0.16em] text-paper/45 uppercase">
+            <h2 className="font-display text-label font-semibold tracking-[0.16em] text-paper/56 uppercase">
               Rehberler
             </h2>
             <ul className="mt-5 grid gap-x-8 gap-y-2.5 sm:grid-cols-2">
@@ -38,13 +41,13 @@ export function SiteFooter() {
                 <li key={g.slug} className="flex gap-3">
                   <span
                     aria-hidden="true"
-                    className="tabular pt-[3px] font-display text-[0.6875rem] text-coral/70"
+                    className="tabular pt-[3px] font-display text-[0.6875rem] text-sun/75"
                   >
                     {g.number}
                   </span>
                   <Link
                     href={`/${g.slug}`}
-                    className="text-small text-paper/78 no-underline transition-colors duration-200 hover:text-coral"
+                    className="text-small text-paper/78 no-underline transition-colors duration-200 hover:text-sun"
                   >
                     {g.navLabel}
                   </Link>
@@ -53,13 +56,13 @@ export function SiteFooter() {
               <li className="flex gap-3">
                 <span
                   aria-hidden="true"
-                  className="tabular pt-[3px] font-display text-[0.6875rem] text-coral/70"
+                  className="tabular pt-[3px] font-display text-[0.6875rem] text-sun/75"
                 >
                   ↗
                 </span>
                 <Link
                   href="/blog"
-                  className="text-small text-paper/78 no-underline transition-colors duration-200 hover:text-coral"
+                  className="text-small text-paper/78 no-underline transition-colors duration-200 hover:text-sun"
                 >
                   Blog
                 </Link>
@@ -67,13 +70,13 @@ export function SiteFooter() {
               <li className="flex gap-3">
                 <span
                   aria-hidden="true"
-                  className="tabular pt-[3px] font-display text-[0.6875rem] text-coral/70"
+                  className="tabular pt-[3px] font-display text-[0.6875rem] text-sun/75"
                 >
                   ↗
                 </span>
                 <Link
                   href="/hakkinda"
-                  className="text-small text-paper/78 no-underline transition-colors duration-200 hover:text-coral"
+                  className="text-small text-paper/78 no-underline transition-colors duration-200 hover:text-sun"
                 >
                   Hakkında
                 </Link>
@@ -88,13 +91,14 @@ export function SiteFooter() {
             Bir{' '}
             <a
               href={miamiliUrl('/', 'footer-kunye')}
-              className="text-paper underline decoration-coral/60 underline-offset-4 transition-colors hover:decoration-coral"
+              className="text-paper underline decoration-flamingo/60 underline-offset-4 transition-colors hover:decoration-flamingo"
             >
               {PUBLISHER.name}
             </a>{' '}
             yayınıdır.
           </p>
-          <p className="text-[0.8125rem] text-paper/40">
+          {/* /52: /40 lacivertte 3.77:1 (AA<4.5), /52 → 5.51:1 */}
+          <p className="text-[0.8125rem] text-paper/52">
             © {year} {PUBLISHER.name}
           </p>
         </div>

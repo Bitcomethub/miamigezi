@@ -70,7 +70,7 @@ gtag('config','${GA_ID}',{anonymize_ip:true});`}
           role="dialog"
           aria-labelledby="consent-title"
           aria-describedby="consent-desc"
-          className="fixed inset-x-3 bottom-3 z-50 border border-ink/15 bg-paper-2 px-5 py-4 shadow-[0_10px_40px_-12px_oklch(22%_0.026_205/0.35)] sm:inset-x-auto sm:right-5 sm:bottom-5 sm:max-w-sm"
+          className="fixed inset-x-3 bottom-3 z-50 border border-ink/15 bg-paper-2 px-5 py-4 shadow-[0_10px_40px_-12px_rgb(10_22_51/0.4)] sm:inset-x-auto sm:right-5 sm:bottom-5 sm:max-w-sm"
         >
           <h2
             id="consent-title"
@@ -86,7 +86,9 @@ gtag('config','${GA_ID}',{anonymize_ip:true});`}
             <button
               type="button"
               onClick={() => decide('granted')}
-              className="cursor-pointer bg-ink px-4 py-2 font-display text-[0.8125rem] font-medium text-paper transition-colors hover:bg-coral-deep"
+              // Sitenin tek gerçek CTA'sı — gün batımı gradyanı burada.
+              // Lacivert metin gradyanın her durağında AA: pembe 4.79, turuncu 7.62.
+              className="cursor-pointer bg-gradient-to-r from-flamingo to-sunset px-4 py-2 font-display text-[0.8125rem] font-semibold text-ink transition-[filter] duration-200 hover:brightness-[1.06]"
             >
               Kabul et
             </button>

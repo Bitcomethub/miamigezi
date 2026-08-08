@@ -111,15 +111,25 @@ commit'te** değişir.
 
 ## Tasarım sistemi
 
-Yön: **1950'ler Miami tabelası + çağdaş editoryal dergi**. Kağıt zemin, mürekkep
-siyahı metin, tek sıcak aksan (coral). Anti-referans: mavi-turkuaz gradyanlı
-jenerik seyahat portalı, stok palmiye görseli, kart ızgarası.
+Yön: **"Ocean Drive Sunset"** — Deco editoryal iskelet üstünde turizm enerjisi
+(güneş + deniz). Beyaz zemin, lacivert mürekkep, Miami pembesi + okyanus
+turkuazı, az dozda gün batımı turuncusu/sarısı. **Krem/bej yasak** — ikincil
+yüzeyler soğuk. Anti-referans: stok palmiye görseli, kart ızgarası, neon
+mor-mavi "Miami Vice" gradyanı.
 
-- Fontlar: display **Familjen Grotesk** (variable, `font-stretch`), gövde
-  **Hanken Grotesk**. Tokenlar `globals.css`'te `@theme` altında.
-- Renk: `--color-paper`, `--color-ink`, `--color-coral` (+ `-deep`), `--color-mute`.
+- Fontlar: display **Archivo** (variable, `wdth`), gövde **Literata**.
+  Tokenlar `globals.css`'te `@theme` altında.
+- Renk: `--color-paper` (#fff) / `-paper-2` (soğuk #f5f8fc), `--color-ink`
+  (#0a1633), `--color-flamingo` (#f5317f, + `-deep`/`-quiet`/`-wash`),
+  `--color-lagoon` (#0fb5ba, + `-deep`/`-ink`), `--color-sunset`/`-sun`.
+  Kanal ayrımı: pembe = marka/bağlantı, turkuaz = veri/bilgi + focus ring,
+  turuncu-sarı = yalnız gradyan ve koyu zemin süsü. Taban pembe/turkuaz küçük
+  metinde AA'yı GEÇMEZ (3.73 / 2.52) — küçük punto daima `-deep` varyant.
+- Pembe→turuncu gradyan yalnız üç yerde: header şeridi (3px), hero ufuk
+  çizgisi, consent CTA'sı. Üstüne metin konacaksa lacivert (her stopta ≥4.5:1).
 - İmza öğeler: `fluted` (dikey yiv dokusu), `Ledge` / `Sunburst` (art-deco
-  ayraç), `tabular` (rakam hizası), `rise` (giriş animasyonu).
+  ayraç; `tone`: ink/flamingo/lagoon), `tabular` (rakam hizası), `rise`
+  (giriş animasyonu).
 - Görsel yok — bilinçli. Stok fotoğraf özgünlük katmıyor, LCP'yi bozuyor.
 
 ## Ortam değişkenleri

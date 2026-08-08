@@ -72,14 +72,14 @@ export default async function GuidePage({
         <p className="flex items-center gap-3 font-display text-label font-semibold tracking-[0.2em] text-mute uppercase">
           <Link
             href="/"
-            className="text-mute no-underline transition-colors hover:text-coral-deep"
+            className="text-mute no-underline transition-colors hover:text-flamingo-deep"
           >
             Rehberler
           </Link>
-          <span aria-hidden="true" className="text-coral-quiet">
+          <span aria-hidden="true" className="text-flamingo-quiet">
             /
           </span>
-          <span className="tabular text-coral-deep">{guide.number}</span>
+          <span className="tabular text-flamingo-deep">{guide.number}</span>
         </p>
 
         <h1 className="mt-5 max-w-[20ch] font-display text-h1 font-semibold tracking-[-0.032em] text-balance">
@@ -96,7 +96,8 @@ export default async function GuidePage({
         className="mx-auto mt-12 max-w-[78rem] px-5 sm:px-8"
         aria-label="Özet bilgiler"
       >
-        <Ledge tone="coral" />
+        {/* Almanak = veri bloğu → turkuaz (bilgi kanalı), pembe değil */}
+        <Ledge tone="lagoon" />
         <dl className="mt-7 grid gap-x-10 gap-y-5 sm:grid-cols-2 lg:grid-cols-3">
           {guide.quickFacts.map((fact) => (
             <div key={fact.label} className="min-w-0">
@@ -135,7 +136,7 @@ export default async function GuidePage({
 
         {guide.miamili ? (
           <aside className="mt-stack max-w-[68rem] border border-ink/14 bg-paper-2 px-6 py-6 sm:px-8">
-            <p className="flex items-center gap-2.5 font-display text-label font-semibold tracking-[0.18em] text-coral-deep uppercase">
+            <p className="flex items-center gap-2.5 font-display text-label font-semibold tracking-[0.18em] text-flamingo-deep uppercase">
               <Sunburst className="h-3 w-5" />
               Aynı ağdan
             </p>
@@ -143,7 +144,7 @@ export default async function GuidePage({
               {guide.miamili.context}{' '}
               <a
                 href={miamiliUrl(guide.miamili.path, `rehber-${guide.slug}`)}
-                className="font-medium text-coral-deep underline decoration-coral/45 underline-offset-4 transition-colors hover:decoration-coral"
+                className="font-medium text-flamingo-deep underline decoration-flamingo/45 underline-offset-4 transition-colors hover:decoration-flamingo"
               >
                 {guide.miamili.label}
               </a>{' '}
@@ -171,7 +172,7 @@ export default async function GuidePage({
                 <dt className="font-display text-h3 font-semibold tracking-[-0.015em] text-ink">
                   <span
                     aria-hidden="true"
-                    className="tabular mr-3 text-coral-quiet"
+                    className="tabular mr-3 text-flamingo-quiet"
                   >
                     {String(i + 1).padStart(2, '0')}
                   </span>
@@ -199,7 +200,7 @@ export default async function GuidePage({
                   <a
                     href={source.url}
                     rel="nofollow noopener"
-                    className="text-small text-coral-deep underline decoration-coral/35 underline-offset-4 transition-colors hover:decoration-coral"
+                    className="text-small text-flamingo-deep underline decoration-flamingo/35 underline-offset-4 transition-colors hover:decoration-flamingo"
                   >
                     {source.label}
                   </a>
@@ -229,7 +230,7 @@ export default async function GuidePage({
           >
             Sıradaki
           </h2>
-          <Ledge className="mt-3" tone="coral" />
+          <Ledge className="mt-3" tone="flamingo" />
           <ul className="mt-8">
             {related.map((r) => (
               <li key={r.slug}>
@@ -239,12 +240,12 @@ export default async function GuidePage({
                 >
                   <span
                     aria-hidden="true"
-                    className="tabular font-display text-small font-semibold text-coral-quiet transition-colors group-hover:text-coral-deep"
+                    className="tabular font-display text-small font-semibold text-flamingo-quiet transition-colors group-hover:text-flamingo-deep"
                   >
                     {r.number}
                   </span>
                   <span>
-                    <span className="block font-display text-h3 font-semibold text-ink transition-colors group-hover:text-coral-deep">
+                    <span className="block font-display text-h3 font-semibold text-ink transition-colors group-hover:text-flamingo-deep">
                       {r.navLabel}
                     </span>
                     <span className="mt-1 block max-w-[58ch] text-small text-ink-2">
@@ -267,7 +268,7 @@ function Section({ section, index }: { section: GuideSection; index: number }) {
       <h2 className="max-w-[24ch] font-display text-h2 font-semibold tracking-[-0.028em] text-balance">
         <span
           aria-hidden="true"
-          className="tabular mr-3.5 align-[0.18em] text-h3 font-medium text-coral-quiet"
+          className="tabular mr-3.5 align-[0.18em] text-h3 font-medium text-flamingo-quiet"
         >
           {String(index + 1).padStart(2, '0')}
         </span>
@@ -289,7 +290,7 @@ function Section({ section, index }: { section: GuideSection; index: number }) {
               key={item}
               className="grid grid-cols-[1.35rem_1fr] items-baseline gap-x-2 border-t border-ink/10 py-3 first:border-t-0"
             >
-              <span aria-hidden="true" className="text-small text-coral-quiet">
+              <span aria-hidden="true" className="text-small text-flamingo-quiet">
                 —
               </span>
               <span className="text-small text-ink-2">{item}</span>
@@ -344,8 +345,8 @@ function Section({ section, index }: { section: GuideSection; index: number }) {
       ) : null}
 
       {section.note ? (
-        <p className="mt-7 max-w-[64ch] border border-coral/30 bg-coral-wash px-5 py-4 text-small leading-relaxed text-ink-2">
-          <span className="font-display text-label font-semibold tracking-[0.16em] text-coral-deep uppercase">
+        <p className="mt-7 max-w-[64ch] border border-flamingo/30 bg-flamingo-wash px-5 py-4 text-small leading-relaxed text-ink-2">
+          <span className="font-display text-label font-semibold tracking-[0.16em] text-flamingo-deep uppercase">
             Dikkat
           </span>
           <span className="mt-1.5 block">{section.note}</span>

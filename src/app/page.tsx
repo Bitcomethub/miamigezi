@@ -20,7 +20,7 @@ export default function HomePage() {
           Fotoğraf yok — lisanslı görsel yok ve uydurma stok üretmiyoruz.
           Hiyerarşi tamamen tipografiden ve yatay silmelerden geliyor. */}
       <section className="rise mx-auto max-w-[78rem] px-5 pt-14 pb-band sm:px-8 sm:pt-20">
-        <p className="flex items-center gap-2.5 font-display text-label font-semibold tracking-[0.22em] text-coral-deep uppercase">
+        <p className="flex items-center gap-2.5 font-display text-label font-semibold tracking-[0.22em] text-flamingo-deep uppercase">
           <Sunburst className="h-3 w-5" />
           Türkçe Miami rehberi
         </p>
@@ -41,6 +41,13 @@ export default function HomePage() {
             satmıyoruz, komisyon almıyoruz.
           </p>
         </div>
+
+        {/* Gün batımı ufku — hero'nun imza gradyanı (pembe→turuncu).
+            Metin DEĞİL, zemin şeridi: gradient-text yasağına girmez. */}
+        <div
+          aria-hidden="true"
+          className="mt-12 h-2.5 bg-gradient-to-r from-flamingo to-sunset sm:mt-14"
+        />
       </section>
 
       {/* ── Numaralı içindekiler ──────────────────────────────────────────
@@ -70,12 +77,12 @@ export default function HomePage() {
               >
                 <span
                   aria-hidden="true"
-                  className="tabular font-display text-h3 font-semibold text-coral-quiet transition-colors duration-300 group-hover:text-coral-deep"
+                  className="tabular font-display text-h3 font-semibold text-flamingo-quiet transition-colors duration-300 group-hover:text-flamingo-deep"
                 >
                   {guide.number}
                 </span>
 
-                <h3 className="font-display text-h2 font-semibold tracking-[-0.025em] text-ink transition-colors duration-300 group-hover:text-coral-deep">
+                <h3 className="font-display text-h2 font-semibold tracking-[-0.025em] text-ink transition-colors duration-300 group-hover:text-flamingo-deep">
                   {guide.navLabel}
                 </h3>
 
@@ -89,7 +96,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Koyu bant: yöntem beyanı ──────────────────────────────────── */}
-      <section className="fluted mt-band bg-lagoon-deep text-paper">
+      <section className="fluted mt-band bg-lagoon-ink text-paper">
         <div className="mx-auto grid max-w-[78rem] gap-x-14 gap-y-8 px-5 py-band sm:px-8 md:grid-cols-[1fr_1.3fr]">
           <h2 className="max-w-[14ch] font-display text-h1 font-semibold tracking-[-0.03em] text-balance">
             Rakam varsa kaynağı vardır.
@@ -125,12 +132,12 @@ export default function HomePage() {
             </h2>
             <Link
               href="/blog"
-              className="font-display text-label text-coral-deep underline decoration-coral/40 underline-offset-4 transition-colors hover:decoration-coral"
+              className="font-display text-label text-flamingo-deep underline decoration-flamingo/40 underline-offset-4 transition-colors hover:decoration-flamingo"
             >
               Tümü
             </Link>
           </div>
-          <Ledge className="mt-3" tone="coral" />
+          <Ledge className="mt-3" tone="flamingo" />
 
           <ul className="mt-9 grid gap-x-10 gap-y-8 sm:grid-cols-2">
             {posts.map((post) => (
@@ -142,7 +149,7 @@ export default function HomePage() {
                   >
                     {formatDate(post.publishedAt)}
                   </time>
-                  <h3 className="mt-2 font-display text-h3 font-semibold tracking-[-0.015em] text-ink transition-colors duration-300 group-hover:text-coral-deep">
+                  <h3 className="mt-2 font-display text-h3 font-semibold tracking-[-0.015em] text-ink transition-colors duration-300 group-hover:text-flamingo-deep">
                     {post.title}
                   </h3>
                   <p className="mt-1.5 max-w-[46ch] text-small text-ink-2">

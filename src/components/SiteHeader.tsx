@@ -19,6 +19,11 @@ const NAV = [
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-ink/12 bg-paper/92 backdrop-blur-[6px]">
+      {/* Gün batımı şeridi — sitenin her sayfadaki imza rengi, 3px'lik dozda */}
+      <span
+        aria-hidden="true"
+        className="block h-[3px] bg-gradient-to-r from-flamingo to-sunset"
+      />
       <div className="mx-auto flex max-w-[78rem] items-baseline gap-6 px-5 pt-3.5 pb-2 sm:px-8">
         {/* py-1.5 -my-1.5: dokunma hedefi 24px'e çıkar (WCAG 2.5.8), negatif
             margin düzeni aynı bırakır. Metin 13-21px olduğu için satır kutusu
@@ -27,7 +32,7 @@ export function SiteHeader() {
           href="/"
           className="group -my-1.5 flex shrink-0 items-baseline gap-2 py-1.5 font-display text-ink no-underline"
         >
-          <Sunburst className="h-3 w-5 translate-y-[1px] text-coral transition-transform duration-300 group-hover:-translate-y-px" />
+          <Sunburst className="h-3 w-5 translate-y-[1px] text-flamingo transition-transform duration-300 group-hover:-translate-y-px" />
           <span
             className="text-[1.32rem] leading-none font-semibold tracking-[-0.02em]"
             style={{ fontStretch: '112%' }}
@@ -51,7 +56,7 @@ export function SiteHeader() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="-my-1.5 inline-block py-1.5 font-display text-[0.8125rem] font-medium tracking-[0.01em] text-ink-2 no-underline transition-colors duration-200 hover:text-coral-deep"
+                  className="-my-1.5 inline-block py-1.5 font-display text-[0.8125rem] font-medium tracking-[0.01em] text-ink-2 no-underline transition-colors duration-200 hover:text-flamingo-deep"
                 >
                   {item.label}
                 </Link>

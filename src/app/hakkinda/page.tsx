@@ -25,7 +25,7 @@ export default function HakkindaPage() {
       />
 
       <header className="rise">
-        <p className="font-display text-label font-semibold tracking-[0.22em] text-coral-deep uppercase">
+        <p className="font-display text-label font-semibold tracking-[0.22em] text-flamingo-deep uppercase">
           Künye
         </p>
         <h1 className="mt-5 max-w-[16ch] font-display text-h1 font-semibold tracking-[-0.032em] text-balance">
@@ -39,7 +39,7 @@ export default function HakkindaPage() {
         </p>
       </header>
 
-      <Ledge className="mt-12" tone="coral" />
+      <Ledge className="mt-12" tone="flamingo" />
 
       <div className="mt-12 grid gap-x-14 gap-y-12 lg:grid-cols-[1fr_1fr]">
         <div className="prose-mg">

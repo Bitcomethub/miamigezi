@@ -7,15 +7,12 @@ export function Ledge({
   tone = 'ink',
   className = '',
 }: {
-  tone?: 'ink' | 'coral';
+  tone?: 'ink' | 'flamingo' | 'lagoon';
   className?: string;
 }) {
-  return (
-    <span
-      aria-hidden="true"
-      className={`ledge ${tone === 'coral' ? 'ledge-coral' : ''} ${className}`}
-    />
-  );
+  const toneClass =
+    tone === 'flamingo' ? 'ledge-flamingo' : tone === 'lagoon' ? 'ledge-lagoon' : '';
+  return <span aria-hidden="true" className={`ledge ${toneClass} ${className}`} />;
 }
 
 /** Deco güneş amblemi — logoda ve bölüm işaretlerinde kullanılan tek motif. */

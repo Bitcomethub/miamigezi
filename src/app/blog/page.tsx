@@ -8,7 +8,7 @@ import { breadcrumbSchema } from '@/lib/schema';
 export const metadata: Metadata = {
   title: 'Miami Yazıları',
   description:
-    "Miami'ye gidenler için güncel notlar: pratik sorular, kısa cevaplar ve düzenli olarak eklenen yeni yazılar.",
+    "Miami’ye gidenler için güncel notlar: pratik sorular, kısa cevaplar ve düzenli olarak eklenen yeni yazılar.",
   alternates: { canonical: '/blog' },
   openGraph: { url: abs('/blog'), locale: 'tr_TR' },
 };
@@ -26,7 +26,7 @@ export default function BlogIndexPage() {
       />
 
       <header className="rise">
-        <p className="font-display text-label font-semibold tracking-[0.22em] text-coral-deep uppercase">
+        <p className="font-display text-label font-semibold tracking-[0.22em] text-flamingo-deep uppercase">
           Günlük akış
         </p>
         <h1 className="mt-5 max-w-[18ch] font-display text-h1 font-semibold tracking-[-0.032em] text-balance">
@@ -38,7 +38,7 @@ export default function BlogIndexPage() {
         </p>
       </header>
 
-      <Ledge className="mt-12" tone="coral" />
+      <Ledge className="mt-12" tone="flamingo" />
 
       <ol className="mt-10">
         {ALL_POSTS.map((post, i) => (
@@ -55,7 +55,7 @@ export default function BlogIndexPage() {
                 {formatDate(post.publishedAt)}
               </time>
               <div className="min-w-0">
-                <h2 className="max-w-[34ch] font-display text-h2 font-semibold tracking-[-0.025em] text-ink transition-colors duration-300 group-hover:text-coral-deep">
+                <h2 className="max-w-[34ch] font-display text-h2 font-semibold tracking-[-0.025em] text-ink transition-colors duration-300 group-hover:text-flamingo-deep">
                   {post.title}
                 </h2>
                 <p className="mt-2 max-w-[58ch] text-small text-ink-2">

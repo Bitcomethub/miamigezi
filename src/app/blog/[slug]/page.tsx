@@ -67,14 +67,14 @@ export default async function BlogPostPage({
         <p className="flex items-center gap-3 font-display text-label font-semibold tracking-[0.2em] text-mute uppercase">
           <Link
             href="/blog"
-            className="text-mute no-underline transition-colors hover:text-coral-deep"
+            className="text-mute no-underline transition-colors hover:text-flamingo-deep"
           >
             Yazılar
           </Link>
-          <span aria-hidden="true" className="text-coral-quiet">
+          <span aria-hidden="true" className="text-flamingo-quiet">
             /
           </span>
-          <time dateTime={post.publishedAt} className="tabular text-coral-deep">
+          <time dateTime={post.publishedAt} className="tabular text-flamingo-deep">
             {formatDate(post.publishedAt)}
           </time>
         </p>
@@ -88,7 +88,7 @@ export default async function BlogPostPage({
         </p>
       </header>
 
-      <Ledge className="mt-10" tone="coral" />
+      <Ledge className="mt-10" tone="flamingo" />
 
       <div className="prose-mg mt-10">
         {post.intro.map((para, i) => (
@@ -110,7 +110,7 @@ export default async function BlogPostPage({
           <h2 className="max-w-[26ch] font-display text-h2 font-semibold tracking-[-0.028em] text-balance">
             <span
               aria-hidden="true"
-              className="tabular mr-3.5 align-[0.18em] text-h3 font-medium text-coral-quiet"
+              className="tabular mr-3.5 align-[0.18em] text-h3 font-medium text-flamingo-quiet"
             >
               {String(i + 1).padStart(2, '0')}
             </span>
@@ -131,7 +131,7 @@ export default async function BlogPostPage({
                   key={item}
                   className="grid grid-cols-[0.85rem_1fr] gap-x-3 text-small leading-relaxed text-ink-2"
                 >
-                  <span aria-hidden="true" className="pt-2 text-coral">
+                  <span aria-hidden="true" className="pt-2 text-flamingo">
                     <svg viewBox="0 0 8 8" className="h-[0.4rem] w-[0.4rem]">
                       <rect width="8" height="8" fill="currentColor" />
                     </svg>
@@ -159,7 +159,7 @@ export default async function BlogPostPage({
               className="border-t border-ink/12 py-6 first:border-t-0 first:pt-0"
             >
               <dt className="font-display text-h3 font-semibold tracking-[-0.015em] text-ink">
-                <span aria-hidden="true" className="tabular mr-3 text-coral-quiet">
+                <span aria-hidden="true" className="tabular mr-3 text-flamingo-quiet">
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 {faq.q}
@@ -183,7 +183,7 @@ export default async function BlogPostPage({
       <p className="mt-8">
         <Link
           href="/blog"
-          className="font-display text-small text-coral-deep underline decoration-coral/40 underline-offset-4 transition-colors hover:decoration-coral"
+          className="font-display text-small text-flamingo-deep underline decoration-flamingo/40 underline-offset-4 transition-colors hover:decoration-flamingo"
         >
           ← Tüm yazılar
         </Link>
