@@ -54,7 +54,7 @@ const SITE = 'https://miamigezi.com';
 // Varsayılan: claude-sonnet-4.6 (OpenRouter üzerinden). gemini-2.5-flash denendi —
 // kalite kapısının kelime hedeflerini tutturamadı (87-91 kelime / hedef 135-170,
 // 2 retry'da da reddedildi, run #1). Kapı spesifikasyonu Claude'a göre ayarlı.
-const MODEL = process.env.BLOG_MODEL || 'google/gemini-2.5-flash';
+const MODEL = process.env.BLOG_MODEL || 'anthropic/claude-sonnet-4.6';
 
 const args = process.argv.slice(2);
 const FLAGS = {
