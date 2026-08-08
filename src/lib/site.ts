@@ -15,7 +15,7 @@ export const SITE = {
   lang: 'tr',
   tagline: 'Miami seyahat rehberi',
   description:
-    "Miami'ye gidecekler için Türkçe seyahat rehberi: uçak bileti, gezilecek yerler, otel bölgeleri, plajlar, ulaşım ve aylara göre hava durumu.",
+    "Miami’ye gidecekler için Türkçe seyahat rehberi: uçak bileti, gezilecek yerler, otel bölgeleri, plajlar, ulaşım ve aylara göre hava durumu.",
 } as const;
 
 export const PUBLISHER = {

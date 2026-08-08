@@ -32,15 +32,15 @@ export const aileceMiami: Guide = {
     {
       heading: 'Küçük çocuklar için hangi plaj?',
       body: [
-        "Bebek ve okul öncesi çocuklarla en rahat su, Coral Gables tarafındaki Matheson Hammock Park'ın deniz suyuyla dolan atol havuzu: dalgasız, sığ ve rüzgârdan korunaklı. Kum plajı beklemeyin, burası daha çok park.",
-        "Kum ve deniz isteyenler için Key Biscayne'deki Crandon Park en dengeli seçenek. Doğal resif hattı dalgaları kırdığı için su uzun bir mesafe boyunca sığ kalıyor; ayrıca gölgelikli piknik alanları ve düzenli tuvaletler var.",
-        "Miami Beach tarafında kalıyorsanız South Beach yerine North Beach ya da Surfside daha az kalabalık ve daha sakin. South Beach'te doğal gölge yok denecek kadar az, bu yüzden şemsiye zorunlu.",
+        "Bebek ve okul öncesi çocuklarla en rahat su, Coral Gables tarafındaki Matheson Hammock Park’ın deniz suyuyla dolan atol havuzu: dalgasız, sığ ve rüzgârdan korunaklı. Kum plajı beklemeyin, burası daha çok park.",
+        "Kum ve deniz isteyenler için Key Biscayne’deki Crandon Park en dengeli seçenek. Doğal resif hattı dalgaları kırdığı için su uzun bir mesafe boyunca sığ kalıyor; ayrıca gölgelikli piknik alanları ve düzenli tuvaletler var.",
+        "Miami Beach tarafında kalıyorsanız South Beach yerine North Beach ya da Surfside daha az kalabalık ve daha sakin. South Beach’te doğal gölge yok denecek kadar az, bu yüzden şemsiye zorunlu.",
       ],
     },
     {
       heading: 'Yaşa göre ne yapılır?',
       body: [
-        "Miami'nin çocuk aktiviteleri yaş gruplarına göre net biçimde ayrışıyor. Aşağıdaki liste, aynı gün içinde birden fazla yaş grubunu memnun etmenin en pratik yolunu gösteriyor.",
+        "Miami’nin çocuk aktiviteleri yaş gruplarına göre net biçimde ayrışıyor. Aşağıdaki liste, aynı gün içinde birden fazla yaş grubunu memnun etmenin en pratik yolunu gösteriyor.",
       ],
       list: [
         '0–4 yaş — Matheson Hammock atol havuzu, Miami Children’s Museum, Bayfront Park oyun alanı',
@@ -53,7 +53,7 @@ export const aileceMiami: Guide = {
     {
       heading: 'Günü nasıl planlamalı?',
       body: [
-        "Miami'de çocuklu bir günün en zor kısmı 12.00 ile 16.00 arası. Nem yüzünden hissedilen sıcaklık termometreden çok daha yüksek olduğu için, bu saatleri açık havada geçirmek küçük çocuklarda hızla yorgunluk ve huysuzluğa dönüşüyor.",
+        "Miami’de çocuklu bir günün en zor kısmı 12.00 ile 16.00 arası. Nem yüzünden hissedilen sıcaklık termometreden çok daha yüksek olduğu için, bu saatleri açık havada geçirmek küçük çocuklarda hızla yorgunluk ve huysuzluğa dönüşüyor.",
         "İşleyen düzen şu: sabah 09.00–12.00 arası plaj ya da açık hava, öğleden sonra otel havuzu, müze veya alışveriş merkezi, akşam 17.30 sonrası tekrar dışarı. Yerel restoranlar da erken saatte çok daha boş oluyor, bu da bekleme süresini ortadan kaldırıyor.",
         "Yağışlı sezonda öğleden sonra sağanağı neredeyse takvime yazılabilir; iç mekân planını zaten o saate koyduğunuzda yağmur programı bozmuyor.",
       ],
@@ -61,9 +61,9 @@ export const aileceMiami: Guide = {
     {
       heading: 'Yasal ve pratik ayrıntılar',
       body: [
-        "Florida'da küçük çocuklar için araçta çocuk koltuğu kullanımı yasal zorunluluk; kural yaşa göre değişiyor ve kiralık araçlarda koltuk ek ücretle veriliyor. Uber gibi uygulamalarda çocuk koltuklu araç her zaman garanti değil, bunu önceden planlamak gerekiyor.",
-        "Güneş koruması Miami'de mevsimden bağımsız olarak gerekli; UV indeksi kışın bile yüksek olabiliyor. Çocuklarda yüksek faktörlü koruyucuya ek olarak UV korumalı tişört, en pratik çözüm.",
-        "Sağlık tarafında ABD'de tedavi maliyetleri çok yüksek; çocuklu seyahatte kapsamlı seyahat sağlık sigortası tercih değil zorunluluk sayılmalı. Reçeteli ilaçları orijinal kutusunda ve reçetesiyle taşıyın.",
+        "Florida’da küçük çocuklar için araçta çocuk koltuğu kullanımı yasal zorunluluk; kural yaşa göre değişiyor ve kiralık araçlarda koltuk ek ücretle veriliyor. Uber gibi uygulamalarda çocuk koltuklu araç her zaman garanti değil, bunu önceden planlamak gerekiyor.",
+        "Güneş koruması Miami’de mevsimden bağımsız olarak gerekli; UV indeksi kışın bile yüksek olabiliyor. Çocuklarda yüksek faktörlü koruyucuya ek olarak UV korumalı tişört, en pratik çözüm.",
+        "Sağlık tarafında ABD’de tedavi maliyetleri çok yüksek; çocuklu seyahatte kapsamlı seyahat sağlık sigortası tercih değil zorunluluk sayılmalı. Reçeteli ilaçları orijinal kutusunda ve reçetesiyle taşıyın.",
       ],
       table: {
         caption: 'Çocuklu seyahatte bütçeye eklenecek kalemler',
@@ -81,8 +81,8 @@ export const aileceMiami: Guide = {
     {
       heading: 'Bütçeyi zorlamayan aktiviteler',
       body: [
-        "Miami'de çocuklu bir gün her zaman bilet parası gerektirmiyor. Plajlar ücretsiz; Metromover ücretsiz ve yükseltilmiş raylarda ilerlediği için küçük çocuklar açısından başlı başına bir gezi. Miami Beach Boardwalk boyunca bisiklet ya da scooter turu, hem uzun hem ucuz bir aktivite.",
-        "Bayfront Park'ta oyun alanı ve açık alan var; Design District'in sokakları ise heykelleri ve mimarisiyle ücretsiz bir açık hava sergisi. ICA Miami çağdaş sanat müzesinin girişi ücretsiz.",
+        "Miami’de çocuklu bir gün her zaman bilet parası gerektirmiyor. Plajlar ücretsiz; Metromover ücretsiz ve yükseltilmiş raylarda ilerlediği için küçük çocuklar açısından başlı başına bir gezi. Miami Beach Boardwalk boyunca bisiklet ya da scooter turu, hem uzun hem ucuz bir aktivite.",
+        "Bayfront Park’ta oyun alanı ve açık alan var; Design District’in sokakları ise heykelleri ve mimarisiyle ücretsiz bir açık hava sergisi. ICA Miami çağdaş sanat müzesinin girişi ücretsiz.",
         "Kütüphane ve topluluk merkezlerinde çocuklara yönelik ücretsiz etkinlikler düzenleniyor; tarihinize denk gelen bir etkinlik için yerel takvime bakmak sürpriz bir gün kazandırabilir.",
       ],
     },
@@ -94,19 +94,19 @@ export const aileceMiami: Guide = {
     },
     {
       q: 'Miami’de çocuk için en güvenli deniz nerede?',
-      a: "Coral Gables'taki Matheson Hammock Park'ın deniz suyuyla dolan atol havuzu dalgasız ve sığ olduğu için küçük çocuklara en uygun alandır. Kum ve deniz isteyenler için Key Biscayne'deki Crandon Park, doğal resif hattı dalgaları kırdığından uzun mesafe boyunca sığ kalır. Her iki noktada da cankurtaran saatlerini ve bayrak rengini kontrol edin.",
+      a: "Coral Gables’taki Matheson Hammock Park’ın deniz suyuyla dolan atol havuzu dalgasız ve sığ olduğu için küçük çocuklara en uygun alandır. Kum ve deniz isteyenler için Key Biscayne’deki Crandon Park, doğal resif hattı dalgaları kırdığından uzun mesafe boyunca sığ kalır. Her iki noktada da cankurtaran saatlerini ve bayrak rengini kontrol edin.",
     },
     {
       q: 'Kiralık araçta çocuk koltuğu zorunlu mu?',
-      a: "Evet, Florida'da küçük çocuklar için araçta çocuk koltuğu kullanımı yasal zorunluluktur ve kural yaşa göre değişir. Kiralama şirketleri koltuğu genellikle günlük ek ücretle sağlar, ancak stok garantisi için önceden rezerve etmek gerekir. Kendi koltuğunuzu getirmek de mümkündür; çoğu havayolu çocuk koltuğunu ücretsiz bagaj olarak kabul eder ama bunu bilet alırken teyit edin.",
+      a: "Evet, Florida’da küçük çocuklar için araçta çocuk koltuğu kullanımı yasal zorunluluktur ve kural yaşa göre değişir. Kiralama şirketleri koltuğu genellikle günlük ek ücretle sağlar, ancak stok garantisi için önceden rezerve etmek gerekir. Kendi koltuğunuzu getirmek de mümkündür; çoğu havayolu çocuk koltuğunu ücretsiz bagaj olarak kabul eder ama bunu bilet alırken teyit edin.",
     },
     {
       q: 'Yağmurlu günde çocukla Miami’de ne yapılır?',
-      a: "Frost Bilim Müzesi, akvaryumu ve planetaryumuyla yarım günü rahatça doldurur. Miami Children's Museum küçük yaşlar için tasarlanmıştır. Bunların dışında Pérez Art Museum, büyük alışveriş merkezlerindeki oyun alanları ve sinemalar iyi alternatiflerdir. Yağışlı sezonda sağanaklar genellikle öğleden sonra bir-iki saat sürdüğü için iç mekân planını doğrudan o saate koymak en pratik çözümdür.",
+      a: "Frost Bilim Müzesi, akvaryumu ve planetaryumuyla yarım günü rahatça doldurur. Miami Children’s Museum küçük yaşlar için tasarlanmıştır. Bunların dışında Pérez Art Museum, büyük alışveriş merkezlerindeki oyun alanları ve sinemalar iyi alternatiflerdir. Yağışlı sezonda sağanaklar genellikle öğleden sonra bir-iki saat sürdüğü için iç mekân planını doğrudan o saate koymak en pratik çözümdür.",
     },
     {
       q: 'Miami’den Orlando’ya çocuklarla gitmek mantıklı mı?',
-      a: "Mantıklıdır ama günübirlik değil. Araçla tek yön 3,5–4 saat sürer; Brightline hızlı treniyle araç kullanmadan da gidilebilir. Tema parkları en az iki tam gün ister, bu yüzden Orlando'yu Miami tatiline eklemek yerine ayrı bir bölüm olarak planlamak daha iyi sonuç verir. Aksi hâlde yol yorgunluğu iki şehri de gölgeleyebilir.",
+      a: "Mantıklıdır ama günübirlik değil. Araçla tek yön 3,5–4 saat sürer; Brightline hızlı treniyle araç kullanmadan da gidilebilir. Tema parkları en az iki tam gün ister, bu yüzden Orlando’yu Miami tatiline eklemek yerine ayrı bir bölüm olarak planlamak daha iyi sonuç verir. Aksi hâlde yol yorgunluğu iki şehri de gölgeleyebilir.",
     },
   ],
   related: ['plajlar', 'hava-durumu', 'ulasim'],

@@ -5,9 +5,9 @@ export const havaDurumu: Guide = {
   number: '06',
   title: "Miami Hava Durumu ve Aylara Göre Gitme Zamanı",
   navLabel: 'Hava ve Aylar',
-  question: "Miami'ye hangi ayda gitmek en iyisi?",
+  question: "Miami’ye hangi ayda gitmek en iyisi?",
   excerpt:
-    "Miami'de mevsim yaz-kış değil, kuru sezon ve yağışlı sezon olarak ayrılıyor. Kasım–nisan arası ılık, kuru ve kalabalık; mayıs–ekim arası sıcak, nemli, ucuz ve kasırga sezonu.",
+    "Miami’de mevsim yaz-kış değil, kuru sezon ve yağışlı sezon olarak ayrılıyor. Kasım–nisan arası ılık, kuru ve kalabalık; mayıs–ekim arası sıcak, nemli, ucuz ve kasırga sezonu.",
   keywords: [
     'miami hava durumu',
     'miami ne zaman gidilir',
@@ -17,7 +17,7 @@ export const havaDurumu: Guide = {
   ],
   updated: '2026-08-08',
   intro: [
-    "Miami'ye gitmek için en iyi dönem, kalabalık ve fiyatı ne kadar tolere ettiğinize bağlı. Hava açısından en konforlu aylar kasım ile nisan arası: nem düşer, sıcaklık 24–28 derece bandında kalır, yağış seyrekleşir. Aynı dönem otel ve uçak fiyatlarının da en yüksek olduğu dönemdir.",
+    "Miami’ye gitmek için en iyi dönem, kalabalık ve fiyatı ne kadar tolere ettiğinize bağlı. Hava açısından en konforlu aylar kasım ile nisan arası: nem düşer, sıcaklık 24–28 derece bandında kalır, yağış seyrekleşir. Aynı dönem otel ve uçak fiyatlarının da en yüksek olduğu dönemdir.",
     "Mayıs ile ekim arası ise sıcak ve nemli; neredeyse her öğleden sonra kısa süreli sağanak olur ve resmî kasırga sezonu bu aralığı kapsar. Buna karşılık fiyatlar belirgin biçimde düşer ve plajlar boşalır.",
   ],
   quickFacts: [
@@ -65,8 +65,8 @@ export const havaDurumu: Guide = {
     {
       heading: 'Kasırga sezonu seyahati riskli mi?',
       body: [
-        "Atlantik kasırga sezonu resmen 1 Haziran ile 30 Kasım arasında; istatistiksel olarak en yoğun dönem ağustos ortasından ekim sonuna kadar. Buna rağmen Miami'ye doğrudan isabet eden fırtına her yıl yaşanmaz; sezon boyunca çoğu gün normal geçer.",
-        "Riski yönetmenin yolu tarihten kaçınmak değil, hazırlıklı olmak: kasırga kapsamı olan bir seyahat sigortası yaptırmak, esnek iptal koşullu otel seçmek ve Ulusal Kasırga Merkezi'nin (NHC) bültenlerini takip etmek. Fırtınalar birkaç gün önceden tahmin edilebilir, ani baskın yapmaz.",
+        "Atlantik kasırga sezonu resmen 1 Haziran ile 30 Kasım arasında; istatistiksel olarak en yoğun dönem ağustos ortasından ekim sonuna kadar. Buna rağmen Miami’ye doğrudan isabet eden fırtına her yıl yaşanmaz; sezon boyunca çoğu gün normal geçer.",
+        "Riski yönetmenin yolu tarihten kaçınmak değil, hazırlıklı olmak: kasırga kapsamı olan bir seyahat sigortası yaptırmak, esnek iptal koşullu otel seçmek ve Ulusal Kasırga Merkezi’nin (NHC) bültenlerini takip etmek. Fırtınalar birkaç gün önceden tahmin edilebilir, ani baskın yapmaz.",
         "Uyarı yayımlanırsa havayolları genellikle ücretsiz tarih değişikliği sunar ve yerel yönetim tahliye bölgelerini ilan eder. Otelinizin bulunduğu bölgenin tahliye bölgesinde olup olmadığını önceden öğrenmek en pratik hazırlıktır.",
       ],
       note: 'Kasırga sezonu seyahatinde en kritik karar bilet veya otel değil, iptal/erteleme koşullarıdır. Rezervasyon yaparken esnek tarifeyi ek maliyet değil sigorta olarak düşünün.',
@@ -74,7 +74,7 @@ export const havaDurumu: Guide = {
     {
       heading: 'Hangi ayda hangi etkinlik var?',
       body: [
-        "Miami'nin takvimi fiyatları doğrudan etkiliyor. Büyük bir etkinliğe denk gelen hafta, aynı otelde iki katı fiyat anlamına gelebilir. Aşağıdaki etkinlikler her yıl tekrarlanıyor, ancak tarihleri yıldan yıla kayar — kesin tarih için etkinliğin kendi sitesine bakın.",
+        "Miami’nin takvimi fiyatları doğrudan etkiliyor. Büyük bir etkinliğe denk gelen hafta, aynı otelde iki katı fiyat anlamına gelebilir. Aşağıdaki etkinlikler her yıl tekrarlanıyor, ancak tarihleri yıldan yıla kayar — kesin tarih için etkinliğin kendi sitesine bakın.",
       ],
       list: [
         'Şubat — South Beach Wine & Food Festival, Miami Uluslararası Tekne Fuarı',
@@ -89,14 +89,14 @@ export const havaDurumu: Guide = {
       heading: 'Ne giymeli, valize ne koymalı?',
       body: [
         "Yıl boyunca ince ve nefes alan kıyafetler işinizi görür. Yazın en büyük sorun sıcaklık değil nem; pamuklu yerine hızlı kuruyan kumaşlar belirgin fark yaratıyor. Yağışlı sezonda hafif bir yağmurluk, şemsiyeden daha kullanışlı çünkü sağanaklara genellikle rüzgâr eşlik ediyor.",
-        "Kışın gündüz tişört yeterli olsa da akşam serinliyor; ince bir kat mutlaka bulunsun. Ayrıca restoran, müze ve alışveriş merkezlerinde klima çok güçlü çalıştırılıyor — içeride üşümek Miami'de dışarıda terlemekten daha yaygın bir şikâyet.",
+        "Kışın gündüz tişört yeterli olsa da akşam serinliyor; ince bir kat mutlaka bulunsun. Ayrıca restoran, müze ve alışveriş merkezlerinde klima çok güçlü çalıştırılıyor — içeride üşümek Miami’de dışarıda terlemekten daha yaygın bir şikâyet.",
         "Güneş koruması yıl boyunca gerekli. Kışın bile UV indeksi yüksek olabiliyor; şapka, güneş gözlüğü ve yüksek faktörlü koruyucu, mevsimden bağımsız olarak listeye girmeli.",
       ],
     },
   ],
   faqs: [
     {
-      q: "Miami'ye gitmek için en iyi ay hangisi?",
+      q: "Miami’ye gitmek için en iyi ay hangisi?",
       a: "Hava açısından en dengeli dönem kasım, aralık başı, nisan ve mayıs başıdır: nem düşük, sıcaklık 26–29 derece bandında ve yağış seyrektir. Ocak–mart da konforludur ama en kalabalık ve en pahalı dönemdir. Bütçe önceliğinizse eylül ve ekim en ucuz aylardır; karşılığında sıcak, nemli ve kasırga sezonunun zirvesinde bir tatil kabul etmeniz gerekir.",
     },
     {
@@ -109,11 +109,11 @@ export const havaDurumu: Guide = {
     },
     {
       q: 'Kasırga sezonunda Miami’ye gitmeli miyim?',
-      a: "Gidilebilir, ama esnek rezervasyonla. Sezon 1 Haziran–30 Kasım arasıdır ve en riskli dönem ağustos ortası ile ekim sonudur. Miami'ye doğrudan etki eden bir fırtına her yıl olmaz; fiyatlar ise belirgin şekilde düşer. Kasırga kapsamlı seyahat sigortası yaptırın, ücretsiz iptal edilebilen otel seçin ve Ulusal Kasırga Merkezi'nin bültenlerini takip edin.",
+      a: "Gidilebilir, ama esnek rezervasyonla. Sezon 1 Haziran–30 Kasım arasıdır ve en riskli dönem ağustos ortası ile ekim sonudur. Miami’ye doğrudan etki eden bir fırtına her yıl olmaz; fiyatlar ise belirgin şekilde düşer. Kasırga kapsamlı seyahat sigortası yaptırın, ücretsiz iptal edilebilen otel seçin ve Ulusal Kasırga Merkezi’nin bültenlerini takip edin.",
     },
     {
       q: 'Miami’de kışın denize girilir mi?',
-      a: "Evet. Ocak ve şubatta deniz suyu sıcaklığı 24 derece civarındadır, yani Akdeniz'in yaz ortası sıcaklığına yakındır. Hava sıcaklığı soğuk cephe günlerinde düşüp rüzgâr artabildiği için sudan çıkınca üşüyebilirsiniz. Öğle saatleri en konforlu zamandır; bu dönemde plajlar yazdan çok daha sakindir.",
+      a: "Evet. Ocak ve şubatta deniz suyu sıcaklığı 24 derece civarındadır, yani Akdeniz’in yaz ortası sıcaklığına yakındır. Hava sıcaklığı soğuk cephe günlerinde düşüp rüzgâr artabildiği için sudan çıkınca üşüyebilirsiniz. Öğle saatleri en konforlu zamandır; bu dönemde plajlar yazdan çok daha sakindir.",
     },
   ],
   sources: [
