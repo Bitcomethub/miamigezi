@@ -40,7 +40,13 @@ export function SiteHeader() {
           aria-label="Ana menü"
           className="-mb-2 min-w-0 flex-1 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          <ul className="flex items-baseline justify-end gap-x-5 gap-y-1 whitespace-nowrap">
+          {/* `ml-auto w-max` — `justify-end` DEĞİL. justify-end + overflow-x
+              birleşiminde taşan içerik SOL taraftan çıkar ve spec gereği o alan
+              kaydırılamaz (scrollWidth taşmayı saymaz): 393px'te ilk üç bağlantı
+              -262px'te kalıp erişilemez oluyordu. Auto margin, boş alan
+              kalmadığında 0'a düşer; hizalama sessizce devre dışı kalır ve taşma
+              SAĞA — yani kaydırılabilir yöne — gider. */}
+          <ul className="ml-auto flex w-max items-baseline gap-x-5 whitespace-nowrap">
             {NAV.map((item) => (
               <li key={item.href}>
                 <Link
