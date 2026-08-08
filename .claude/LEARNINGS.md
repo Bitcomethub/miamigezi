@@ -9,9 +9,14 @@
 - İçerik içi miamili linki bütçesi **DOLU**: 10 rehberde 3 link
   (`ilk-kez`, `oteller`, `ulasim`). Yeni link eklemek, uydu siteyi gizli link
   ağı görünümüne sokar. Eklemek gerekiyorsa varolanı taşı.
-- MiamiLi'ye giden **her** URL `miamiliUrl()`'den (`src/lib/site.ts`) üretilir.
-  Elle yazılan URL'de `utm_source=miamigezi` er ya da geç düşer ve
-  attribution — projenin tek başarı ölçütü — sessizce ölür.
+- Kullanıcının **tıklayabildiği** her miamili URL'i `miamiliUrl()`'den
+  (`src/lib/site.ts`) üretilir. Elle yazılan URL'de `utm_source=miamigezi` er ya
+  da geç düşer ve attribution — projenin tek başarı ölçütü — sessizce ölür.
+- **İstisna: kimlik/köken URL'leri UTM ALMAZ** — `<link rel="author">`
+  (layout.tsx `authors`), JSON-LD `url`/`sameAs`/`publisher`. Bunlar tıklanmaz,
+  trafik taşımaz; arama motorları iki markayı bunlarla eşleştirir ve UTM'li
+  varyant varlık sinyalini böler. Denetimde "utm_source yok" diye görünen tek
+  href budur ve **doğru** hâlidir; `miamiliUrl()`'e bağlamak regresyondur.
 - **Günlük üretilen yazılar miamili'den sıfır kez bahseder.** Kapı kuralı #10
   bunu zorlar. Sahiplik footer künyesinde açık; yazı içi marka bahsi PBN deseni.
 

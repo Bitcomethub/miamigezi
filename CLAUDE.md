@@ -23,8 +23,11 @@ değişiklik, sitenin varlık sebebini ters çevirir.
      doğal geçtiğinde miamili.com'un İLGİLİ sayfasına. Şu an **10 rehberde 3
      link** var (`ilk-kez`, `oteller`, `ulasim`). Bu bütçe DOLU sayılır — her
      sayfaya link eklemek yasak.
-   - **Her** miamili linki `miamiliUrl()` üzerinden üretilir (`src/lib/site.ts`).
-     Elle URL yazma: `utm_source=miamigezi` sessizce düşer ve attribution ölür.
+   - **Tıklanabilir** her miamili linki `miamiliUrl()` üzerinden üretilir
+     (`src/lib/site.ts`). Elle URL yazma: `utm_source=miamigezi` sessizce düşer
+     ve attribution ölür. **İstisna:** kimlik/köken URL'leri (`<link rel=author>`,
+     JSON-LD `url`/`sameAs`) UTM ALMAZ — tıklanmazlar ve UTM'li varyant, arama
+     motorlarının iki markayı eşleştirdiği varlık sinyalini böler.
    - **Günlük üretilen blog yazıları miamili'den HİÇ bahsetmez** (kalite kapısı
      kuralı #10, sıfır tolerans). Sahiplik zaten footer'da; her yazıya marka
      bahsi sıkıştırmak tam olarak kaçınılan gizli-PBN deseni.
