@@ -26,7 +26,7 @@ export default function BlogIndexPage() {
       />
 
       <header className="rise">
-        <p className="font-display text-label font-semibold tracking-[0.22em] text-coral uppercase">
+        <p className="font-display text-label font-semibold tracking-[0.22em] text-coral-deep uppercase">
           Günlük akış
         </p>
         <h1 className="mt-5 max-w-[18ch] font-display text-h1 font-semibold tracking-[-0.032em] text-balance">

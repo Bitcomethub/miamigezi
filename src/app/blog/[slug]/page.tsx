@@ -71,10 +71,10 @@ export default async function BlogPostPage({
           >
             Yazılar
           </Link>
-          <span aria-hidden="true" className="text-coral/60">
+          <span aria-hidden="true" className="text-coral-quiet">
             /
           </span>
-          <time dateTime={post.publishedAt} className="tabular text-coral">
+          <time dateTime={post.publishedAt} className="tabular text-coral-deep">
             {formatDate(post.publishedAt)}
           </time>
         </p>
@@ -110,7 +110,7 @@ export default async function BlogPostPage({
           <h2 className="max-w-[26ch] font-display text-h2 font-semibold tracking-[-0.028em] text-balance">
             <span
               aria-hidden="true"
-              className="tabular mr-3.5 align-[0.18em] text-h3 font-medium text-coral/55"
+              className="tabular mr-3.5 align-[0.18em] text-h3 font-medium text-coral-quiet"
             >
               {String(i + 1).padStart(2, '0')}
             </span>
@@ -159,7 +159,7 @@ export default async function BlogPostPage({
               className="border-t border-ink/12 py-6 first:border-t-0 first:pt-0"
             >
               <dt className="font-display text-h3 font-semibold tracking-[-0.015em] text-ink">
-                <span aria-hidden="true" className="tabular mr-3 text-coral/60">
+                <span aria-hidden="true" className="tabular mr-3 text-coral-quiet">
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 {faq.q}

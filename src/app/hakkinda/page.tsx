@@ -25,7 +25,7 @@ export default function HakkindaPage() {
       />
 
       <header className="rise">
-        <p className="font-display text-label font-semibold tracking-[0.22em] text-coral uppercase">
+        <p className="font-display text-label font-semibold tracking-[0.22em] text-coral-deep uppercase">
           Künye
         </p>
         <h1 className="mt-5 max-w-[16ch] font-display text-h1 font-semibold tracking-[-0.032em] text-balance">

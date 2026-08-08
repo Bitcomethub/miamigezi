@@ -20,7 +20,7 @@ export default function HomePage() {
           Fotoğraf yok — lisanslı görsel yok ve uydurma stok üretmiyoruz.
           Hiyerarşi tamamen tipografiden ve yatay silmelerden geliyor. */}
       <section className="rise mx-auto max-w-[78rem] px-5 pt-14 pb-band sm:px-8 sm:pt-20">
-        <p className="flex items-center gap-2.5 font-display text-label font-semibold tracking-[0.22em] text-coral uppercase">
+        <p className="flex items-center gap-2.5 font-display text-label font-semibold tracking-[0.22em] text-coral-deep uppercase">
           <Sunburst className="h-3 w-5" />
           Türkçe Miami rehberi
         </p>
@@ -70,7 +70,7 @@ export default function HomePage() {
               >
                 <span
                   aria-hidden="true"
-                  className="tabular font-display text-h3 font-semibold text-coral/55 transition-colors duration-300 group-hover:text-coral"
+                  className="tabular font-display text-h3 font-semibold text-coral-quiet transition-colors duration-300 group-hover:text-coral-deep"
                 >
                   {guide.number}
                 </span>

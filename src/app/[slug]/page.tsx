@@ -76,10 +76,10 @@ export default async function GuidePage({
           >
             Rehberler
           </Link>
-          <span aria-hidden="true" className="text-coral/60">
+          <span aria-hidden="true" className="text-coral-quiet">
             /
           </span>
-          <span className="tabular text-coral">{guide.number}</span>
+          <span className="tabular text-coral-deep">{guide.number}</span>
         </p>
 
         <h1 className="mt-5 max-w-[20ch] font-display text-h1 font-semibold tracking-[-0.032em] text-balance">
@@ -135,7 +135,7 @@ export default async function GuidePage({
 
         {guide.miamili ? (
           <aside className="mt-stack max-w-[68rem] border border-ink/14 bg-paper-2 px-6 py-6 sm:px-8">
-            <p className="flex items-center gap-2.5 font-display text-label font-semibold tracking-[0.18em] text-coral uppercase">
+            <p className="flex items-center gap-2.5 font-display text-label font-semibold tracking-[0.18em] text-coral-deep uppercase">
               <Sunburst className="h-3 w-5" />
               Aynı ağdan
             </p>
@@ -171,7 +171,7 @@ export default async function GuidePage({
                 <dt className="font-display text-h3 font-semibold tracking-[-0.015em] text-ink">
                   <span
                     aria-hidden="true"
-                    className="tabular mr-3 text-coral/60"
+                    className="tabular mr-3 text-coral-quiet"
                   >
                     {String(i + 1).padStart(2, '0')}
                   </span>
@@ -239,7 +239,7 @@ export default async function GuidePage({
                 >
                   <span
                     aria-hidden="true"
-                    className="tabular font-display text-small font-semibold text-coral/55 transition-colors group-hover:text-coral"
+                    className="tabular font-display text-small font-semibold text-coral-quiet transition-colors group-hover:text-coral-deep"
                   >
                     {r.number}
                   </span>
@@ -267,7 +267,7 @@ function Section({ section, index }: { section: GuideSection; index: number }) {
       <h2 className="max-w-[24ch] font-display text-h2 font-semibold tracking-[-0.028em] text-balance">
         <span
           aria-hidden="true"
-          className="tabular mr-3.5 align-[0.18em] text-h3 font-medium text-coral/55"
+          className="tabular mr-3.5 align-[0.18em] text-h3 font-medium text-coral-quiet"
         >
           {String(index + 1).padStart(2, '0')}
         </span>
@@ -289,7 +289,7 @@ function Section({ section, index }: { section: GuideSection; index: number }) {
               key={item}
               className="grid grid-cols-[1.35rem_1fr] items-baseline gap-x-2 border-t border-ink/10 py-3 first:border-t-0"
             >
-              <span aria-hidden="true" className="text-small text-coral">
+              <span aria-hidden="true" className="text-small text-coral-quiet">
                 —
               </span>
               <span className="text-small text-ink-2">{item}</span>

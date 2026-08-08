@@ -20,8 +20,17 @@
   --color-ink-2: oklch(37% 0.022 205);
   --color-mute: oklch(53.5% 0.017 70);
 
-  /* Aksan 1 — mercan/terrakota. Marka kanalı: yalnız vurgu ve bağlantı. */
+  /* Aksan 1 — mercan/terrakota. Marka kanalı: yalnız vurgu ve bağlantı.
+     KONTRAST NOTU (kâğıt zemin #faf6f1 üzerinde ölçüldü):
+       --color-coral       3.63:1  → yalnız BÜYÜK metin (≥24px) ve ikon/çizgi
+       --color-coral-quiet 4.94:1  → ornamental rakam/işaret, küçük punto
+       --color-coral-deep  6.79:1  → küçük metin, bağlantı, etiket
+     Küçük punto metne `text-coral` verme: Lighthouse a11y'de color-contrast
+     düşürüyor (12px etiketlerde 3.63 < 4.5 gerekli). `coral/55` gibi opaklık
+     kırpmaları daha da düşürür — 1.97'ye kadar iner.
+     Ton dizisi bilinçli: aynı hue (33), açıldıkça chroma düşüyor. */
   --color-coral: oklch(62% 0.152 33);
+  --color-coral-quiet: oklch(54% 0.1 33);
   --color-coral-deep: oklch(47% 0.132 33);
   --color-coral-wash: oklch(94% 0.032 40);
 
