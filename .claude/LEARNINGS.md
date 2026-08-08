@@ -32,6 +32,21 @@
 - Backlog slug'ları **ASCII** olmak zorunda (URL'e dönüşüyor). `ğ`, `ı`, `ş`
   içeren slug fark edilmeden geçer, sonra rotayı bozar.
 
+## Düzen & ölçüm
+
+- Yatay kaydırılan ray (`overflow-x`) **asla** `justify-content: flex-end` ile
+  hizalanmaz — `ml-auto` kullanılır. Uca hizalı taşma BAŞLANGIÇ tarafından çıkar,
+  spec gereği kaydırılamaz ve `scrollWidth` onu saymaz: nav'ın ilk üç bağlantısı
+  393px'te erişilemez hâldeydi. Auto margin boş alan bitince 0'a düşer, taşma
+  kaydırılabilir yöne gider.
+- Kırpılan öğe ekran görüntüsünde **görünmez**. Düzen iddiaları (kaydırılabilir
+  mi, çakışıyor mu, taşıyor mu) `scrollWidth`/`clientWidth` ve
+  `getBoundingClientRect()` ile ÖLÇÜLEREK doğrulanır — bakarak değil.
+- Render edilmiş HTML'de metin ararken karakterin o katmandaki biçimini önce
+  doğrula: React, JSX metnindeki düz kesme işaretini `&#x27;` olarak kaçırır,
+  ham `'` HTML'de hiç bulunmaz. **"0 eşleşme" bir sonuç değil, ölü arama
+  şüphesidir** — her aramayı eşleşmesi GEREKEN bir vakayla sına.
+
 ## İçerik & doğruluk
 
 - Oynak veri (fiyat, saat, tarih, ücret) **ya aralık ya çerçeveli** yazılır.

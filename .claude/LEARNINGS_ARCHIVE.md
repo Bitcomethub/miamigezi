@@ -5,6 +5,60 @@
 
 ---
 
+## 2026-08-08 — Mobilde nav'ın ilk üç bağlantısı yok: `justify-end` + `overflow-x` tuzağı
+
+- **Problem:** Lighthouse `/ucak-bileti` mobilde `target-size` düşürdü ve çakışan
+  öğe olarak logoyu gösterdi. Tuhaflık: çakıştığı söylenen nav bağlantıları
+  geometrik olarak logonun ÜSTÜNDEydi — oysa nav, logonun sağındaki ayrı bir
+  flex öğesi. Gerçek arıza dokunma hedefi değildi: 393px'te bağlantılar -262px'e
+  kadar uzanıyordu, yani "Gezilecek Yerler", "Plajlar" ve "Nerede Kalınır"
+  kırpılmış ve **erişilemez** hâldeydi. Sekiz bağlantının üçü telefonda yoktu.
+- **Elenen:** *Dokunma hedeflerini daha da büyütmek* → semptomu adresliyor,
+  bağlantılar yine ekran dışında kalırdı. *Mobilde hamburger menüye geçmek* →
+  çalışırdı ama state + focus tuzağı + Escape getirir; başlangıçtaki "ray"
+  kararının gerekçesi hâlâ geçerliydi, kusur karardaydı değil uygulamadaydı.
+  *`overflow-x: scroll`'a çevirmek* → hiçbir şeyi değiştirmez: sorun kaydırma
+  görünürlüğü değil, tarayıcının taşmayı HİÇ raporlamaması.
+- **Seçilen:** hizalamayı auto margin'e devretmek (`ml-auto w-max`,
+  `justify-end` YOK). `justify-content: flex-end` + taşma birleşiminde fazlalık
+  BAŞLANGIÇ tarafından çıkar ve spec gereği o alan kaydırılamaz — `scrollWidth`
+  taşmayı saymaz bile. Auto margin ise boş alan kalmadığında 0'a düşer: hizalama
+  sessizce devre dışı kalır, taşma sağa (kaydırılabilir yöne) gider. Masaüstünde
+  sağa dayalı görünüm birebir korunur.
+- **Kanıt:** 393px'te puppeteer probu — önce `scrollWidth === clientWidth === 193`,
+  `scrollLeft` aralığı `0→0` (ray kaydırılamıyor), bağlantılar `-262…373`.
+  Sonra `scrollWidth 635 > clientWidth 193`, `scrollLeft 0→442`, sekiz bağlantı
+  da pozitif koordinatta, logoyla çakışma yok. Lighthouse a11y 96 → 100.
+- **Kural:** Yatay kaydırılan bir rayı ASLA `justify-content: flex-end` ile
+  hizalama — auto margin kullan. Ve kırpılmış öğeler ekran görüntüsünde
+  görünmez: bir rayın gerçekten kaydırılabildiği ancak `scrollWidth`/`clientWidth`
+  ve öğe koordinatları ÖLÇÜLEREK doğrulanır.
+
+---
+
+## 2026-08-08 — "Sıfır tutarsızlık" diyen ölçüm, kodlama katmanını atlıyordu
+
+- **Problem:** Ekran görüntülerinde kesme işaretinin iki biçimi karışık
+  görünüyordu (`Miami’de` vs `Miami'de`). Doğrulamak için yayındaki HTML'de
+  `[[:alpha:]]'[[:alpha:]]` arandı: her sayfada **0** çıktı. Ölçüme göre
+  tutarsızlık yoktu — ama vardı.
+- **Elenen:** *Ekran görüntüsü yanılgısı sanmak* → gözü haklıydı; ölçüm
+  yanlıştı. *Kaynak kodda saymak* → 301 "düz" eşleşmenin çoğu KOD YORUMU
+  (`crawler'ları`, `subset'inde`), kullanıcıya dönük metin değil; kaynak bu soru
+  için ayırt edici değil.
+- **Seçilen:** görünür metni sunucudan gelen HTML'den çıkarıp **entity
+  biçimlerini de** saymak. React, JSX metnindeki düz kesme işaretini `&#x27;`
+  olarak kaçırır; ham `'` karakteri HTML'de hiç bulunmaz. Gerçek oran:
+  `/ucak-bileti` 27 düz'e karşı 2 eğri, `/gezilecek-yerler` 33'e 3.
+- **Kanıt:** aynı sayfada `ham düz=0` ama `&#x27;=27`. İlk grep bu yüzden
+  sessizce boş dönüyordu.
+- **Kural:** Render edilmiş çıktıda metin ararken, aradığın karakterin o
+  katmanda hangi biçime dönüştüğünü önce doğrula (HTML entity, unicode kaçışı,
+  normalizasyon). "0 eşleşme" bir sonuç değil, çoğu zaman ölü bir aramadır —
+  aramanın kendisini pozitif bir kontrol vakasıyla sına.
+
+---
+
 ## 2026-08-08 — Kalite kapısı: prompt'ta rica etmek yasak koymak değildir
 
 **Bağlam.** Brief üç yasak koyuyordu: uydurma fiyat/istatistik yok, bilet
