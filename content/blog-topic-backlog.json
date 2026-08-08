@@ -1,0 +1,525 @@
+{
+  "_readme": [
+    "miamigezi günlük içerik motorunun konu kuyruğu.",
+    "Mimari: 10 temel rehber HUB, buradaki konular SPOKE. Bir konu bir hub rehberin",
+    "yerini almaz — onun tek bir alt sorusunu derinleştirir. Kanibalizasyon önlemi:",
+    "yeni konu eklerken (a) slug hiçbir rehber/yazı slug'ıyla çakışmamalı,",
+    "(b) 'question' alanı bir rehberin ana sorusunun yeniden ifadesi olmamalı.",
+    "scripts/generate-blog-post.mjs her gün ilk 'pending' konuyu priority sırasıyla çeker.",
+    "status: pending → published | needs_review | skipped_duplicate.",
+    "priority: 1 = en yüksek arama/AI-atıf potansiyeli.",
+    "angle: üretici modele verilen kapsam sınırı — makalenin nereye girmeyeceğini de söyler."
+  ],
+  "topics": [
+    {
+      "id": "visa-appointment",
+      "slug": "abd-turist-vizesi-randevu-sureci",
+      "title": "ABD Turist Vizesi (B1/B2) Türkiye'den Nasıl Alınır?",
+      "question": "Miami'ye gitmek için ABD turist vizesi nasıl alınır?",
+      "category": "Vize & Giriş",
+      "cluster": "giris",
+      "priority": 1,
+      "keywords": [
+        "ABD turist vizesi",
+        "B1 B2 vizesi başvuru",
+        "Amerika vizesi randevu",
+        "Miami vize gerekli mi"
+      ],
+      "angle": "Süreci adım adım anlat: DS-160 formu, harç ödemesi, konsolosluk randevusu, mülakat. RANDEVU BEKLEME SÜRESİ İÇİN SAYI VERME — dönemsel olarak aylarca değişiyor, 'güncel süreyi resmî randevu sisteminden kontrol edin' de. Harç tutarını da yazma, 'başvuru sırasında güncel harç gösterilir' de. ESTA'nın Türk vatandaşları için GEÇERLİ OLMADIĞINI net söyle (Türkiye Vize Muafiyet Programı'nda değil). Vize aldıktan sonra sınırda kabul kararının yine de sınır memurunda olduğunu belirt. Hukuki tavsiye olmadığını yaz.",
+      "status": "pending"
+    },
+    {
+      "id": "transit-visa",
+      "slug": "avrupa-aktarmali-miami-ucuslari-transit-vize",
+      "title": "Avrupa Aktarmalı Miami Uçuşlarında Transit Vize Gerekir mi?",
+      "question": "Miami'ye Avrupa üzerinden aktarmalı giderken Schengen ya da İngiltere vizesi gerekir mi?",
+      "category": "Vize & Giriş",
+      "cluster": "giris",
+      "priority": 1,
+      "keywords": [
+        "transit vize Schengen",
+        "aktarmalı uçuş vize",
+        "İngiltere transit vize Türk",
+        "Miami aktarmalı uçuş"
+      ],
+      "angle": "Ana ayrım: havalimanının uluslararası transit alanından çıkmadan aktarma yapmak ile ülkeye giriş yapmak farklı şeydir; bazı ülkelerde transit alanı bile vize ister. Türk pasaportu için Schengen ülkeleri, İngiltere ve bazı Körfez aktarmalarının kuralları FARKLI — hangisinin ne istediğini SAYMA, 'aktarma yapacağın ülkenin resmî kaynağından ve havayolundan teyit et' kuralını öğret. Bagajın aktarmada otomatik gidip gitmemesi ile vize gerekliliği arasındaki ilişkiyi açıkla. Kural değişkendir uyarısı zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "driving-licence",
+      "slug": "turk-ehliyetiyle-miamide-arac-kiralama",
+      "title": "Türk Ehliyetiyle Miami'de Araba Kiralanır mı?",
+      "question": "Türk ehliyetiyle Miami'de araç kiralanabilir mi, uluslararası ehliyet şart mı?",
+      "category": "Ulaşım",
+      "cluster": "arac",
+      "priority": 1,
+      "keywords": [
+        "Türk ehliyeti Amerika geçerli mi",
+        "uluslararası sürücü belgesi",
+        "Miami araç kiralama şartları",
+        "Amerika'da araba kiralama yaş sınırı"
+      ],
+      "angle": "İlk cümlede net cevap ver, sonra şartları aç: uluslararası sürücü belgesinin ne olduğu (tercüme belgesi, ehliyetin yerine geçmez, yanında orijinal ehliyet şart), kiralama şirketlerinin yaş politikası ve genç sürücü ek ücreti, kredi kartı üzerinden alınan blokaj, CDW/LDW ve sorumluluk sigortası kavramlarının Türkçe karşılıkları. RAKAM VERME — ek ücret ve depozito şirkete göre değişir, 'rezervasyon ekranında yazan tutarı okuyun' de. Kiralama sözleşmesinin ek sürücü maddesine dikkat çek.",
+      "status": "pending"
+    },
+    {
+      "id": "hurricane-warning",
+      "slug": "miamide-kasirga-uyarisi-gelirse-ne-yapmali",
+      "title": "Tatildeyken Miami'de Kasırga Uyarısı Gelirse Ne Yapmalı?",
+      "question": "Miami'de tatildeyken kasırga uyarısı verilirse turist olarak ne yapmalı?",
+      "category": "Etkinlik & Sezon",
+      "cluster": "sezon",
+      "priority": 1,
+      "keywords": [
+        "Miami kasırga uyarısı",
+        "hurricane watch warning farkı",
+        "Florida tahliye bölgesi",
+        "Miami kasırga sezonu tatil"
+      ],
+      "angle": "Watch (izleme) ile warning (uyarı) arasındaki farkı ve tahliye bölgesi (evacuation zone) mantığını öğret — otelin hangi bölgede olduğunu önceden sormak en pratik hazırlık. Resmî kaynaklar: National Hurricane Center, Miami-Dade County acil durum sayfası, havayolunun esnek değişim duyurusu. Uçuş iptalinde ne yapılacağı, seyahat sigortasının kasırgayı ne zaman kapsadığı (poliçe alım tarihi kritik). PANİK DİLİ KULLANMA; olasılıkla ilgili sayı uydurma. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "halal-mosque",
+      "slug": "miamide-helal-yemek-ve-cami",
+      "title": "Miami'de Helal Yemek ve Cami Bulmak",
+      "question": "Miami'de helal yemek ve namaz kılacak yer bulmak kolay mı?",
+      "category": "Yeme İçme",
+      "cluster": "pratik",
+      "priority": 1,
+      "keywords": [
+        "Miami helal restoran",
+        "Miami cami",
+        "Amerika'da helal yemek",
+        "Miami Müslüman turist"
+      ],
+      "angle": "Gerçekçi ol: Miami'de helal seçenek New York veya New Jersey kadar yoğun değil ama bulunur. Restoran adı vermek yerine ARAMA STRATEJİSİ öğret — Orta Doğu, Türk, Pakistan ve Afgan mutfaklarının bulunduğu bölgeler, 'halal' etiketinin ABD'de denetimsiz olduğu ve doğrudan sormanın gerektiği. Deniz ürünü ve vejetaryen menülerin pratik çıkış yolu olması. Cami/mescit için resmî dernek sayfalarına ve harita aramasına yönlendir, ADRES UYDURMA. Cuma namazı saatlerinin yaz-kış değiştiğini, doğrudan aranmasını söyle.",
+      "status": "pending"
+    },
+    {
+      "id": "health-emergency",
+      "slug": "miamide-acil-saglik-durumu",
+      "title": "Miami'de Hastalanırsanız Ne Yapmalı?",
+      "question": "Miami'de tatildeyken hastalanan bir turist nereye başvurmalı?",
+      "category": "Pratik Bilgi",
+      "cluster": "saglik",
+      "priority": 1,
+      "keywords": [
+        "Amerika'da sağlık sistemi turist",
+        "Miami acil servis ücreti",
+        "urgent care nedir",
+        "seyahat sağlık sigortası ABD"
+      ],
+      "angle": "Üç kademeyi ayır: 911 (gerçek acil), emergency room (ER — pahalı, uzun bekleme), urgent care / walk-in clinic (orta şiddet, çok daha ucuz ve hızlı). ABD'de sağlık hizmetinin ücretli olduğunu ve faturanın SONRADAN geldiğini anlat. RAKAM VERME — ABD sağlık faturaları öngörülemez, 'sigortasız gitmeyin' mesajı sayıdan daha doğru. Seyahat sağlık sigortasında bakılacak maddeler: teminat limiti, doğrudan ödeme mi geri ödeme mi, mevcut hastalık istisnası. Tıbbi tavsiye olmadığını yaz.",
+      "status": "pending"
+    },
+    {
+      "id": "key-west-daytrip",
+      "slug": "miamiden-key-weste-gunubirlik-gezi",
+      "title": "Miami'den Key West'e Günübirlik Gitmek Mantıklı mı?",
+      "question": "Miami'den Key West'e günübirlik gidilir mi, yoksa gecelemek mi gerekir?",
+      "category": "Günübirlik",
+      "cluster": "gezi",
+      "priority": 1,
+      "keywords": [
+        "Miami Key West mesafe",
+        "Key West günübirlik",
+        "Overseas Highway",
+        "Florida Keys gezi"
+      ],
+      "angle": "Dürüst cevap: yapılabilir ama gün büyük ölçüde yolda geçer — tek yön yaklaşık üç buçuk-dört saat, trafiğe göre daha uzun. Karar çerçevesi ver: araba mı, otobüs mü, tekne/uçak mı; erken çıkış neden şart. Yol üzerindeki duraklar (Islamorada, Marathon, Seven Mile Bridge) ve Key West'te bir günde yapılabilecekler. Bir gecelemenin neyi değiştirdiğini anlat. Ücret ve bilet fiyatı YAZMA; sezon ve gün farkı çok büyük.",
+      "status": "pending"
+    },
+    {
+      "id": "solo-women",
+      "slug": "miamide-tek-basina-kadin-seyahati",
+      "title": "Miami'ye Tek Başına Giden Kadınlar İçin Pratik Notlar",
+      "question": "Miami tek başına seyahat eden bir kadın için uygun bir şehir mi?",
+      "category": "Pratik Bilgi",
+      "cluster": "guvenlik",
+      "priority": 2,
+      "keywords": [
+        "Miami tek başına seyahat",
+        "kadın gezgin Miami",
+        "Miami güvenli bölgeler",
+        "solo seyahat Amerika"
+      ],
+      "angle": "Abartısız ve korkutmadan yaz. Konaklama seçiminde yürünebilirlik ve gece ışıklandırması, gece ulaşımında araç çağırma uygulamasının plaka doğrulaması, plajda eşya güvenliği, bar ortamında içki güvenliği. Suç istatistiği UYDURMA — 'şu bölgede suç oranı %X' tarzı iddia yasak; bunun yerine davranışsal tavsiye ver. Acil numara 911. Tek başına yemek yemenin ve gündüz gezmenin Miami'de son derece normal olduğunu belirt.",
+      "status": "pending"
+    },
+    {
+      "id": "spring-break",
+      "slug": "spring-break-doneminde-miami",
+      "title": "Spring Break Döneminde Miami'ye Gitmek Mantıklı mı?",
+      "question": "Spring break döneminde Miami'ye gitmek iyi bir fikir mi?",
+      "category": "Etkinlik & Sezon",
+      "cluster": "sezon",
+      "priority": 2,
+      "keywords": [
+        "Miami spring break",
+        "South Beach mart ayı",
+        "Miami kalabalık dönem",
+        "spring break ne zaman"
+      ],
+      "angle": "Spring break'in ABD okul takvimine bağlı olarak mart civarında dalgalar hâlinde yaşandığını, tek bir tarih olmadığını anlat. Kime uygun (genç, kalabalık ve gece hayatı isteyen), kime uygun değil (aile, sakin tatil). South Beach'te dönemsel olarak ek trafik düzenlemesi, park kısıtı ve plaj kuralı getirilebildiğini söyle ama HANGİ YIL NE OLDUĞUNU iddia etme — 'gitmeden önce Miami Beach şehir duyurularına bak' de. Fiyatların yükseldiğini aralık vermeden, göreli olarak ifade et.",
+      "status": "pending"
+    },
+    {
+      "id": "parking-fines",
+      "slug": "miamide-park-etme-ve-ceza",
+      "title": "Miami'de Park Etme Kuralları ve Ceza Yerseniz Ne Olur?",
+      "question": "Miami'de nereye park edilir, park cezası yenirse ne yapılır?",
+      "category": "Ulaşım",
+      "cluster": "arac",
+      "priority": 2,
+      "keywords": [
+        "Miami park ücreti",
+        "South Beach park sorunu",
+        "Amerika park cezası",
+        "PayByPhone Miami"
+      ],
+      "angle": "Sistemi öğret: sokak kenarı ölçerli park, uygulama üzerinden ödeme, garaj/otopark, otel valesi. Kaldırım rengi kodlarının ve tabelaların ABD'de bağlayıcı olduğunu, 'yanlış anladım' savunmasının işlemediğini anlat. Kiralık araçla ceza yenirse cezanın kiralama şirketi üzerinden ek işlem ücretiyle kredi kartına yansıdığını söyle. TUTAR YAZMA — bölgeye ve ihlale göre değişir; itiraz ve ödeme kanalı için şehrin resmî sayfasına yönlendir. Çekilme (tow) durumunda ne yapılacağını ekle.",
+      "status": "pending"
+    },
+    {
+      "id": "pharmacy",
+      "slug": "miamide-eczane-ve-recetesiz-ilac",
+      "title": "Miami'de Eczane ve Reçetesiz İlaç Nasıl Bulunur?",
+      "question": "Miami'de reçetesiz ilaç alınabilir mi, Türkiye'den ilaç götürmek gerekir mi?",
+      "category": "Pratik Bilgi",
+      "cluster": "saglik",
+      "priority": 2,
+      "keywords": [
+        "Amerika'da eczane",
+        "reçetesiz ilaç ABD",
+        "Miami eczane 24 saat",
+        "yurt dışına ilaç götürmek"
+      ],
+      "angle": "ABD'de zincir eczanelerin market içinde olduğunu ve reçetesiz (OTC) ilaçların raftan alındığını anlat; antibiyotik gibi ilaçların kesinlikle reçeteli olduğunu vurgula. Düzenli kullanılan ilacın orijinal kutusunda ve reçete/rapor kopyasıyla taşınmasının neden önemli olduğunu söyle. İLAÇ ADI ÖNERME, doz verme — bu tıbbi tavsiye olur; 'etken maddeyi bilerek gidin, eczacıya sorun' çerçevesi kullan. Fiyat yazma. Tıbbi tavsiye olmadığı uyarısı zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "customs-return",
+      "slug": "miamiden-turkiyeye-donuste-gumruk",
+      "title": "Miami'den Türkiye'ye Dönüşte Gümrükte Nelere Dikkat Edilir?",
+      "question": "Miami'den Türkiye'ye dönerken gümrükte hangi kurallar geçerli?",
+      "category": "Pratik Bilgi",
+      "cluster": "pratik",
+      "priority": 2,
+      "keywords": [
+        "yurt dışından alışveriş gümrük",
+        "Türkiye gümrük muafiyet",
+        "yolcu beraberi eşya",
+        "Amerika'dan telefon getirmek"
+      ],
+      "angle": "SAYI VERME — muafiyet limitleri ve telefon harcı dönem dönem değişiyor; makalenin işi limit ezberletmek değil, süreci ve nereye bakılacağını öğretmek. Anlat: yolcu beraberi eşya kavramı, kişisel kullanım ile ticari miktar ayrımı, faturayı saklamanın önemi, elektronik cihazın kayıt (IMEI) meselesinin ayrı bir konu olduğu, yeşil/kırmızı hat. Ticaret Bakanlığı'nın güncel yolcu beraberi eşya sayfasına yönlendir. Gıda ve tarım ürünlerinde ülkeye giriş kısıtı olabileceğini ekle.",
+      "status": "pending"
+    },
+    {
+      "id": "turkish-food",
+      "slug": "miamide-turk-restoranlari",
+      "title": "Miami'de Türk Restoranı ve Türk Topluluğu Var mı?",
+      "question": "Miami'de Türk restoranı ve Türk topluluğu bulmak mümkün mü?",
+      "category": "Yeme İçme",
+      "cluster": "pratik",
+      "priority": 2,
+      "keywords": [
+        "Miami Türk restoranı",
+        "Miami Türkler",
+        "Amerika'da Türk yemeği",
+        "Miami Türk topluluğu"
+      ],
+      "angle": "Gerçekçi çerçeve: Miami'de Türk nüfusu New York veya New Jersey ölçeğinde değil, ama Türk ve Akdeniz mutfağı sunan yerler ve aktif bir topluluk var. RESTORAN ADI VE ADRES UYDURMA — açılıp kapanıyorlar; bunun yerine hangi bölgelerde aranacağını, Türk-Yunan-Lübnan mutfaklarının nasıl iç içe geçtiğini ve harita aramasında hangi terimlerin işe yaradığını anlat. Topluluk için dernek ve sosyal medya gruplarını genel olarak işaret et, isim uydurma. Türk kahvesi/baklava gibi ürünlerin market zincirlerinde bulunabilirliği.",
+      "status": "pending"
+    },
+    {
+      "id": "nightlife-rules",
+      "slug": "miamide-gece-hayati-kurallari",
+      "title": "Miami'de Kulüplere Giriş Kuralları: Yaş, Kimlik, Kıyafet",
+      "question": "Miami'de kulüplere girmek için hangi kurallar geçerli?",
+      "category": "Gece Hayatı",
+      "cluster": "gece",
+      "priority": 2,
+      "keywords": [
+        "Miami kulüp yaş sınırı",
+        "South Beach gece hayatı",
+        "Miami dress code",
+        "Amerika'da alkol yaşı"
+      ],
+      "angle": "Bağlayıcı kural: ABD'de alkol yaşı 21 ve kimlik kontrolü istisnasız — pasaport en güvenli belge, Türk kimliği kabul edilmez. Kulüp giriş politikası (dress code, guest list, masa rezervasyonu, kapıda seçim) özel işletme kararıdır, şikâyet edilecek bir kural değil. Bahşiş ve servis ücreti mantığının bar hesabına nasıl yansıdığı. FİYAT VE KULÜP ADI VERME. Güvenlik: içkini gözden ayırma, dönüş ulaşımını önceden planla, açık alanda alkol yasağı.",
+      "status": "pending"
+    },
+    {
+      "id": "everglades-tour",
+      "slug": "everglades-airboat-turu-nasil-secilir",
+      "title": "Everglades Airboat Turu Nasıl Seçilir?",
+      "question": "Everglades'e hangi turla gidilmeli ve airboat turu değer mi?",
+      "category": "Günübirlik",
+      "cluster": "gezi",
+      "priority": 2,
+      "keywords": [
+        "Everglades turu",
+        "airboat turu Miami",
+        "Everglades milli parkı",
+        "Miami timsah turu"
+      ],
+      "angle": "Ayrımı net kur: Everglades Milli Parkı'nın resmî girişleri ile park dışındaki özel airboat işletmeleri farklı deneyimlerdir; ikisini karıştıran çok. Seçim kriterleri: tur süresi, grup büyüklüğü, gürültü ve hayvan refahı, ulaşımın dahil olup olmadığı, sezon (kuru sezonda hayvan gözlemi daha iyi). Sivrisinek ve güneş uyarısı. FİYAT VE İŞLETME ADI VERME, rezervasyon linki verme. Resmî park bilgisi için nps.gov'a yönlendir.",
+      "status": "pending"
+    },
+    {
+      "id": "orlando-transfer",
+      "slug": "miamiden-orlandoya-nasil-gidilir",
+      "title": "Miami'den Orlando'ya Nasıl Gidilir?",
+      "question": "Miami'den Orlando'ya araba, tren ve uçak arasında hangisi mantıklı?",
+      "category": "Günübirlik",
+      "cluster": "gezi",
+      "priority": 2,
+      "keywords": [
+        "Miami Orlando arası",
+        "Brightline Orlando",
+        "Florida tren",
+        "Miami Disney World ulaşım"
+      ],
+      "angle": "Üç seçeneği karar tablosuyla karşılaştır: araba (esneklik, yaklaşık üç buçuk-dört saatlik sürüş, otopark), Brightline treni (şehir merkezinden şehir merkezine, konfor, varışta araç ihtiyacı), iç hat uçuşu (havalimanı süreleriyle birlikte gerçek kazanç azalır). Orlando'ya tema parkı için gidiliyorsa park bileti ve konaklama planının ulaşımdan önce geldiğini söyle. BİLET FİYATI VERME. Günübirlik yapılabilir mi sorusuna dürüst cevap: tema parkı için hayır.",
+      "status": "pending"
+    },
+    {
+      "id": "boat-rental",
+      "slug": "miamide-tekne-kiralama-nasil-isler",
+      "title": "Miami'de Tekne Kiralamak Nasıl İşler?",
+      "question": "Miami'de kaptanlı ya da kaptansız tekne kiralanabilir mi?",
+      "category": "Pratik Bilgi",
+      "cluster": "aktivite",
+      "priority": 3,
+      "keywords": [
+        "Miami tekne kiralama",
+        "Miami yat turu",
+        "kaptanlı tekne kiralama",
+        "Biscayne Bay tekne"
+      ],
+      "angle": "İki modeli ayır: kaptanlı kiralama (çoğu turist için doğru seçenek) ve kaptansız kiralama (Florida'da doğum yılına bağlı tekne kullanma belgesi şartı olabilir — kesin tarih iddia etme, 'kiralama şirketi belge şartını söyler' de). Yakıt, temizlik ve kaptan bahşişinin genelde fiyata dahil olmadığını belirt. Can yeleği, hava ve dalga durumu, alkol ve tekne kullanımı. FİYAT VE ŞİRKET ADI VERME, rezervasyon linki verme.",
+      "status": "pending"
+    },
+    {
+      "id": "water-sports",
+      "slug": "miamide-su-sporlari-guvenligi",
+      "title": "Miami'de Jet Ski ve Su Sporları: Bilinmesi Gerekenler",
+      "question": "Miami'de jet ski ve su sporları için neye dikkat etmek gerekir?",
+      "category": "Pratik Bilgi",
+      "cluster": "aktivite",
+      "priority": 3,
+      "keywords": [
+        "Miami jet ski",
+        "Miami su sporları",
+        "parasailing Miami",
+        "jet ski kiralama kuralları"
+      ],
+      "angle": "Güvenlik ve sözleşme odaklı yaz: yaş ve belge şartı, zorunlu can yeleği, sorumluluk sözleşmesi (waiver) imzalamanın anlamı, hasar durumunda depozito ve sorumluluk, kiralama öncesi hasar fotoğrafı çekmenin pratik değeri. Rüzgâr, dalga ve trafik yoğun koylarda dikkat. Seyahat sigortasının bazı 'tehlikeli aktivite' başlıklarını kapsam dışı bırakabildiğini söyle. FİYAT VERME, işletme önerme.",
+      "status": "pending"
+    },
+    {
+      "id": "rainy-day",
+      "slug": "miamide-yagmurlu-gunde-ne-yapilir",
+      "title": "Miami'de Yağmurlu Günde Ne Yapılır?",
+      "question": "Miami'de yağmura denk gelirsek ne yapabiliriz?",
+      "category": "Etkinlik & Sezon",
+      "cluster": "sezon",
+      "priority": 3,
+      "keywords": [
+        "Miami yağmur",
+        "Miami kapalı alan aktivite",
+        "Miami müze",
+        "yağmurlu günde Miami"
+      ],
+      "angle": "Önce beklentiyi düzelt: yaz aylarında yağmur genellikle gün boyu değil, öğleden sonra kısa ve şiddetli geçer — planı iptal etmek yerine kaydırmak çoğu zaman yeterli. Kapalı alan alternatifleri: müzeler, akvaryum yerine bilim merkezi, sanat mekânları, alışveriş merkezleri, kapalı gıda pazarları, sinema. Fırtına sırasında plaj ve tekne turlarının neden kapandığı, şimşek kuralı. SAAT VE BİLET FİYATI VERME — mekânların güncel saatini kendi sayfasından kontrol et de.",
+      "status": "pending"
+    },
+    {
+      "id": "cruise-port",
+      "slug": "portmiami-kruvaziyer-rehberi",
+      "title": "PortMiami'den Kruvaziyere Binmek: Pratik Rehber",
+      "question": "Miami'den kruvaziyere binecekler için limana ulaşım ve check-in nasıl işler?",
+      "category": "Ulaşım",
+      "cluster": "gezi",
+      "priority": 3,
+      "keywords": [
+        "PortMiami kruvaziyer",
+        "Miami cruise limanı",
+        "Miami kruvaziyer ulaşım",
+        "cruise check-in"
+      ],
+      "angle": "Limanın şehir merkezine yakınlığı, havalimanından ulaşım seçenekleri, terminal ve check-in saatinin gemi şirketi tarafından belirlendiği. En kritik pratik tavsiye: kalkış günü uçuşuyla gelmemek, bir gece önceden şehirde olmak. Pasaport ve vize meselesi — kruvaziyerin uğradığı ülkelerin ayrı vize isteyebileceği, bunun gemi şirketinden teyit edilmesi gerektiği. Otopark ve bagaj teslimi. GEMİ ŞİRKETİ ÖNERME, fiyat verme.",
+      "status": "pending"
+    },
+    {
+      "id": "jet-lag",
+      "slug": "miami-jet-lag-nasil-atlatilir",
+      "title": "Miami Uçuşunda Jet Lag Nasıl Atlatılır?",
+      "question": "Türkiye ile Miami arasındaki saat farkı jet lag'i nasıl etkiler?",
+      "category": "Pratik Bilgi",
+      "cluster": "ucus",
+      "priority": 3,
+      "keywords": [
+        "Miami saat farkı",
+        "jet lag nasıl geçer",
+        "uzun uçuş yorgunluğu",
+        "Türkiye Amerika saat farkı"
+      ],
+      "angle": "Saat farkının yaz saati uygulaması nedeniyle dönem dönem değiştiğini söyle ve TEK BİR RAKAMA BAĞLANMA — 'gidiş tarihindeki farkı kontrol et' de. Batıya uçmanın doğuya uçmaktan neden daha kolay olduğu. Pratik strateji: uçakta hedef saate göre uyumak, varış günü gün ışığına çıkmak, ilk günü hafif program yapmak, kafein ve şekerleme yönetimi. İLAÇ ÖNERME, melatonin dozu verme — bu tıbbi tavsiye olur; doktora danışma cümlesi ekle.",
+      "status": "pending"
+    },
+    {
+      "id": "bike-share",
+      "slug": "miamide-bisikletle-gezmek",
+      "title": "Miami'de Bisikletle Gezmek Mantıklı mı?",
+      "question": "Miami'de bisiklet kiralayıp şehri gezmek mümkün mü?",
+      "category": "Ulaşım",
+      "cluster": "arac",
+      "priority": 3,
+      "keywords": [
+        "Miami bisiklet kiralama",
+        "Citi Bike Miami",
+        "Miami Beach bisiklet yolu",
+        "Miami bisikletle gezi"
+      ],
+      "angle": "Nerede işe yarar, nerede yaramaz: Miami Beach, Venetian Causeway ve Key Biscayne bisiklet için elverişli; şehir içi ana arterler ve otoyol kenarları değil. Paylaşımlı bisiklet sisteminin nasıl çalıştığı (istasyon, uygulama, dakika bazlı ücret) — TARİFE RAKAMI VERME. Kask, sıcak ve nem, su, öğle saatlerinden kaçınma. Bisikletin araç sayıldığı ve trafik kurallarına tabi olduğu. Elektrikli scooter kurallarının belediyeden belediyeye değiştiği uyarısı.",
+      "status": "pending"
+    },
+    {
+      "id": "art-basel",
+      "slug": "art-basel-miami-haftasi-rehberi",
+      "title": "Art Basel Miami Haftasında Şehirde Ne Olur?",
+      "question": "Art Basel haftasında Miami'ye gitmek nasıl bir deneyim?",
+      "category": "Etkinlik & Sezon",
+      "cluster": "sezon",
+      "priority": 3,
+      "keywords": [
+        "Art Basel Miami",
+        "Miami sanat haftası",
+        "Aralık ayında Miami",
+        "Miami etkinlik takvimi"
+      ],
+      "angle": "Haftanın tek bir fuardan ibaret olmadığını anlat: ana fuarın yanında şehre yayılan uydu fuarlar, galeri açılışları ve sokak sanatı etkinlikleri. Kime uygun: sanatla ilgilenen, kalabalığa ve yüksek fiyata hazır olan. Kime uygun değil: sakin plaj tatili arayan. Otel ve ulaşımın bu haftada zorlaştığını, erken planlamanın şart olduğunu göreli olarak söyle — FİYAT ARTIŞ ORANI UYDURMA. Tarihler yıldan yıla değişir; resmî etkinlik sayfasından teyit et.",
+      "status": "pending"
+    },
+    {
+      "id": "alcohol-rules",
+      "slug": "miamide-alkol-kurallari",
+      "title": "Miami'de Alkol Kuralları: Yaş, Saat ve Açık Alan",
+      "question": "Miami'de alkol satışı ve tüketimi hangi kurallara tabi?",
+      "category": "Gece Hayatı",
+      "cluster": "gece",
+      "priority": 3,
+      "keywords": [
+        "Amerika alkol yaşı 21",
+        "Miami alkol satış saatleri",
+        "plajda alkol yasağı",
+        "açık kapta alkol ABD"
+      ],
+      "angle": "21 yaş kuralı ve kimlik kontrolünün istisnasızlığı; pasaportun tek güvenli belge olması. Açık kapta alkolun sokakta ve plajda yasak olduğu, bunun ciddi bir para cezası doğurabileceği. Satış saatlerinin ve market/dükkân türüne göre kısıtların BELEDİYEDEN BELEDİYEYE değiştiği — tek bir saat iddia etme, 'satın alacağın yerin kuralı geçerlidir' de. Alkollü araç kullanmanın ABD'deki ağır sonuçları. Kiralık araçta açık şişe taşıma kuralı.",
+      "status": "pending"
+    },
+    {
+      "id": "accessibility",
+      "slug": "miamide-engelli-erisimi",
+      "title": "Miami Tekerlekli Sandalye ve Engelli Erişimi Açısından Nasıl?",
+      "question": "Miami'de tekerlekli sandalyeyle gezmek ne kadar kolay?",
+      "category": "Aile & Erişim",
+      "cluster": "erisim",
+      "priority": 3,
+      "keywords": [
+        "Miami engelli erişimi",
+        "tekerlekli sandalye seyahat",
+        "erişilebilir plaj Miami",
+        "ADA erişim ABD"
+      ],
+      "angle": "ABD'de erişilebilirliğin yasal bir standarda (ADA) bağlı olduğunu ve bunun pratikte Türkiye'ye göre daha tutarlı bir deneyim ürettiğini söyle — ama abartma, eski binalar istisna. Somut başlıklar: toplu taşımada rampa ve asansör, bazı plajlarda kum üstü erişim yolu ve tekerlekli sandalye ödünç verme uygulamaları, otel odası rezervasyonunda 'accessible room' talebinin AYRI istenmesi gerektiği, havayolunda tekerlekli sandalye taşıma bildirimi. TESİS ADI VE DONANIM İDDİASI UYDURMA — 'gitmeden önce doğrudan tesise sor' kuralını öğret.",
+      "status": "pending"
+    },
+    {
+      "id": "photo-drone",
+      "slug": "miamide-fotograf-ve-drone-kurallari",
+      "title": "Miami'de Fotoğraf Çekmek ve Drone Uçurmak",
+      "question": "Miami'de drone uçurmak serbest mi, nerede fotoğraf çekilebilir?",
+      "category": "Pratik Bilgi",
+      "cluster": "aktivite",
+      "priority": 4,
+      "keywords": [
+        "Miami drone kuralları",
+        "Amerika'da drone uçurmak",
+        "Miami fotoğraf noktaları",
+        "FAA drone kayıt"
+      ],
+      "angle": "Drone kısmını ciddiye al: ABD'de drone uçurmak federal düzenlemeye tabi, havalimanı çevresi ve bazı bölgeler uçuşa kapalı, kayıt ve uygulama üzerinden izin gerekebilir. KESİN PROSEDÜR VE AĞIRLIK EŞİĞİ İDDİA ETME — FAA'nın güncel sayfasına ve resmî uygulamasına yönlendir; ihlalin cezası ağır. Fotoğraf tarafı: Art Deco cephelerinin ışığı, gün doğumu ve gün batımının hangi kıyıda çalıştığı, özel mülk ve müze içi çekim izinleri, insan fotoğraflamada nezaket.",
+      "status": "pending"
+    },
+    {
+      "id": "pets",
+      "slug": "miamiye-evcil-hayvanla-seyahat",
+      "title": "Miami'ye Evcil Hayvanla Seyahat Etmek",
+      "question": "Miami'ye kedi ya da köpekle seyahat etmek mümkün mü?",
+      "category": "Aile & Erişim",
+      "cluster": "erisim",
+      "priority": 4,
+      "keywords": [
+        "evcil hayvanla uçuş",
+        "Amerika'ya köpek götürmek",
+        "Miami pet friendly",
+        "köpek plajı Miami"
+      ],
+      "angle": "En kritik uyarı: ABD'ye evcil hayvan girişi kuralları (aşı, mikroçip, sağlık sertifikası, bazı ülkeler için ek şartlar) değişkendir ve HAVAYOLUNUN kuralı ile ÜLKENİN kuralı ayrı ayrı sağlanmalıdır — kesin belge listesi yazma, CDC ve havayolunun resmî sayfasına yönlendir. Kabin/kargo ayrımı, sıcak hava nedeniyle bazı dönemlerde kargo taşımasının durabilmesi. Şehirde: pet-friendly otel talebinin ayrıca sorulması, köpeklerin yasak olduğu plajlar ve köpek dostu alanların varlığı. TESİS ADI UYDURMA.",
+      "status": "pending"
+    },
+    {
+      "id": "luggage-storage",
+      "slug": "miamide-bagaj-nereye-birakilir",
+      "title": "Miami'de Bagaj Nereye Bırakılır?",
+      "question": "Miami'de otelden çıkış ile uçuş arasında bagaj nereye bırakılır?",
+      "category": "Pratik Bilgi",
+      "cluster": "pratik",
+      "priority": 4,
+      "keywords": [
+        "Miami bagaj deposu",
+        "luggage storage Miami",
+        "otel bagaj bırakma",
+        "havalimanı emanet"
+      ],
+      "angle": "En basit ve ücretsiz çözümle başla: otelin check-out sonrası bagaj saklama hizmeti — çoğu otel yapar, sormak yeterli. Sonra ücretli seçenekler: bagaj emanet uygulamaları üzerinden dükkân/otel noktaları, havalimanı emanet hizmetinin varlığının terminale göre değiştiği. Kruvaziyer ve uzun aktarma senaryoları. Değerli eşyanın emanete bırakılmaması, sigorta kapsamının okunması. FİYAT VE MARKA ÖNERME — 'kapasitesi ve saatleri değişir, aynı gün teyit et' de.",
+      "status": "pending"
+    },
+    {
+      "id": "restaurant-booking",
+      "slug": "miamide-restoran-rezervasyonu",
+      "title": "Miami'de Restoran Rezervasyonu Nasıl Yapılır?",
+      "question": "Miami'de popüler restoranlara rezervasyon almak zor mu?",
+      "category": "Yeme İçme",
+      "cluster": "pratik",
+      "priority": 4,
+      "keywords": [
+        "Miami restoran rezervasyon",
+        "Resy OpenTable",
+        "Miami popüler restoran",
+        "restoran rezervasyon iptal ücreti"
+      ],
+      "angle": "Sistemi anlat: rezervasyon uygulamaları üzerinden masaların belirli bir gün önceden açılması, popüler yerlerde saatlerin dakikalar içinde dolması, bar tarafının çoğu zaman rezervasyonsuz kabul etmesi, bekleme listesi mantığı. Gelmemenin (no-show) kredi kartından ücret doğurabildiği. Erken saatlerin ve hafta içi günlerin avantajı. RESTORAN ADI VE FİYAT VERME. Kıyafet kuralı ve grup rezervasyonunda otomatik servis ücretine kısa değin.",
+      "status": "pending"
+    },
+    {
+      "id": "golf",
+      "slug": "miamide-golf-oynamak",
+      "title": "Miami'de Golf Oynamak: Sahalar ve Rezervasyon",
+      "question": "Miami'de turist olarak golf oynamak mümkün mü?",
+      "category": "Pratik Bilgi",
+      "cluster": "aktivite",
+      "priority": 4,
+      "keywords": [
+        "Miami golf sahaları",
+        "Florida golf tatili",
+        "public golf course Miami",
+        "golf tee time rezervasyon"
+      ],
+      "angle": "Ayrımı kur: halka açık (public/municipal) sahalar herkese açıktır, özel kulüpler üyelik ya da üye davetiyle çalışır — turist için doğru arama terimi 'public course'. Tee time rezervasyonunun online sistemlerle nasıl yapıldığı, ekipman kiralama, golf arabası (cart) kullanımının çoğu sahada standart olması, kıyafet kuralı. Sıcak ve nem nedeniyle sabah erken saatlerin tercih edilmesi, yaz aylarında öğleden sonra şimşek nedeniyle sahaların kapanabilmesi. SAHA ADI, GREEN FEE VE PUAN VERME.",
+      "status": "pending"
+    }
+  ]
+}

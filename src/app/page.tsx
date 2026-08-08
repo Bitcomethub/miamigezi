@@ -1,69 +1,170 @@
-import Image from "next/image";
+import Link from 'next/link';
+import type { Metadata } from 'next';
+import { GUIDES } from '@/content/guides';
+import { getRecentPosts } from '@/lib/blogData';
+import { Ledge, Sunburst } from '@/components/Ledge';
+import { SITE } from '@/lib/site';
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Miami Seyahat Rehberi — Uçak Bileti, Gezilecek Yerler, Oteller",
+  description: SITE.description,
+  alternates: { canonical: '/' },
+};
+
+export default function HomePage() {
+  const posts = getRecentPosts(4);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      {/* ── Açılış ────────────────────────────────────────────────────────
+          Fotoğraf yok — lisanslı görsel yok ve uydurma stok üretmiyoruz.
+          Hiyerarşi tamamen tipografiden ve yatay silmelerden geliyor. */}
+      <section className="rise mx-auto max-w-[78rem] px-5 pt-14 pb-band sm:px-8 sm:pt-20">
+        <p className="flex items-center gap-2.5 font-display text-label font-semibold tracking-[0.22em] text-coral uppercase">
+          <Sunburst className="h-3 w-5" />
+          Türkçe Miami rehberi
+        </p>
+
+        <h1 className="mt-6 max-w-[16ch] font-display text-hero font-semibold tracking-[-0.035em] text-balance">
+          Miami’yi gitmeden önce anlayın.
+        </h1>
+
+        <div className="mt-10 grid gap-x-14 gap-y-6 md:grid-cols-[1.15fr_1fr]">
+          <p className="max-w-[46ch] text-body text-ink-2">
+            Uçak biletinden otel semtine, plaj bayraklarından bahşiş oranına
+            kadar Miami’de işinize yarayacak her şey — pazarlama diliyle değil,
+            gerçekten karar vermenizi sağlayacak ayrıntıyla.
+          </p>
+          <p className="max-w-[42ch] self-end text-small text-mute">
+            On temel rehber, sürekli güncellenen bir günlük yazı akışı ve
+            oynak bilgilerde açık bir “değişebilir” çerçevesi. Bilet
+            satmıyoruz, komisyon almıyoruz.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </section>
+
+      {/* ── Numaralı içindekiler ──────────────────────────────────────────
+          Kart ızgarası DEĞİL: editoryal bir künye listesi. Numaralar
+          içeriğin sırasını taşır, dekorasyon değildir. */}
+      <section className="mx-auto max-w-[78rem] px-5 sm:px-8" aria-labelledby="rehberler">
+        <div className="flex items-baseline justify-between gap-6">
+          <h2
+            id="rehberler"
+            className="font-display text-label font-semibold tracking-[0.2em] text-mute uppercase"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Rehberler
+          </h2>
+          <span className="tabular font-display text-label text-mute">
+            {GUIDES.length} bölüm
+          </span>
         </div>
-      </main>
-    </div>
+        <Ledge className="mt-3" />
+
+        <ol className="mt-10">
+          {GUIDES.map((guide, i) => (
+            <li key={guide.slug}>
+              <Link
+                href={`/${guide.slug}`}
+                className="group grid grid-cols-[2.75rem_1fr] items-baseline gap-x-4 gap-y-2 border-t border-ink/12 py-6 no-underline sm:grid-cols-[3.5rem_minmax(0,20rem)_1fr] sm:gap-x-8 sm:py-7"
+                style={{ borderTopWidth: i === 0 ? 0 : undefined }}
+              >
+                <span
+                  aria-hidden="true"
+                  className="tabular font-display text-h3 font-semibold text-coral/55 transition-colors duration-300 group-hover:text-coral"
+                >
+                  {guide.number}
+                </span>
+
+                <h3 className="font-display text-h2 font-semibold tracking-[-0.025em] text-ink transition-colors duration-300 group-hover:text-coral-deep">
+                  {guide.navLabel}
+                </h3>
+
+                <p className="col-start-2 max-w-[52ch] text-small text-ink-2 sm:col-start-3 sm:max-w-none">
+                  {guide.question}
+                </p>
+              </Link>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      {/* ── Koyu bant: yöntem beyanı ──────────────────────────────────── */}
+      <section className="fluted mt-band bg-lagoon-deep text-paper">
+        <div className="mx-auto grid max-w-[78rem] gap-x-14 gap-y-8 px-5 py-band sm:px-8 md:grid-cols-[1fr_1.3fr]">
+          <h2 className="max-w-[14ch] font-display text-h1 font-semibold tracking-[-0.03em] text-balance">
+            Rakam varsa kaynağı vardır.
+          </h2>
+          <div className="prose-mg text-small text-paper/72">
+            <p>
+              Miami’de fiyatlar, saatler ve sezonlar hızlı değişiyor. Bu yüzden
+              burada uydurma rakam yok: fiyat aralıkları eğilim olarak veriliyor,
+              her tabloda ne kadar oynak olduğunu söyleyen bir not bulunuyor ve
+              resmî kaynağa yönlendirme yapılıyor.
+            </p>
+            <p>
+              Bilet, otel veya tur satmıyoruz. Bu sitenin bir şeyi size satmak
+              gibi bir işi olmadığı için, en uygun seçeneğin “bizim
+              üzerimizden” olması diye bir zorunluluk da yok.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Blog akışı ────────────────────────────────────────────────── */}
+      {posts.length > 0 ? (
+        <section
+          className="mx-auto max-w-[78rem] px-5 pt-band sm:px-8"
+          aria-labelledby="gunluk"
+        >
+          <div className="flex items-baseline justify-between gap-6">
+            <h2
+              id="gunluk"
+              className="font-display text-label font-semibold tracking-[0.2em] text-mute uppercase"
+            >
+              Günlük yazılar
+            </h2>
+            <Link
+              href="/blog"
+              className="font-display text-label text-coral-deep underline decoration-coral/40 underline-offset-4 transition-colors hover:decoration-coral"
+            >
+              Tümü
+            </Link>
+          </div>
+          <Ledge className="mt-3" tone="coral" />
+
+          <ul className="mt-9 grid gap-x-10 gap-y-8 sm:grid-cols-2">
+            {posts.map((post) => (
+              <li key={post.slug} className="min-w-0">
+                <Link href={`/blog/${post.slug}`} className="group no-underline">
+                  <time
+                    dateTime={post.publishedAt}
+                    className="tabular font-display text-label tracking-[0.12em] text-mute uppercase"
+                  >
+                    {formatDate(post.publishedAt)}
+                  </time>
+                  <h3 className="mt-2 font-display text-h3 font-semibold tracking-[-0.015em] text-ink transition-colors duration-300 group-hover:text-coral-deep">
+                    {post.title}
+                  </h3>
+                  <p className="mt-1.5 max-w-[46ch] text-small text-ink-2">
+                    {post.excerpt}
+                  </p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+    </>
   );
+}
+
+/** Sunucuda çalışır; ISO string'i parçalayarak biçimlendirir — saat dilimi
+ *  okumaz. `new Date()` ile bugünü okumak Vercel'de UTC döner (bilinen tuzak). */
+function formatDate(iso: string): string {
+  const AYLAR = [
+    'Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran',
+    'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık',
+  ];
+  const [y, m, d] = iso.slice(0, 10).split('-');
+  return `${Number(d)} ${AYLAR[Number(m) - 1]} ${y}`;
 }

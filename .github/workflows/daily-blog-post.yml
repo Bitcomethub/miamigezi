@@ -1,0 +1,121 @@
+# Günlük içerik hattı — miamigezi
+#
+# Neden Vercel Cron değil GitHub Action? Yayın hedefi git'e commit edilen statik
+# bir dosya (src/content/blog/generated-posts.json — sayfalar SSG ile üretiliyor,
+# AI crawler'ların JS çalıştırmadan gördüğü şey bu). Vercel fonksiyonlarının dosya
+# sistemi salt-okunur olduğu için bir cron route'u repoya ancak GitHub API +
+# kalıcı PAT ile yazabilirdi; GH Actions ise yerleşik, kapsamı sınırlı
+# GITHUB_TOKEN ile doğrudan push edebiliyor ve cron'u da kendisi sağlıyor.
+# Ayrıntılı işletim rehberi: docs/blog-pipeline.md
+#
+# Manuel tetikleme: Actions sekmesi → "Günlük blog yazısı" → Run workflow
+# (dry_run=true seçilirse hiçbir dosya yazılmaz/push edilmez — API yine çağrılır).
+
+name: Günlük blog yazısı
+
+on:
+  schedule:
+    # 06:30 UTC = 09:30 İstanbul, 02:30 Miami — düşük trafik penceresi
+    - cron: '30 6 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (dosya yazma / push yok)'
+        type: boolean
+        default: false
+      mock:
+        description: 'Mock taslak (API çağırma — sadece hattı test eder)'
+        type: boolean
+        default: false
+
+concurrency:
+  group: daily-blog-post
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      # schedule → default branch (main); workflow_dispatch → seçilen ref.
+      # Sabit 'ref: main' YAZMA: branch üzerinde dry-run testini imkânsız kılar
+      # (miamili'de ilk canlı testte branch dispatch'i main'in eski kodunu çalıştırdı).
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Bağımlılıklar
+        run: npm ci
+
+      # Kalite kapısının BİRİM TESTİ — API'siz, saniyeler sürer. Kapı bozulmuşsa
+      # (mutasyon kaçıyorsa ya da meşru yazımı yanlışlıkla eliyorsa) job burada
+      # kırmızıya döner ve API'ye tek bir istek bile gitmez.
+      - name: Kalite kapısı self-test
+        run: npm run blog:test
+
+      - name: Yazıyı üret
+        id: generate
+        continue-on-error: true # needs_review durumunda da state commit edilsin
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          FLAGS=""
+          if [ "${{ inputs.dry_run }}" = "true" ]; then FLAGS="$FLAGS --dry-run"; fi
+          if [ "${{ inputs.mock }}" = "true" ]; then FLAGS="$FLAGS --mock"; fi
+          node scripts/generate-blog-post.mjs $FLAGS
+
+      # Yayın VEYA needs_review state değişikliklerini commit et.
+      # Push → Vercel main deploy'unu otomatik tetikler → sitemap.xml yeni
+      # makaleyi içerir (sitemap.ts ALL_POSTS üzerinden üretiyor).
+      - name: Commit ve push
+        id: push
+        if: inputs.dry_run != true
+        run: |
+          git config user.name "miamigezi-bot"
+          git config user.email "adanirmetin@gmail.com"
+          git add src/content/blog/generated-posts.json content/
+          if git diff --cached --quiet; then
+            echo "değişiklik yok, commit atlanıyor"
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "content(blog): günlük yazı ($(date -u +%F))"
+            git pull --rebase origin "${{ github.ref_name }}"
+            git push origin "HEAD:${{ github.ref_name }}"
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # IndexNow: Bing/Yandex'e yeni URL'i bildir. Anahtar gizli DEĞİL — protokol
+      # gereği public/<key>.txt olarak yayınlanıyor, doğrulama bu dosyayla yapılıyor.
+      # Vercel deploy'u ~2-3 dk sürdüğü için önce bekliyoruz; motorlar URL'i hemen
+      # taramaz, kuyruğa alır.
+      - name: IndexNow ping
+        if: steps.generate.outputs.published == 'true' && steps.push.outputs.pushed == 'true'
+        run: |
+          sleep 180
+          curl -sS -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{
+              "host": "miamigezi.com",
+              "key": "6cedaa49efb91eaf5e0331d26a30ed2f",
+              "keyLocation": "https://miamigezi.com/6cedaa49efb91eaf5e0331d26a30ed2f.txt",
+              "urlList": [
+                "${{ steps.generate.outputs.post_url }}",
+                "https://miamigezi.com/blog",
+                "https://miamigezi.com/sitemap.xml"
+              ]
+            }' -w "\nIndexNow HTTP %{http_code}\n"
+
+      # Kalite kapısı 2 kez başarısız olduysa (needs_review) job'u kırmızıya
+      # boya → GitHub e-posta bildirimi. Taslak content/rejected-drafts/ altında.
+      - name: İnceleme gerekiyorsa kırmızıya boya
+        if: steps.generate.outcome == 'failure'
+        run: |
+          echo "::error::Yazı kalite kapısından 2 kez döndü veya üretim hatası oluştu. content/rejected-drafts/ ve yukarıdaki logu incele."
+          exit 1

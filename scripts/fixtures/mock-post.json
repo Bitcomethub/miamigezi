@@ -1,0 +1,86 @@
+{
+  "_readme": "Kalite kapısının BİRİM TESTİ fixture'ı. Modelden dönen taslağın şeklini birebir taklit eder (OUTPUT_SCHEMA alanları). Bu dosya --self-test ile iki yönlü kullanılır: temiz hâli kapıdan GEÇMELİ, selfTest içindeki mutasyonların her biri YAKALANMALI. Backlog'un ilk konusuna (abd-turist-vizesi-randevu-sureci) göre yazıldı — backlog'un ilk konusu değişirse intro örtüşme kontrolü kırılır, o zaman bu fixture da güncellenir. Yayınlanan bir içerik DEĞİLDİR.",
+  "excerpt": "ABD turist vizesi randevuyla alınır: önce DS-160 formu, sonra harç ödemesi, sonra randevu ve mülakat. Bekleme süresi döneme göre değişir, tek bir rakama bağlanamaz. Türk vatandaşları ESTA kullanamaz.",
+  "intro": [
+    "ABD turist vizesi randevuyla alınır ve süreç DS-160 formunun doldurulmasıyla başlar. Formun ardından harç ödemesi, ardından da başvuru merkezi ve konsolosluk mülakatı randevuları gelir. Adımların sırası sabittir ve hiçbiri atlanamaz.",
+    "Sürecin en belirsiz kısmı randevu bekleme süresidir; temsilciliğe ve döneme göre büyük fark gösterir. Bu yüzden uçak biletini randevu kesinleşmeden almamak, Miami planı yapan çoğu kişinin en pratik kuralıdır."
+  ],
+  "sections": [
+    {
+      "heading": "ABD turist vizesi başvurusunda ilk adım nedir?",
+      "body": [
+        "Başvuru, çevrimiçi DS-160 formunun doldurulmasıyla başlar. Form uzun ve ayrıntılıdır; pasaport bilgilerinden seyahat geçmişine, iş durumundan aile bilgilerine kadar çok sayıda alan ister. Formu tek oturumda bitirmek zorunda değilsiniz, ancak verdiğiniz bilgilerin pasaportunuzla ve mülakatta söyleyeceklerinizle tutarlı olması gerekir. Form gönderildikten sonra alınan onay sayfası, randevu adımlarında ve mülakat gününde yanınızda bulunması gereken temel belgelerden biridir.",
+        "Form tamamlandıktan sonra sırasıyla başvuru harcının ödenmesi ve randevu takviminin açılması gelir. Harç tutarı zaman içinde güncellendiği için burada sabit bir rakam yazmıyoruz; ödeme adımında güncel tutar ekranda gösterilir. Ödeme referansı sisteme düşmeden randevu ekranı açılmaz, bu yüzden ödemeden sonra bildirimi beklemek gerekir. Sıralama bellidir: önce form, sonra ödeme, sonra randevu.",
+        "Formu doldururken en sık yapılan hata, adları pasaporttaki yazımdan farklı girmek ve geçmiş seyahatleri eksik bildirmektir. Gönderdikten sonra düzeltme yapmak mümkün ama zaman kaybettirir; bu yüzden göndermeden önce bilgileri satır satır kontrol etmek en hızlı yol. Onay sayfasındaki barkod mülakat girişinde okutulduğu için çıktısını yanınızda bulundurmak da işinizi kolaylaştırır."
+      ]
+    },
+    {
+      "heading": "Konsolosluk randevusu ne kadar sürede alınır?",
+      "body": [
+        "Bekleme süresi için tek bir rakam vermek mümkün değil; süre başvurunun yapıldığı temsilciliğe, sezona ve o dönemki yoğunluğa göre değişir. Bazı dönemlerde birkaç hafta içinde uygun tarih bulunabilirken, yoğun dönemlerde bekleme çok daha uzun olabilir. Güncel süreyi yalnızca resmî randevu sisteminden görebilirsiniz; ikinci el bilgiler hızla eskiyor.",
+        "Randevu iki ayrı adımdan oluşur: parmak izi ve fotoğraf için başvuru merkezi randevusu ile konsolosluk mülakatı randevusu. İkisinin tarihleri farklı olabilir ve genellikle önce başvuru merkezi adımı tamamlanır. Sistemde iptal edilen tarihler zaman zaman yeniden açılır; randevu ekranını düzenli kontrol etmek daha erken bir gün bulma şansını artırır.",
+        "Planlama açısından işe yarayan yaklaşım, randevu tarihini önce kesinleştirip uçuş ve konaklama kararlarını ondan sonra vermektir. Vize sonucu belli olmadan yapılan iade edilemez rezervasyonlar, sürecin en pahalı hatası oluyor. Esnek tarihli ya da iptal koşulu olan seçenekler bu riski azaltıyor; yine de kesin karar için sonucu beklemek en sağlıklısı."
+      ]
+    },
+    {
+      "heading": "Mülakatta hangi belgeler isteniyor?",
+      "body": [
+        "Temel set her başvuruda aynıdır: pasaport, DS-160 onay sayfası, randevu teyidi ve harç ödeme belgesi. Bunların dışında istenen destekleyici belgeler kişiden kişiye değişir. Çalışıyorsanız iş yerinden alınmış bir yazı, öğrenciyseniz öğrenci belgesi, kendi işiniz varsa şirket evrakları en sık istenenlerdir.",
+        "Destekleyici belgelerin amacı, ülkenize dönmenizi bekleten bağların anlaşılmasıdır; iş, aile, eğitim ya da mülkiyet bunların yaygın örnekleridir. Belgelerin çok olması değil, tutarlı ve anlaşılır olması işe yarar. Görevli sormadıkça belgeleri kendiliğinden uzatmanız gerekmez. Gerçeğe aykırı belge sunmak ise reddin ötesinde kalıcı sonuçlar doğurabilir.",
+        "Belgeleri düzenli bir dosyada, istenme ihtimaline göre sıralı tutmak mülakatta zaman kazandırır. Görüşme genellikle kısa sürer ve sorular kişiselleşir: nerede çalıştığınız, kimlerle gideceğiniz, dönüşte sizi ne beklediği gibi. Kısa, net ve doğru cevaplar, ezberlenmiş uzun anlatımlardan daha iyi sonuç veriyor."
+      ],
+      "list": [
+        "Pasaport ve varsa eski pasaportlar",
+        "DS-160 onay sayfası ile randevu teyidi",
+        "Harç ödemesinin belgesi",
+        "Çalışma, öğrencilik ya da işletme sahipliğini gösteren yazı"
+      ]
+    },
+    {
+      "heading": "Vize alındıktan sonra sınırda ne oluyor?",
+      "body": [
+        "Vize almak ülkeye girişi garanti etmez; vize yalnızca sınır kapısında giriş talebinde bulunma hakkı verir. Nihai kabul kararı havalimanındaki sınır görevlisine aittir. Bu ayrım, ilk kez gidenlerin en sık şaşırdığı noktalardan biridir ve vize onayını bir garanti sanmak gereksiz sorun çıkarabilir.",
+        "Sınırda genellikle seyahatin amacı, kalış süresi, nerede kalacağınız ve dönüş planınız sorulur. Cevapların formda yazdıklarınızla ve mülakatta söylediklerinizle uyumlu olması beklenir. Kalış süresi vizenin geçerlilik süresiyle aynı şey değildir; ne kadar kalabileceğiniz giriş sırasında ayrıca belirlenir ve elektronik kayda işlenir. Bu kaydı çıkıştan önce kontrol etmekte fayda var.",
+        "Sınır kontrolünden geçtikten sonra dikkat edilmesi gereken bir başka nokta, yanınızda getirdiğiniz yiyecek ve tarım ürünleridir. Beyan edilmeyen ürünler, kişi kötü niyetli olmasa bile para cezasına yol açabiliyor. Kuru gıda ve paketli ürünlerde kural içeriğe göre değiştiği için, şüpheye düşerseniz beyan formunda işaretlemek her zaman daha güvenli. Beyan etmek çoğu durumda ürünü kaybetmek anlamına gelmiyor; saklamak ise ceza riski taşıyor."
+      ]
+    },
+    {
+      "heading": "Türk vatandaşları ESTA ile gidebilir mi?",
+      "body": [
+        "ESTA, Türk vatandaşları için bir seçenek değildir. ESTA yalnızca Vize Muafiyet Programı kapsamındaki ülkelerin vatandaşlarına açıktır ve Türkiye bu programın içinde yer almaz. Dolayısıyla Türk pasaportuyla turistik amaçlı gidiş için vize almak gerekir; ESTA başvurusu yapılamaz, yapılsa da sonuç doğurmaz.",
+        "Karışıklık genellikle bazı Avrupa ülkelerinin vatandaşlarına uygulanan sistemle karşılaştırma yapılırken ortaya çıkıyor. Bir başka karışıklık kaynağı, ikinci bir ülke vatandaşlığı ya da daimi oturum izni olan kişilerin farklı kurallara tabi olmasıdır. İkinci pasaportunuz varsa hangi belgeyle seyahat edeceğinizi baştan netleştirin. Bu bilgi hukuki tavsiye değildir; tereddüt hâlinde göçmenlik hukuku alanında çalışan bir avukata danışın.",
+        "Uygulamada bu fark, planlama takvimini doğrudan uzatıyor: vize gerektiren bir pasaportla seyahat ediyorsanız süreci aylar öncesinden başlatmak gerekir. Aynı gruptaki herkesin durumu farklı olabileceği için, aile ya da arkadaş grubu hâlinde gidilecekse herkesin belgesini ayrı ayrı gözden geçirin. Tek kişinin eksik kalması bütün planı kaydırıyor."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Vize başvurusu için aracı kuruma ihtiyaç var mı?",
+      "a": "Hayır, başvuruyu kendiniz yapabilirsiniz. Form, harç ödemesi ve randevu adımlarının hepsi resmî sistem üzerinden bireysel olarak tamamlanabilir. Aracı kurumlar süreci hızlandırmaz ve randevu tarihini değiştiremez. Yardım almak isterseniz bunun yalnızca bir kolaylık hizmeti olduğunu, sonucu etkilemediğini bilerek karar verin."
+    },
+    {
+      "q": "Vize reddedilirse tekrar başvurabilir miyim?",
+      "a": "Evet, tekrar başvurmanın önünde bir engel yok. Ancak koşullarınızda anlamlı bir değişiklik olmadan yapılan yeni başvuruların sonucu çoğu zaman aynı oluyor. Ret gerekçesi mülakatta sözlü olarak ya da yazılı bildirimle aktarılır; yeni başvurudan önce bu gerekçeyi doğru anlamak en kritik adımdır."
+    },
+    {
+      "q": "Çocuklar için ayrı başvuru yapmak gerekir mi?",
+      "a": "Evet, bebekler ve küçük çocuklar dahil her yolcunun kendi vizesi olmalıdır. Çocuklar için ayrı form doldurulur ve ayrı harç ödenir. Belirli yaş gruplarında mülakat şartı farklı uygulanabildiği için, randevu alırken çocuğun yaşına göre hangi adımların gerektiğini resmî sistemden kontrol edin."
+    },
+    {
+      "q": "Vizenin geçerlilik süresi ne kadar kalabileceğimi gösterir mi?",
+      "a": "Hayır. Geçerlilik süresi, o vizeyle giriş talebinde bulunabileceğiniz dönemi gösterir; ne kadar kalabileceğinizi değil. Kalış süresi her girişte sınır görevlisi tarafından belirlenir ve ayrı bir kayda işlenir. İki tarihi karıştırmak, farkında olmadan izinli süreyi aşmaya yol açabilir."
+    },
+    {
+      "q": "Randevumu daha erken bir tarihe taşıyabilir miyim?",
+      "a": "Bazen mümkün. İptaller nedeniyle boşalan tarihler sistemde yeniden açılabiliyor ve mevcut randevunuzu daha erken bir güne taşıyabiliyorsunuz. Bunun için ek ücret ödemeniz gerekmez. Boşalan tarihler hızla dolduğu için garanti yoktur; planı kesinleşmiş randevu tarihine göre kurmak daha güvenli."
+    }
+  ],
+  "keywords": [
+    "ABD turist vizesi",
+    "B1 B2 vizesi başvuru",
+    "Amerika vizesi randevu",
+    "Miami vize gerekli mi",
+    "DS-160 formu",
+    "ESTA Türk vatandaşı"
+  ]
+}
