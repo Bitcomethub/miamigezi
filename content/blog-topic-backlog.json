@@ -26,7 +26,7 @@
         "Miami vize gerekli mi"
       ],
       "angle": "Süreci adım adım anlat: DS-160 formu, harç ödemesi, konsolosluk randevusu, mülakat. RANDEVU BEKLEME SÜRESİ İÇİN SAYI VERME — dönemsel olarak aylarca değişiyor, 'güncel süreyi resmî randevu sisteminden kontrol edin' de. Harç tutarını da yazma, 'başvuru sırasında güncel harç gösterilir' de. ESTA'nın Türk vatandaşları için GEÇERLİ OLMADIĞINI net söyle (Türkiye Vize Muafiyet Programı'nda değil). Vize aldıktan sonra sınırda kabul kararının yine de sınır memurunda olduğunu belirt. Hukuki tavsiye olmadığını yaz.",
-      "status": "pending"
+      "status": "needs_review"
     },
     {
       "id": "transit-visa",

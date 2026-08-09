@@ -1,0 +1,90 @@
+{
+  "topic": "visa-appointment",
+  "slug": "abd-turist-vizesi-randevu-sureci",
+  "problems": [
+    "intro ilk cümlesi soruyla yeterince örtüşmüyor (örtüşen kök: 1) — soruyu doğrudan yanıtla",
+    "bölüm 2 (Vize harcı nasıl ödenir?): 108 kelime — çok kısa, hedef 135-170"
+  ],
+  "draft": {
+    "excerpt": "ABD turist vizesi (B1/B2) DS-160 formu, harç ödemesi, konsolosluk randevusu ve mülakattan geçilerek alınır; ESTA Türk vatandaşları için geçerli değildir. Randevu süresi ve harç tutarı dönemsel değiştiğinden güncel bilgi resmi kaynaklardan kontrol edilmelidir.",
+    "intro": [
+      "Miami'ye gitmek için ABD turist vizesi (B1/B2), DS-160 başvuru formunun doldurulması, vize harcının ödenmesi, konsolosluk randevusu alınması ve ardından mülakata girilmesiyle elde edilir. Süreç Türkiye'deki ABD konsoloslukları (Ankara ve İstanbul) üzerinden yürütülür ve adımlar birbirine bağlıdır; form tamamlanmadan harç ödenmez, harç ödenmeden randevu alınamaz.",
+      "Bu rehber süreci adım adım anlatır; randevu bekleme süreleri ve harç tutarları dönemsel olarak değiştiği için burada sabit bir rakam verilmez, güncel bilgi her zaman resmi kaynaktan kontrol edilmelidir. Ayrıca bu metin hukuki tavsiye niteliği taşımaz; bağlayıcı sorularınız için ilgili konsolosluğa ya da bir göçmenlik uzmanına başvurmanız gerekir."
+    ],
+    "sections": [
+      {
+        "heading": "DS-160 formu nedir, nasıl doldurulur?",
+        "body": [
+          "DS-160, ABD Dışişleri Bakanlığı'nın çevrimiçi vize başvuru formudur (Online Nonimmigrant Visa Application) ve B1/B2 turist vizesi başvurusunun temelini oluşturur. Form; kişisel bilgiler, pasaport detayları, seyahat amacı, ABD'deki adres, iş ve aile durumu gibi başlıkları kapsar. Doldurma sırasında güncel bir dijital fotoğraf yüklenir ve tüm bilgiler pasaportla birebir uyumlu olmalıdır.",
+          "Form tamamlandığında bir teyit sayfası (confirmation page) ve barkodlu bir numara oluşur; bu numara randevu alırken ve mülakata girerken istenir, o yüzden çıktısı yanınızda olmalı. Bilgilerde tutarsızlık ya da eksik bölüm bırakmak, mülakatta ek soru sorulmasına ya da başvurunun geciktirilmesine yol açabilir. Formu doldurmadan önce pasaport, önceki ABD vizeleri varsa bilgileri ve iş/eğitim geçmişi hazır bulundurmak süreci hızlandırır. Form ücretsizdir; ödeme aşaması ayrı bir adımdır."
+        ]
+      },
+      {
+        "heading": "Vize harcı nasıl ödenir?",
+        "body": [
+          "Vize harcı (MRV fee), DS-160 formu tamamlandıktan sonra ödenir ve başvurunun randevu aşamasına geçebilmesi için şarttır. Ödeme, ABD Vize Bilgi Merkezi'nin belirttiği anlaşmalı bankalar üzerinden ya da bu bankaların şubelerinde yapılabilir; tutar başvuru sırasında sistem üzerinde güncel olarak gösterilir, bu yüzden burada sabit bir rakam vermek doğru olmaz.",
+          "Ödeme yapıldıktan sonra elinize geçen makbuzdaki referans numarası, randevu sistemine giriş yaparken istenecektir; bu numara olmadan randevu tarihi seçilemez. Harç genellikle belirli bir süre için geçerlidir, dolayısıyla ödemeyi yaptıktan sonra randevuyu makul bir zaman içinde almak gerekir. Ödeme kanalları ve kabul edilen yöntemler zaman zaman değişebildiğinden, en güncel talimatları başvuru yapılan ülkenin resmi vize randevu sitesinden kontrol etmek en sağlıklısıdır."
+        ]
+      },
+      {
+        "heading": "Konsolosluk randevusu nasıl alınır, ne kadar sürer?",
+        "body": [
+          "Konsolosluk randevusu, vize harcı ödendikten ve DS-160 teyit numarası alındıktan sonra resmi ABD vize randevu sistemi üzerinden alınır. Türkiye'de başvuru sahipleri genellikle Ankara ya da İstanbul'daki konsolosluk hizmetlerinden birini seçer; sistem üzerinde uygun tarih ve saat aralıkları listelenir.",
+          "Randevu bekleme süresi, konsolosluğun o dönemki iş yüküne göre büyük ölçüde değişir; bazı dönemlerde kısa, bazı dönemlerde oldukça uzun sürebilir. Bu nedenle sabit bir bekleme süresi vermek yanıltıcı olur; en güncel ve doğru bilgiyi öğrenmek için resmi randevu sistemine giriş yaparak mevcut tarihleri kontrol etmek gerekir. Randevu alınırken görüşme yeri, DS-160 numarası ve harç makbuz numarası eşleştirilir; bilgilerde tutarsızlık olursa sistem randevu oluşturmayı engelleyebilir. Seyahat tarihinden yeterince önce başvuruya başlamak, olası bekleme sürelerine karşı esneklik sağlar."
+        ]
+      },
+      {
+        "heading": "Mülakatta neler oluyor, nelere dikkat edilmeli?",
+        "body": [
+          "Mülakat günü konsolosluğa pasaport, DS-160 teyit sayfası, randevu onayı ve fotoğrafla gidilir; bazı durumlarda ek destekleyici belgeler de istenebilir. Görüşme sırasında önce biyometrik veriler (parmak izi) alınır, ardından konsolosluk memuruyla kısa bir sözlü görüşme yapılır.",
+          "Sorular genellikle seyahatin amacı, Miami'de ne kadar kalınacağı, kim tarafından karşılanacağı, iş ya da eğitim durumu ve Türkiye'ye dönüş bağları üzerine yoğunlaşır. Memur, başvuranın seyahat sonunda Türkiye'ye döneceğine dair güvenilir işaretler arar; bu yüzden net, kısa ve tutarlı cevaplar vermek önemlidir. Aşırı hazırlanmış ya da ezberlenmiş görünen cevaplar bazen şüphe yaratabilir, dolayısıyla doğal ve samimi bir anlatım tercih edilmelidir. Görüşme genellikle birkaç dakika sürer ve karar çoğu zaman aynı gün sözlü olarak bildirilir, pasaport sonradan elden ya da kargoyla teslim edilir."
+        ]
+      },
+      {
+        "heading": "ESTA Türk vatandaşları için geçerli mi?",
+        "body": [
+          "Hayır, ESTA (Elektronik Seyahat Yetkilendirme Sistemi) Türk vatandaşları için geçerli değildir, çünkü Türkiye ABD'nin Vize Muafiyet Programı'na (Visa Waiver Program) dahil değildir. ESTA, sadece bu programa dahil olan ülkelerin vatandaşlarına vize almadan kısa süreli seyahat izni verir; Türk pasaportu bu kapsamda sayılmaz.",
+          "Bazı seyahat siteleri ya da aracılar yanlışlıkla ESTA başvurusu önerebilir, ancak Türk vatandaşları için bu belge ABD'ye giriş için geçerli bir yetkilendirme oluşturmaz ve sınırda kabul edilmez. Miami'ye ya da ABD'nin başka bir noktasına turist olarak gitmek isteyen bir Türk vatandaşının tek yasal yolu, konsolosluk üzerinden B1/B2 turist vizesi başvurusu yapmaktır. Güncel muafiyet ülkeleri listesi zaman zaman değişebildiğinden, en doğru ve bağlayıcı bilgiyi ABD Dışişleri Bakanlığı'nın resmi sayfasından teyit etmek gerekir."
+        ]
+      },
+      {
+        "heading": "Vize alındıktan sonra ABD'ye giriş garanti mi?",
+        "body": [
+          "Hayır, elinizde B1/B2 vizesi olması ABD'ye giriş yapacağınızın garantisi değildir. Vize, sadece ABD sınırına gelip giriş talep etme hakkı verir; nihai kabul kararı her zaman sınırdaki gümrük ve sınır koruma memurunun (CBP) yetkisindedir.",
+          "Memur, pasaport kontrolü sırasında seyahat amacınızı, kalış süresini, dönüş bileti gibi belgeleri sorgulayabilir ve gerekli görürse ek sorular sorabilir ya da sizi ikincil bir kontrole (secondary inspection) yönlendirebilir. Bu görüşme sırasında verilen tutarsız ya da yetersiz cevaplar, geçerli bir vizeye sahip olsanız bile girişin reddedilmesine yol açabilir. Bu yüzden Miami seyahatinizle ilgili plan, konaklama ve dönüş bilgilerini net ve tutarlı biçimde anlatabilmek önemlidir. Vize süreci ve sınır kuralları hakkında bağlayıcı ve güncel bilgi için ABD Dışişleri Bakanlığı'nın ve Gümrük ve Sınır Koruma'nın (CBP) resmi sayfalarına başvurulmalıdır; bu yazı hukuki tavsiye niteliği taşımaz."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "DS-160 formunu doldurmak için ücret ödemem gerekir mi?",
+        "a": "Hayır, DS-160 formunun kendisi ücretsizdir; ödeme, form tamamlandıktan sonra ayrı bir adım olan vize harcı (MRV fee) aşamasında yapılır. Harç tutarı başvuru sırasında sistem üzerinde güncel olarak gösterilir."
+      },
+      {
+        "q": "Randevu ne kadar sürede çıkar?",
+        "a": "Bu, konsolosluğun o dönemki iş yüküne göre büyük ölçüde değişir ve dönemsel olarak aylarca farklılık gösterebilir. Sabit bir süre vermek yanıltıcı olur; en doğru bilgiyi resmi ABD vize randevu sisteminden anlık olarak kontrol etmek gerekir."
+      },
+      {
+        "q": "Mülakata girmeden vize alınabilir mi?",
+        "a": "B1/B2 turist vizesi başvurularının büyük çoğunluğunda bir konsolosluk mülakatı gereklidir; bazı özel istisnalar olabilir ama bunlar konsolosluğun kendi değerlendirmesine bağlıdır. Kesin durumunuz için başvuru yaptığınız konsolosluğun güncel yönergesine bakmanız gerekir."
+      },
+      {
+        "q": "ESTA ile Miami'ye gidebilir miyim?",
+        "a": "Hayır, ESTA Türk vatandaşları için geçerli değildir çünkü Türkiye ABD'nin Vize Muafiyet Programı'na dahil değildir. Miami'ye turist olarak gitmek isteyen bir Türk vatandaşının B1/B2 turist vizesi alması gerekir."
+      },
+      {
+        "q": "Vize onaylandıktan sonra girişim garanti mi?",
+        "a": "Hayır, vize sadece ABD sınırına gelip giriş talep etme hakkı verir; nihai karar sınırdaki gümrük ve sınır koruma memurunun yetkisindedir. Memur, seyahat amacınızı ve belgelerinizi kontrol ettikten sonra kabul ya da ek inceleme kararı verebilir."
+      }
+    ],
+    "keywords": [
+      "ABD turist vizesi",
+      "B1 B2 vizesi başvuru",
+      "Amerika vizesi randevu",
+      "Miami vize gerekli mi",
+      "DS-160 formu nasıl doldurulur",
+      "ESTA Türk vatandaşları",
+      "ABD konsolosluk mülakatı"
+    ]
+  }
+}
