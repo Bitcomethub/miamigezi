@@ -60,7 +60,8 @@
         "Amerika'da araba kiralama yaş sınırı"
       ],
       "angle": "İlk cümlede net cevap ver, sonra şartları aç: uluslararası sürücü belgesinin ne olduğu (tercüme belgesi, ehliyetin yerine geçmez, yanında orijinal ehliyet şart), kiralama şirketlerinin yaş politikası ve genç sürücü ek ücreti, kredi kartı üzerinden alınan blokaj, CDW/LDW ve sorumluluk sigortası kavramlarının Türkçe karşılıkları. RAKAM VERME — ek ücret ve depozito şirkete göre değişir, 'rezervasyon ekranında yazan tutarı okuyun' de. Kiralama sözleşmesinin ek sürücü maddesine dikkat çek.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-08-15"
     },
     {
       "id": "hurricane-warning",
