@@ -442,7 +442,10 @@ async function generateDraft(topic, brandFacts, feedback) {
     },
     body: JSON.stringify({
       model: MODEL,
-      max_tokens: 16000,
+      // 16000 -> 32000: kalite kapısı kalibrasyonu (bölüm başına 140-165 kelime)
+      // çıktıyı ~%40 büyüttü ve sonnet-5'in reasoning token'ları da bu bütçeden
+      // düşüyor; ilk kalibrasyon koşusu 'finish_reason: length' ile düştü.
+      max_tokens: 32000,
       messages,
       response_format: {
         type: 'json_schema',
