@@ -229,8 +229,15 @@ export function validatePost(post, topic, brandFacts) {
     const total =
       (s.body || []).reduce((n, p) => n + words(p), 0) +
       (s.list || []).reduce((n, p) => n + words(p), 0);
-    if (total < 110) push(`bölüm ${i + 1} (${s.heading}): ${total} kelime — çok kısa, hedef 135-170`);
-    if (total > 260) push(`bölüm ${i + 1} (${s.heading}): ${total} kelime — çok uzun, hedef 135-170`);
+    // Ret sınırı (60/260) ile tasarım hedefi (135-170) BİLEREK ayrıdır.
+    // Önceki hal (110'da ret) yapısal bir çelişki yüzünden koşuları reddediyordu:
+    // şemadaki "1-2 paragraf" açıklaması Türkçe'de ~110 kelime üretir, model somut
+    // olan yapısal kısıtı seçer ve tam ret sınırının altında kalırdı. Çözüm miamili
+    // hattından port edildi (commit 6e37194): şema "3 paragraf" der, prompt kuralı
+    // 3b/3c kabul şartını ve nasıl tutturulacağını açık yazar, ret sınırı yalnızca
+    // kabul edilemez uçları keser.
+    if (total < 60) push(`bölüm ${i + 1} (${s.heading}): ${total} kelime — ret sınırı 60'ın altında (tasarım hedefi 135-170)`);
+    if (total > 260) push(`bölüm ${i + 1} (${s.heading}): ${total} kelime — ret sınırı 260'ın üstünde (tasarım hedefi 135-170)`);
     if (/yukarıda (bahsettiğimiz|anlattığımız)|bir önceki bölümde|az önce değindiğimiz/i.test((s.body || []).join(' ')))
       push(`bölüm ${i + 1}: çapraz referans var — her bölüm kendi başına alıntılanabilir olmalı`);
   });
@@ -324,7 +331,9 @@ HEDEF: ChatGPT, Perplexity ve Google AI Overviews tarafından alıntılanmaya (G
 BİÇİM KURALLARI (hepsi zorunlu):
 1. ANSWER-FIRST: intro'nun İLK CÜMLESİ makalenin sorusunu doğrudan ve net yanıtlar. "Bu yazıda...", "Gelin..." gibi girizgâh yasak. Cevap Evet/Hayır ise ilk kelime o olsun.
 2. Bölüm başlıkları (heading) soru formatında olsun — insanların arama motoruna ve AI'ya yazdığı biçimde.
-3. Her bölümün gövdesi (body paragrafları + varsa liste) KENDİ BAŞINA ALINTILANABİLİR, bağlamsız okunabilir tek bir pasaj oluşturur ve TOPLAM 135-170 kelime hedefler. "Yukarıda bahsettiğimiz" tarzı çapraz referans yasak.
+3. Her bölümün gövdesi (body paragrafları + varsa liste) KENDİ BAŞINA ALINTILANABİLİR, bağlamsız okunabilir tek bir pasaj oluşturur. "Yukarıda bahsettiğimiz" tarzı çapraz referans yasak.
+3b. UZUNLUK — KABUL ŞARTI: her bölümün gövdesi (body + list kelimelerinin TOPLAMI) EN AZ 140, EN ÇOK 165 kelime olmalı. Bunu tutturmanın yolu bölümü ÜÇ paragraf yazmaktır (~50 kelimelik üç paragraf) ya da iki paragraf + 3-4 maddelik liste. İKİ KISA PARAGRAF YETMEZ: tipik hata budur ve pasajı 110 kelimede bırakır, o uzunluktaki pasaj AI motorlarında alıntılanmak için fazla incedir.
+3c. Her bölümü bitirdikten sonra kelimelerini SAY. 140'ın altındaysa somut içerik ekleyerek yükselt — örnek durum, sayısal aralık, süreç adımı, istisna, "şu koşulda şöyle olur" ayrımı. Dolgu cümlesi veya tekrar EKLEME; bilgi ekle.
 4. 5-6 bölüm; en az 4, ideali 5 FAQ. FAQ cevapları 30-90 kelime, kendi başına yeten cümleler.
 5. Ton: bilen bir arkadaşın anlatımı — net, abartısız, satış baskısı yok, korkutmuyor. Turizm broşürü dili ("büyüleyici", "eşsiz atmosfer", "unutulmaz anılar") YASAK.
 6. Kusursuz Türkçe imla ve diacritics (ı/İ, ş, ğ, ü, ö, ç). İngilizce terim kalabilir (urgent care, tee time, waiver) ama ilk geçişte parantezle Türkçe açıkla.
@@ -376,7 +385,7 @@ const OUTPUT_SCHEMA = {
           body: {
             type: 'array',
             items: { type: 'string' },
-            description: '1-2 paragraf; bölüm toplamı 135-170 kelime',
+            description: '3 paragraf (veya 2 paragraf + kısa liste); bölüm toplamı 140-165 kelime',
           },
           list: {
             type: 'array',
