@@ -283,5 +283,100 @@
     ],
     "status": "published",
     "generated": true
+  },
+  {
+    "slug": "miamide-acil-saglik-durumu",
+    "title": "Miami'de Hastalanırsanız Ne Yapmalı?",
+    "question": "Miami'de tatildeyken hastalanan bir turist nereye başvurmalı?",
+    "excerpt": "Miami'de hastalanan bir turist, şikayetin ciddiyetine göre 911, urgent care ya da emergency room arasından seçim yapmalıdır; ABD'de sağlık hizmeti anında ödenmez, fatura günler ya da haftalar sonra gelir. Seyahat sağlık sigortası olmadan gitmek ciddi mali risk taşır.",
+    "keywords": [
+      "Amerika'da sağlık sistemi turist",
+      "Miami acil servis ücreti",
+      "urgent care nedir",
+      "seyahat sağlık sigortası ABD",
+      "Miami'de hastalanırsam ne yapmalıyım",
+      "ABD'de 911 ne zaman aranır",
+      "ER ve urgent care farkı"
+    ],
+    "publishedAt": "2026-08-19",
+    "updatedAt": "2026-08-19",
+    "intro": [
+      "Miami'de tatildeyken hastalanan bir turist, şikayetinin ciddiyetine göre üç farklı kapıdan birine başvurmalıdır: hayati tehlike varsa 911, orta şiddette bir sorunda urgent care (acil olmayan hızlı bakım merkezi), daha ciddi ama hayatı tehdit etmeyen durumlarda ise hastane acil servisi (emergency room, ER). Bu üçü arasındaki fark sadece hız değil, aynı zamanda maliyettir; ABD'de sağlık hizmeti Türkiye'deki sistemden çok farklı işler ve her başvuru ayrı bir fatura olarak karşınıza çıkar.",
+      "ABD'de tedavi önce verilir, ödeme talebi ise günler ya da haftalar sonra ayrı faturalar halinde gelir; bu yüzden tedavi anında toplam maliyeti bilmek mümkün olmaz. Bu belirsizlik yüzünden seyahat sağlık sigortası olmadan Miami'ye gitmemek en gerçekçi tavsiyedir; bu yazı tıbbi tavsiye niteliği taşımaz, ciddi bir sağlık sorununda her zaman yerel bir sağlık kuruluşuna ya da yetkili bir uzmana başvurulmalıdır."
+    ],
+    "sections": [
+      {
+        "heading": "Miami'de hastalanan bir turist önce nereye başvurmalı?",
+        "body": [
+          "Miami'de hastalanan bir turist önce durumun ciddiyetini doğru değerlendirmelidir. ABD sağlık sistemi üç kademeli işler: hayati tehlike varsa 911, orta şiddette bir şikayet için urgent care (acil olmayan hızlı bakım merkezi), daha ciddi ama hayatı tehdit etmeyen durumlarda emergency room (hastane acil servisi, kısaca ER) kullanılır. Bu üç seçenek arasında bekleme süresi ve fatura tutarı bakımından büyük fark vardır.",
+          "Türkiye'deki sistemden farklı olarak ABD'de aile hekimi ya da devlet hastanesi gibi ücretsiz bir ilk basamak yoktur; her başvuru ayrı bir hizmet olarak faturalandırılır. Bu nedenle otelde ya da havaalanında karşılaşılan hafif bir rahatsızlıkta bile önce hangi kademeye gidileceğini belirlemek gerekir, çünkü yanlış seçim hem zaman hem de para kaybına yol açar.",
+          "Genel kural şöyledir: nefes almada zorluk, göğüs ağrısı, bilinç kaybı ya da kontrol edilemeyen kanama gibi durumlarda tartışmasız 911 aranır; ateş, kusma, boğaz enfeksiyonu, küçük kesik ya da burkulma gibi durumlarda urgent care yeterlidir; kırık şüphesi ya da yüksek ateşle birlikte bilinç bulanıklığı gibi orta-ağır durumlarda ise ER'a gidilmesi daha güvenlidir."
+        ]
+      },
+      {
+        "heading": "911'i ne zaman aramalı?",
+        "body": [
+          "911, ABD'de hayati tehlike içeren acil durumlar için aranan tek numaradır ve Miami'de de aynı şekilde çalışır. Bilinç kaybı, nefes almada ciddi zorluk, göğüs ağrısı, felç belirtileri (yüzde düşme, konuşmada bozulma, kolda güçsüzlük), kontrol edilemeyen kanama, ciddi alerjik reaksiyon (anafilaksi) ya da ağır trafik kazası gibi durumlarda 911 aranmalı ve ambulans çağrılmalıdır.",
+          "Ambulansla hastaneye taşınmak ABD'de kendi başına ayrı bir hizmet olarak faturalandırılır ve bu ücret hastane faturasından bağımsız gelir. Bu yüzden 911'i sadece gerçekten hayati risk taşıyan durumlarda aramak gerekir; hafif ateş, mide bulantısı ya da basit bir burkulma için ambulans çağırmak hem gereksiz maliyet hem de gerçek acillerin önüne geçme riski yaratır.",
+          "Otelde ya da halka açık bir yerde iseniz, 911'i aradıktan sonra bulunduğunuz kat, oda numarası ya da yakın bir işaret noktası gibi net konum bilgisi vermek müdahale süresini kısaltır. Türkçe konuşan bir operatör bulunamayabilir; bu yüzden temel İngilizce tıbbi ifadeleri (chest pain, can't breathe, unconscious gibi) önceden not almak faydalı olur."
+        ]
+      },
+      {
+        "heading": "Urgent care (walk-in clinic) nedir, ne zaman tercih edilmeli?",
+        "body": [
+          "Urgent care, randevu gerektirmeyen, hayati tehlike içermeyen ama hızlı müdahale isteyen durumlar için tasarlanmış küçük klinik tipidir; Türkçedeki en yakın karşılığı 'acil olmayan hızlı bakım merkezi'dir. Kulak-boğaz-burun enfeksiyonu, ateş, ishal, basit kesikler, hafif yanıklar, alerji, güneş çarpması, küçük burkulmalar gibi durumlar için idealdir ve genellikle hastane acil servisine göre çok daha kısa bekleme süresiyle hizmet verir.",
+          "Miami'de urgent care merkezleri şehrin birçok noktasında bulunur ve çoğu hafta içi ve hafta sonu geniş saatlerde açık çalışır; kesin saatleri kliniğin kendi sitesinden ya da telefonla teyit etmek gerekir. Maliyet ER'a kıyasla belirgin şekilde daha düşüktür, ancak kesin tutar kliniğe ve sigortaya göre değişir; net bir rakam vermek yanıltıcı olur.",
+          "Urgent care'e giderken pasaport, otel bilgisi ve varsa seyahat sağlık sigortası kartı yanınızda bulunmalı; birçok klinik ödemeyi önce sizden alıp sigorta şirketinize fatura göndermenizi ister, bazıları ise sigorta şirketiyle doğrudan çalışabilir. Semptomlar birden ağırlaşırsa (nefes darlığı, göğüs ağrısı, yüksek ateşle bilinç bulanıklığı gibi) urgent care yerine doğrudan 911 aranmalı ya da en yakın ER'a gidilmelidir."
+        ]
+      },
+      {
+        "heading": "Emergency room (ER) ne zaman gerekli, neden pahalı ve uzun sürüyor?",
+        "body": [
+          "Emergency room, ABD hastanelerinin acil servis bölümüdür ve hayati tehlike taşıyan ya da acil cerrahi/görüntüleme gerektiren durumlar için vardır: ciddi kazalar, kırıklar, şiddetli karın ağrısı, yüksek ateşle birlikte bilinç bulanıklığı, felç ya da kalp krizi şüphesi gibi. Hastalar önce triyaj (aciliyet sırasına göre değerlendirme) sürecinden geçer, bu yüzden görünüşte daha az ciddi vakalar saatlerce bekleyebilir.",
+          "ER faturaları ABD'de öngörülemez şekilde yüksek olabilir çünkü hem hastaneye giriş ücreti hem doktor muayenesi hem de yapılan her tetkik (kan tahlili, röntgen, tomografi gibi) ayrı ayrı faturalandırılır. Bu faturalar genellikle hastaneden çıktıktan haftalar sonra posta ya da e-posta yoluyla gelir, dolayısıyla hizmet alırken toplam tutarı net olarak görmek mümkün olmaz.",
+          "Sigortasız ya da yetersiz teminatlı bir seyahat sağlık sigortasıyla ER'a gitmek ciddi mali risk taşır; bu yüzden ABD'ye sigortasız gitmemek, faturanın büyüklüğünden bağımsız olarak en güvenli yaklaşımdır. ER'a gitmeden önce mümkünse sigorta şirketinizin acil yardım hattını aramak, hangi hastanelerin sigortanızla anlaşmalı olduğunu ve doğrudan ödeme yapılıp yapılmayacağını öğrenmek faydalı olur."
+        ]
+      },
+      {
+        "heading": "ABD'de sağlık hizmeti neden sonradan faturalandırılır?",
+        "body": [
+          "ABD sağlık sisteminde hizmet önce verilir, ödeme talebi ise günler ya da haftalar sonra ayrı faturalar halinde gelir; bu, Türkiye'deki 'önce öde ya da SGK ile anında mahsuplaş' mantığından tamamen farklıdır. Hastane, laboratuvar ve görüntüleme merkezi birbirinden bağımsız kurumlar olarak fatura kesebilir, bu yüzden tek bir ziyaretten birden fazla fatura çıkması normaldir.",
+          "Sigortası olan bir hasta için de süreç karmaşıktır: hastane önce sigorta şirketine fatura gönderir, sigorta şirketi 'bu hizmet teminat kapsamında mı, ne kadarı ödenir' değerlendirmesi yapar, kalan tutar ise hastaya 'balance billing' (fark fatura) olarak yansıyabilir. Turistler için bu süreç daha da karışık hale gelir çünkü seyahat sigortası şirketleri genellikle Türkiye merkezlidir ve ABD'deki hastane sistemiyle doğrudan entegre çalışmaz.",
+          "Bu yapı yüzünden Miami'de alınan bir sağlık hizmetinin toplam maliyetini tedavi anında tam olarak bilmek mümkün değildir; bu, kaçınılması gereken bir belirsizlik değil, sistemin doğasıdır. Tek gerçekçi önlem, tedavi öncesinde mümkün olduğunca fiyat bilgisi istemek (özellikle urgent care'de bu genellikle mümkündür) ve her durumda geçerli bir seyahat sağlık sigortasıyla ülkeye girmektir."
+        ]
+      },
+      {
+        "heading": "Seyahat sağlık sigortasında hangi maddelere bakılmalı?",
+        "body": [
+          "ABD'de sağlık hizmeti sigortasız ya da yetersiz teminatlı gitmek çok riskli olduğu için Miami'ye çıkmadan önce seyahat sağlık sigortasını dikkatle okumak gerekir. Bakılacak en önemli madde teminat limitidir: poliçenin toplam sağlık teminatı ABD'deki olası tedavi maliyetlerini karşılayacak kadar yüksek olmalıdır, düşük limitli ucuz poliçeler ciddi bir vakada yetersiz kalabilir.",
+          "İkinci önemli ayrım, sigortanın 'doğrudan ödeme' (cashless/direct billing) mi yoksa 'geri ödeme' (reimbursement) mi yaptığıdır. Doğrudan ödemede sigorta şirketi hastaneyle anlaşmalıysa fatura doğrudan sigortaya kesilir; geri ödemede ise hasta önce kendisi öder, sonra fişleri sigortaya göndererek parasını geri alır. ABD'de tedavi maliyetleri yüksek olabileceğinden, cepten ödeyip sonra geri almayı gerektiren bir poliçe nakit akışı açısından ciddi zorluk yaratabilir.",
+          "Üçüncü kritik madde 'mevcut hastalık istisnası' (pre-existing condition exclusion) maddesidir; birçok poliçe seyahat öncesinde var olan kronik bir hastalığın alevlenmesini teminat dışı bırakır. Bu maddeleri satın almadan önce dikkatle okumak, gerekirse sigorta şirketine yazılı sormak gerekir; bu hukuki ya da tıbbi tavsiye değildir, şartlar her sigorta şirketinde farklı olabileceğinden ilgili şirketle ve gerekirse bir uzmanla doğrulanmalıdır."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Miami'de ilaç almak için reçete gerekiyor mu?",
+        "a": "Bazı ilaçlar (ağrı kesici, ateş düşürücü, alerji ilacı gibi) reçetesiz eczanede satılır, ancak antibiyotik gibi çoğu ilaç için doktor reçetesi zorunludur. Türkiye'den getirdiğiniz reçeteler ABD'de genellikle geçerli değildir; yeni bir reçete için urgent care ya da doktora başvurmanız gerekir. Bu bilgi tıbbi tavsiye değildir, ilaç kullanımı için her zaman bir sağlık uzmanına danışın."
+      },
+      {
+        "q": "Türkiye'deki SGK ya da özel sağlık sigortası Miami'de geçerli mi?",
+        "a": "Genellikle hayır. SGK ve Türkiye'deki çoğu özel sağlık sigortası ABD topraklarında geçerli değildir ve ABD'deki hastaneler bu poliçelerle doğrudan çalışmaz. Miami'ye gitmeden önce ABD'yi kapsayan, ayrı bir seyahat sağlık sigortası satın almak ve poliçenin teminat limitini, ödeme yöntemini kontrol etmek gerekir."
+      },
+      {
+        "q": "Urgent care ile emergency room arasındaki temel fark nedir?",
+        "a": "Urgent care, hayati tehlike içermeyen ama hızlı müdahale isteyen orta şiddette şikayetler (ateş, kulak-boğaz enfeksiyonu, küçük kesik gibi) için düşünülmüştür ve genellikle daha kısa bekleme süresiyle çok daha düşük maliyetli çalışır. Emergency room ise hayati tehlike taşıyan ya da acil görüntüleme/cerrahi gerektiren ciddi durumlar için vardır; bekleme süresi triyaj sırasına göre değişir ve fatura tutarı belirgin şekilde daha yüksektir."
+      },
+      {
+        "q": "ABD'de doktora gitmeden ilaç önerisi almak mümkün mü?",
+        "a": "Eczacılar reçetesiz satılan ilaçlar konusunda genel yönlendirme yapabilir, ancak tanı koyamaz ve reçeteli ilaç yazamaz. Bazı telehealth (uzaktan sağlık danışmanlığı) hizmetleri turistlere de açık olabilir, ancak koşulları ve ücretlendirmesi sağlayıcıdan sağlayıcıya değişir; bu nedenle ilgili hizmetin kendi sayfasından güncel şartları kontrol etmek gerekir."
+      },
+      {
+        "q": "Seyahat sağlık sigortası olmadan Miami'ye gitmek ne kadar riskli?",
+        "a": "Ciddi bir risktir, çünkü ABD'de sağlık hizmeti faturaları öngörülemez şekilde yüksek olabilir ve fatura tedavi bittikten haftalar sonra gelir. Basit bir urgent care ziyaretiyle ciddi bir ER vakası arasındaki maliyet farkı çok büyük olabilir; bu nedenle teminat limiti yeterli, doğrudan ödeme ya da hızlı geri ödeme yapan bir seyahat sağlık sigortası olmadan yola çıkmamak en güvenli yaklaşımdır."
+      }
+    ],
+    "status": "published",
+    "generated": true
   }
 ]

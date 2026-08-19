@@ -114,7 +114,8 @@
         "seyahat sağlık sigortası ABD"
       ],
       "angle": "Üç kademeyi ayır: 911 (gerçek acil), emergency room (ER — pahalı, uzun bekleme), urgent care / walk-in clinic (orta şiddet, çok daha ucuz ve hızlı). ABD'de sağlık hizmetinin ücretli olduğunu ve faturanın SONRADAN geldiğini anlat. RAKAM VERME — ABD sağlık faturaları öngörülemez, 'sigortasız gitmeyin' mesajı sayıdan daha doğru. Seyahat sağlık sigortasında bakılacak maddeler: teminat limiti, doğrudan ödeme mi geri ödeme mi, mevcut hastalık istisnası. Tıbbi tavsiye olmadığını yaz.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-08-19"
     },
     {
       "id": "key-west-daytrip",
