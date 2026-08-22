@@ -60,6 +60,12 @@ jobs:
       - name: Kalite kapısı self-test
         run: npm run blog:test
 
+      # Krem/bej koruma kapısı — API'siz. Hat her gün main üzerinde koştuğu için
+      # aynı zamanda günlük kanarya: palete sızmış bir sıcak nötr en geç ertesi
+      # sabah kırmızıya döner (bkz. CLAUDE.md → Tasarım sistemi).
+      - name: Krem/bej kapısı
+        run: npm run check:renk
+
       - name: Yazıyı üret
         id: generate
         continue-on-error: true # needs_review durumunda da state commit edilsin
