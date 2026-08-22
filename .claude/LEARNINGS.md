@@ -44,6 +44,13 @@
   spec gereği kaydırılamaz ve `scrollWidth` onu saymaz: nav'ın ilk üç bağlantısı
   393px'te erişilemez hâldeydi. Auto margin boş alan bitince 0'a düşer, taşma
   kaydırılabilir yöne gider.
+- Renk/stil yasağı kuran kapı **chroma ile** kurulur, hue ile değil: krem/bej de
+  `sunset`/`sun` de sıcaktır (R>B), onları ayıran doygunluktur. Bant İKİ eşiklidir
+  (`|R-G|` ve `R-B`) — tek eşiğe "sadeleştirmek" paletin meşru aksanlarını yakalar
+  ve kapı bir hafta içinde devre dışı bırakılır (`npm run check:renk`).
+- Bir kapının/sondanın **"0 ihlal" çıktısı ancak pozitif kontrolle** anlam taşır:
+  bilerek kötü girdi enjekte et, kırmızıya düştüğünü gör, geri al. Canlı ağaçta da,
+  tarayıcı sondasında da. Kanıtlanmamış "temiz" sonucu, ölü sorgudan ayırt edilemez.
 - Kırpılan öğe ekran görüntüsünde **görünmez**. Düzen iddiaları (kaydırılabilir
   mi, çakışıyor mu, taşıyor mu) `scrollWidth`/`clientWidth` ve
   `getBoundingClientRect()` ile ÖLÇÜLEREK doğrulanır — bakarak değil.

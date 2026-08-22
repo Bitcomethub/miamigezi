@@ -131,6 +131,13 @@ mor-mavi "Miami Vice" gradyanı.
   ayraç; `tone`: ink/flamingo/lagoon), `tabular` (rakam hizası), `rise`
   (giriş animasyonu).
 - Görsel yok — bilinçli. Stok fotoğraf özgünlük katmıyor, LCP'yi bozuyor.
+- **Krem/bej yasağı çalıştırılabilir:** `npm run check:renk`
+  (`scripts/check-renk.mjs`) src'deki renk literallerini tarar; bilinen krem
+  hex'lerini VE listede olmayan yeni sıcak nötrleri (R≈G>B, düşük chroma)
+  yakalar, ihlalde exit 1. Bant İKİ eşiklidir (`|R-G|` ve `R-B`): tek eşiğe
+  indirgenirse paletin meşru sıcak aksanlarını (`sunset`, `sun`) da yer ve
+  kapı kullanılamaz hâle gelir. `--self-test` iki yönlüdür — kural eklerken
+  hem yakalanması gereken vakayı hem geçmesi gereken palet rengini ekle.
 
 ## Ortam değişkenleri
 
@@ -145,9 +152,10 @@ Tam liste + açıklamalar: `.env.example`.
 ## Geliştirme
 
 ```bash
-npm run dev     # localhost:3000
-npm run build   # 21 statik sayfa üretmeli
+npm run dev        # localhost:3000
+npm run build      # tüm sayfalar statik üretilmeli (sayı blog arttıkça büyür)
 npm run lint
+npm run check:renk # krem/bej koruma kapısı — src'de sıcak nötr var mı
 ```
 
 Deploy: `main` push → Vercel otomatik.

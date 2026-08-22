@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "check:renk": "node scripts/check-renk.mjs",
     "blog:test": "node scripts/generate-blog-post.mjs --self-test",
     "blog:dry": "node scripts/generate-blog-post.mjs --mock --dry-run",
     "blog:generate": "node scripts/generate-blog-post.mjs"

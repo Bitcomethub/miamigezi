@@ -5,6 +5,34 @@
 
 ---
 
+## 2026-08-22 — Krem/bej kapısı: "sıcak" tek eşikle ölçülürse paletin kendi aksanlarını yer
+- **Problem:** "Krem/bej yasak" kuralı CLAUDE.md'de yazılıydı ama çalıştırılabilir
+  değildi; denetim gözle yapılıyordu. Kapı yazılırken asıl zorluk şu: krem/bej ile
+  paletin meşru `sunset` (#ff8a3d) / `sun` (#ffc53d) aksanları İKİSİ DE sıcaktır
+  (R>B). Naif bir "sıcak = yasak" testi paleti de yakalar.
+- **Eliminated:** (a) Yalnız yasak-hex listesi → listede olmayan yeni bir krem
+  (#efe6d9) sessizce geçer; kapı ilk yeni tonda işlevsizleşir. (b) Tek eşikli bant
+  (R>B) → `sun`/`sunset` her koşuda ihlal verir, kapı bir hafta içinde devre dışı
+  bırakılır. (c) Açıklık/lightness eşiği ile ayırmak → #C9B89E (bej, L~%73) ile
+  #ffc53d (sun) açıklıkta çakışıyor, ayrım vermiyor. (d) Named CSS renk taraması
+  (`tan`, `linen`) eklemek → Türkçe içerikte `tan` bir kelime; yanlış pozitif üretir.
+- **Chosen:** İki eşikli bant — `|R-G| ≤ 30` (nötr: kanallar birbirine yakın) VE
+  `R-B ≤ 90` (düşük chroma). Ayrım hue değil CHROMA: #C9B89E R-B=43 (bej) ·
+  #ffc53d R-B=194 (doygun aksan). Katı `G > B` karşılaştırması saf griyi ve beyazı
+  bedavaya eler (#ffffff'te 255>255 yanlış). Yasak-hex listesi 2. katman olarak
+  KALDI — bandın zaten yakaladığı 6 tonu adıyla raporlasın diye (hata mesajı netliği).
+- **Evidence:** `--self-test` iki yönlü: 14 krem/bej yakalandı, paletin 14 gerçek
+  rengi + anchor'lar (`#icerik`, `#article`) dahil 19 vaka geçti. Canlı ağaçta
+  kanıt: globals.css'e #F2EDE7 + layout.tsx'e (listede OLMAYAN) #efe6d9 enjekte
+  edildi → `npm run check:renk` exit 1, iki katman da ateşledi; geri alındıktan
+  sonra exit 0, `git diff -- src` boş. Render tarafı: 6 rotada headless Chrome ile
+  computed style — tüm efektif yüzeyler #ffffff/#0a1633/#0c3d49/#f5f8fc/#fdecf3,
+  0 bant ihlali; pozitif kontrol olarak enjekte edilen #F2EDE7 ve
+  rgba(201,184,158,.85)→#d1c3ad yakalandı (sondanın ölü olmadığı kanıtı).
+- **Rule:** Bir renk ailesini yasaklayan kapı hue ile değil CHROMA ile kurulur ve
+  iki eşik ister; tek eşiğe indirgeyen "sadeleştirme" paletin meşru aksanlarını
+  yakalar ve kapıyı kullanılamaz hâle getirir.
+
 ## 2026-08-09 — Spec'ten gelen marka renkleri küçük metinde AA'yı geçmiyor (Ocean Drive Sunset geçişi)
 - **Problem:** Yeni palet spec'i hex olarak verildi (#F5317F pembe, #0FB5BA turkuaz)
   ama beyaz zeminde 3.73:1 / 2.52:1 — küçük metin AA (4.5:1) ve focus ring (3:1)
