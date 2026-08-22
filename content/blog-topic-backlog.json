@@ -168,7 +168,8 @@
         "spring break ne zaman"
       ],
       "angle": "Spring break'in ABD okul takvimine bağlı olarak mart civarında dalgalar hâlinde yaşandığını, tek bir tarih olmadığını anlat. Kime uygun (genç, kalabalık ve gece hayatı isteyen), kime uygun değil (aile, sakin tatil). South Beach'te dönemsel olarak ek trafik düzenlemesi, park kısıtı ve plaj kuralı getirilebildiğini söyle ama HANGİ YIL NE OLDUĞUNU iddia etme — 'gitmeden önce Miami Beach şehir duyurularına bak' de. Fiyatların yükseldiğini aralık vermeden, göreli olarak ifade et.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-08-22"
     },
     {
       "id": "parking-fines",
