@@ -186,7 +186,8 @@
         "PayByPhone Miami"
       ],
       "angle": "Sistemi öğret: sokak kenarı ölçerli park, uygulama üzerinden ödeme, garaj/otopark, otel valesi. Kaldırım rengi kodlarının ve tabelaların ABD'de bağlayıcı olduğunu, 'yanlış anladım' savunmasının işlemediğini anlat. Kiralık araçla ceza yenirse cezanın kiralama şirketi üzerinden ek işlem ücretiyle kredi kartına yansıdığını söyle. TUTAR YAZMA — bölgeye ve ihlale göre değişir; itiraz ve ödeme kanalı için şehrin resmî sayfasına yönlendir. Çekilme (tow) durumunda ne yapılacağını ekle.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-08-23"
     },
     {
       "id": "pharmacy",
