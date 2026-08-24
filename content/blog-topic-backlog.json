@@ -204,7 +204,8 @@
         "yurt dışına ilaç götürmek"
       ],
       "angle": "ABD'de zincir eczanelerin market içinde olduğunu ve reçetesiz (OTC) ilaçların raftan alındığını anlat; antibiyotik gibi ilaçların kesinlikle reçeteli olduğunu vurgula. Düzenli kullanılan ilacın orijinal kutusunda ve reçete/rapor kopyasıyla taşınmasının neden önemli olduğunu söyle. İLAÇ ADI ÖNERME, doz verme — bu tıbbi tavsiye olur; 'etken maddeyi bilerek gidin, eczacıya sorun' çerçevesi kullan. Fiyat yazma. Tıbbi tavsiye olmadığı uyarısı zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-08-24"
     },
     {
       "id": "customs-return",
