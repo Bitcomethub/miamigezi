@@ -222,7 +222,8 @@
         "Amerika'dan telefon getirmek"
       ],
       "angle": "SAYI VERME — muafiyet limitleri ve telefon harcı dönem dönem değişiyor; makalenin işi limit ezberletmek değil, süreci ve nereye bakılacağını öğretmek. Anlat: yolcu beraberi eşya kavramı, kişisel kullanım ile ticari miktar ayrımı, faturayı saklamanın önemi, elektronik cihazın kayıt (IMEI) meselesinin ayrı bir konu olduğu, yeşil/kırmızı hat. Ticaret Bakanlığı'nın güncel yolcu beraberi eşya sayfasına yönlendir. Gıda ve tarım ürünlerinde ülkeye giriş kısıtı olabileceğini ekle.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-08-25"
     },
     {
       "id": "turkish-food",
