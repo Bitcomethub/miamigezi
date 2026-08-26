@@ -77,23 +77,23 @@ const TARGETS = [
 
   // Rehberler (src/content/guides/*.ts ile slug bazında eşleşir)
   { key: 'guide:ilk-kez', query: 'Miami beach palm trees sunny day' },
-  { key: 'guide:ucak-bileti', query: 'airplane wing window view clouds' },
+  { key: 'guide:ucak-bileti', query: 'Miami International Airport' },
   { key: 'guide:oteller', query: 'Miami Beach hotel swimming pool' },
   { key: 'guide:gezilecek-yerler', query: 'Wynwood Miami street art mural' },
   { key: 'guide:plajlar', query: 'Miami Beach lifeguard tower' },
-  { key: 'guide:hava-durumu', query: 'Florida storm clouds over palm trees' },
+  { key: 'guide:hava-durumu', query: 'Miami storm clouds palm trees' },
   { key: 'guide:ulasim', query: 'Miami highway aerial view traffic' },
-  { key: 'guide:yeme-icme', query: 'cuban food plate restaurant table' },
+  { key: 'guide:yeme-icme', query: 'Miami restaurant outdoor dining' },
   { key: 'guide:alisveris', query: 'Miami Design District shopping street' },
-  { key: 'guide:ailece-miami', query: 'family walking on beach at sunset' },
+  { key: 'guide:ailece-miami', query: 'Miami Beach family sunset' },
 
   // Yazılar (src/lib/blogData.ts ile slug bazında eşleşir)
-  { key: 'blog:turk-ehliyetiyle-miamide-arac-kiralama', query: 'rental car road trip Florida highway' },
-  { key: 'blog:miamide-kasirga-uyarisi-gelirse-ne-yapmali', query: 'hurricane storm palm trees wind' },
-  { key: 'blog:miamide-helal-yemek-ve-cami', query: 'halal food' },
-  { key: 'blog:miamide-acil-saglik-durumu', query: 'hospital emergency entrance sign' },
+  { key: 'blog:turk-ehliyetiyle-miamide-arac-kiralama', query: 'Miami highway driving car' },
+  { key: 'blog:miamide-kasirga-uyarisi-gelirse-ne-yapmali', query: 'Miami storm dark clouds palm trees' },
+  { key: 'blog:miamide-helal-yemek-ve-cami', query: 'shawarma kebab plate' },
+  { key: 'blog:miamide-acil-saglik-durumu', query: 'emergency medical ambulance' },
   { key: 'blog:miamiden-key-weste-gunubirlik-gezi', query: 'Key West Florida overseas highway bridge' },
-  { key: 'blog:miamide-tek-basina-kadin-seyahati', query: 'woman traveler backpack city street daylight' },
+  { key: 'blog:miamide-tek-basina-kadin-seyahati', query: 'Miami street woman walking' },
   { key: 'blog:miamide-kredi-karti-mi-nakit-mi', query: 'credit card contactless payment terminal' },
   { key: 'blog:miamide-internet-ve-esim', query: 'smartphone sim card travel' },
   { key: 'blog:miamide-guvenlik-nelere-dikkat-etmeli', query: 'Miami Beach street at night neon' },
@@ -326,18 +326,25 @@ async function main() {
       const blur = await sharp(raw).resize({ width: BLUR_WIDTH }).webp({ quality: 55 }).toBuffer();
 
       usedIds.add(photo.id);
+      const prev = manifest[target.key];
+      const samePhoto = prev?.unsplashId === photo.id;
       manifest[target.key] = {
         key: target.key,
         src: `/images/${file}.webp`,
         width: info.width,
         height: info.height,
         blurDataURL: `data:image/webp;base64,${blur.toString('base64')}`,
-        // Türkçe alt — ELLE doldurulur, yeniden çalıştırmada korunur.
-        alt: manifest[target.key]?.alt ?? null,
+        // Türkçe alt — ELLE doldurulur ve yeniden çalıştırmada korunur,
+        // AMA YALNIZCA FOTOĞRAF AYNIYSA. Fotoğraf değiştiyse eski alt artık
+        // başka bir kareyi anlatıyor demektir: otomatik null'a düşer, kapı
+        // (--check) onu yakalar. Bu koruma olmadan --force ile değiştirilen
+        // bir görselin altında eski açıklama sessizce yaşamaya devam ediyordu.
+        alt: samePhoto ? (prev?.alt ?? null) : null,
         // temsilî: karede ya da Unsplash açıklamasında Miami/Florida kanıtı
         // yoksa true. Varsayılan GÜVENLİ tarafta (true): kanıtlanmamış bir
-        // fotoğraf sessizce "Miami" ima etmesin. Elle false'a çekilir.
-        illustrative: manifest[target.key]?.illustrative ?? true,
+        // fotoğraf sessizce "Miami" ima etmesin. Fotoğraf değişince de
+        // güvenli tarafa döner — yeni kare için karar yeniden verilir.
+        illustrative: samePhoto ? (prev?.illustrative ?? true) : true,
         // alt metninin dayanağı: Unsplash'in kendi açıklaması. Uydurma yasak.
         altSource: photo.description || photo.alt_description || '',
         photographer: photo.user.name,
