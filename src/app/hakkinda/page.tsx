@@ -1,15 +1,23 @@
 import type { Metadata } from 'next';
 import { Ledge } from '@/components/Ledge';
+import { Photo } from '@/components/Photo';
+import { pageImage } from '@/content/images';
 import { GUIDES } from '@/content/guides';
 import { PUBLISHER, SITE, abs, miamiliUrl } from '@/lib/site';
 import { breadcrumbSchema } from '@/lib/schema';
+
+const HERO = pageImage('hakkinda');
 
 export const metadata: Metadata = {
   title: 'Hakkında',
   description:
     'miamigezi kimin yayını, içerik nasıl hazırlanıyor ve rakamlar nereden geliyor? Sahiplik, yöntem ve sınırların açık beyanı.',
   alternates: { canonical: '/hakkinda' },
-  openGraph: { url: abs('/hakkinda'), locale: 'tr_TR' },
+  openGraph: {
+    url: abs('/hakkinda'),
+    locale: 'tr_TR',
+    images: HERO ? [{ url: abs(HERO.src), width: HERO.width, height: HERO.height, alt: HERO.alt }] : undefined,
+  },
 };
 
 export default function HakkindaPage() {
@@ -38,6 +46,8 @@ export default function HakkindaPage() {
           okuduğunuz bilgiyi değerlendirmenin parçası.
         </p>
       </header>
+
+      <Photo image={HERO} priority className="mt-10" />
 
       <Ledge className="mt-12" tone="flamingo" />
 

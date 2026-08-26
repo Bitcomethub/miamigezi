@@ -2,15 +2,23 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ALL_POSTS } from '@/lib/blogData';
 import { Ledge } from '@/components/Ledge';
+import { Photo } from '@/components/Photo';
+import { pageImage } from '@/content/images';
 import { abs } from '@/lib/site';
 import { breadcrumbSchema } from '@/lib/schema';
+
+const HERO = pageImage('blog');
 
 export const metadata: Metadata = {
   title: 'Miami Yazıları',
   description:
     "Miami’ye gidenler için güncel notlar: pratik sorular, kısa cevaplar ve düzenli olarak eklenen yeni yazılar.",
   alternates: { canonical: '/blog' },
-  openGraph: { url: abs('/blog'), locale: 'tr_TR' },
+  openGraph: {
+    url: abs('/blog'),
+    locale: 'tr_TR',
+    images: HERO ? [{ url: abs(HERO.src), width: HERO.width, height: HERO.height, alt: HERO.alt }] : undefined,
+  },
 };
 
 export default function BlogIndexPage() {
@@ -37,6 +45,8 @@ export default function BlogIndexPage() {
           Rehberler değişmeyen bilgiyi tutar; burası değişeni takip eder.
         </p>
       </header>
+
+      <Photo image={HERO} priority className="mt-10" />
 
       <Ledge className="mt-12" tone="flamingo" />
 
