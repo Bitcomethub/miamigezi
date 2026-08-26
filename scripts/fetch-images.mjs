@@ -90,7 +90,7 @@ const TARGETS = [
   // Yazılar (src/lib/blogData.ts ile slug bazında eşleşir)
   { key: 'blog:turk-ehliyetiyle-miamide-arac-kiralama', query: 'rental car road trip Florida highway' },
   { key: 'blog:miamide-kasirga-uyarisi-gelirse-ne-yapmali', query: 'hurricane storm palm trees wind' },
-  { key: 'blog:miamide-helal-yemek-ve-cami', query: 'mosque architecture detail arches' },
+  { key: 'blog:miamide-helal-yemek-ve-cami', query: 'halal food' },
   { key: 'blog:miamide-acil-saglik-durumu', query: 'hospital emergency entrance sign' },
   { key: 'blog:miamiden-key-weste-gunubirlik-gezi', query: 'Key West Florida overseas highway bridge' },
   { key: 'blog:miamide-tek-basina-kadin-seyahati', query: 'woman traveler backpack city street daylight' },
@@ -215,7 +215,13 @@ function contentSlugs() {
   return { guides, posts: [...seed, ...generated] };
 }
 
-function checkCoverage() {
+/**
+ * @param withAlt  Eksik Türkçe alt metnini ÖLÜMCÜL say. Yalnızca --check
+ *   (CI kapısı) için true. İndirme yolunda false olmak ZORUNDA: script'in
+ *   kendi başarı çıktısı `alt: null` yazıyor, ölümcül sayılsaydı yarıda
+ *   kesilen bir koşu (kota doldu) bir daha çalıştırılamazdı.
+ */
+function checkCoverage(withAlt) {
   const { guides, posts } = contentSlugs();
   const have = new Set(TARGETS.map((t) => t.key));
   const problems = [];
@@ -238,7 +244,7 @@ function checkCoverage() {
 
   // Manifest'te alt metni doldurulmamış kayıt varsa bu ÖLÜMCÜLDÜR: alt'sız
   // görsel ekran okuyucuda sessiz kalır ve build'e kadar fark edilmez.
-  if (fs.existsSync(MANIFEST)) {
+  if (withAlt && fs.existsSync(MANIFEST)) {
     for (const [key, e] of Object.entries(JSON.parse(fs.readFileSync(MANIFEST, 'utf8')))) {
       if (!e.alt || !e.alt.trim()) problems.push(`ALT METNİ EKSİK: ${key} (altSource: "${e.altSource}")`);
     }
@@ -254,7 +260,7 @@ function checkCoverage() {
 
 // ── Ana akış ──────────────────────────────────────────────────────────────
 async function main() {
-  if (FLAGS.check) process.exit(checkCoverage() ? 1 : 0);
+  if (FLAGS.check) process.exit(checkCoverage(true) ? 1 : 0);
 
   const key = loadKey();
   if (!key && !FLAGS.dryRun) {
@@ -262,7 +268,7 @@ async function main() {
     process.exit(1);
   }
 
-  const coverageProblems = checkCoverage();
+  const coverageProblems = checkCoverage(false);
   if (coverageProblems) {
     console.error('\nHedef listesi içerikle uyuşmuyor — önce TARGETS düzeltilmeli.');
     process.exit(1);
