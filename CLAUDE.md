@@ -31,26 +31,42 @@ değişiklik, sitenin varlık sebebini ters çevirir.
    - **Günlük üretilen blog yazıları miamili'den HİÇ bahsetmez** (kalite kapısı
      kuralı #10, sıfır tolerans). Sahiplik zaten footer'da; her yazıya marka
      bahsi sıkıştırmak tam olarak kaçınılan gizli-PBN deseni.
-4. **Yasaklar (kalite kapısında çalıştırılabilir hâlde):** uydurma fiyat/
+4. **Görsel disiplini (Unsplash — lisans şartı, pazarlık dışı):**
+   - Fotoğraflar **repo'ya commit'lenir**, runtime'da Unsplash API'sine
+     bağımlılık YOK (`public/images/*.webp`). Hat: `npm run images:fetch`
+     (elle, tek seferlik). Kaynak SSOT'u `src/content/images.json`.
+   - Her görselin yanında **fotoğrafçı adı + Unsplash profil linki görünür**
+     olmak zorunda (`src/components/Photo.tsx`). Künyeyi kaldırmak API
+     şartlarının ihlalidir ve hesabın askıya alınmasıyla sonuçlanabilir.
+   - İndirilen her fotoğraf için `links.download_location` ucuna istek atılır
+     — script bunu yapar, atlanamaz.
+   - `alt` metni **Türkçe** ve karede GERÇEKTEN olan şeyi anlatır. Dayanağı
+     Unsplash'in kendi açıklamasıdır (`altSource` alanında saklanır, denetim
+     izi). Script `alt`'ı uydurmaz, `null` bırakır; elle doldurulur.
+   - **`illustrative` (temsilî):** karede ya da Unsplash açıklamasında
+     Miami/Florida kanıtı yoksa `true` ve künyede "temsilî" basılır.
+     Varsayılan güvenli taraftadır. Uydurma rakam yasağının görsel karşılığı:
+     bu site Abu Dabi'deki bir camiyi sessizce "Miami'de cami" diye sunmaz.
+5. **Yasaklar (kalite kapısında çalıştırılabilir hâlde):** uydurma fiyat/
    istatistik yok · bilet satışı/affiliate/rezervasyon linki yok · miamili
    içeriğinin kopyası yok. Oynak veriler (fiyat, saat, tarih) ya aralık ya da
    "değişebilir" çerçevesiyle verilir.
-5. **İçerik veri olarak yazılır, JSX olarak değil.** Rehber = bir `Guide`
+6. **İçerik veri olarak yazılır, JSX olarak değil.** Rehber = bir `Guide`
    nesnesi (`src/content/guides/*.ts`), yazı = bir `BlogPost`. Route, JSON-LD,
    sitemap ve footer navigasyonu AYNI diziden türer. Sayfa dosyasına metin
    gömen, dört yerde birden tutarsızlık üretir.
-6. **Her şey statik.** `output` prerender; runtime yok, veritabanı yok, backend
+7. **Her şey statik.** `output` prerender; runtime yok, veritabanı yok, backend
    yok, API route yok. Bir özellik sunucu gerektiriyorsa önce "gerçekten
    gerekiyor mu" sorusu sorulur.
-7. **`new Date()` ile tarih üretme.** Vercel sunucusu UTC; build ile
+8. **`new Date()` ile tarih üretme.** Vercel sunucusu UTC; build ile
    ziyaretçinin günü kayabiliyor. ISO string dilimlenir (`iso.slice(0,10)`),
    footer yılı sabit (`const year = 2026`).
-8. **Analytics yalnızca env + onay varsa RENDER edilir** (gizlenmez —
+9. **Analytics yalnızca env + onay varsa RENDER edilir** (gizlenmez —
    yüklenmez). `NEXT_PUBLIC_GA4_MEASUREMENT_ID` boşsa GA hiç yoktur.
-9. **GA4 property'si miamili'den AYRI.** Aynı property, iki sitenin trafiğini
+10. **GA4 property'si miamili'den AYRI.** Aynı property, iki sitenin trafiğini
    birleştirir ve "uydu gerçekten trafik getiriyor mu" sorusunu ölçülemez kılar
    — projenin bütün amacı bu ölçüm.
-10. **Doküman gerçekliği:** mimari değiştiren oturum bu dosyayı AYNI oturumda
+11. **Doküman gerçekliği:** mimari değiştiren oturum bu dosyayı AYNI oturumda
     günceller.
 
 ## Mimari
@@ -62,6 +78,7 @@ değişiklik, sitenin varlık sebebini ters çevirir.
 | Render | Tamamı statik: `generateStaticParams()` + `dynamicParams = false` |
 | Hosting | Vercel (proje: `miamigezi`) — repo kökü app kökü, alt dizin YOK |
 | İçerik | Repo içi TypeScript/JSON (CMS yok, backend yok) |
+| Görsel | `public/images/*.webp` (commit'li) + `next/image`, Unsplash künyeli |
 | Ölçümleme | GA4, onay-kapılı (`src/components/Analytics.tsx`) |
 
 ### Route haritası
@@ -84,6 +101,11 @@ değişiklik, sitenin varlık sebebini ters çevirir.
 - `public/llms.txt` → **marka gerçekleri SSOT'u.** İçerik hattı izinli
   iddiaları buradan okur. Yayıncı/iletişim/konumlandırma değişirse ÖNCE burası.
 - `src/lib/site.ts` → `SITE`, `PUBLISHER`, `miamiliUrl()`, `abs()`.
+- `src/content/images.json` → **görsel SSOT'u.** `scripts/fetch-images.mjs`'in
+  yazma alanı; ELLE BÜYÜTME. Tek istisna `alt` ve `illustrative` alanlarıdır
+  (insan kararı, script üzerine yazmaz). Okuma arayüzü: `src/content/images.ts`
+  (`guideImage()` / `postImage()` / `pageImage()`). Anahtarı olmayan sayfa
+  görselsiz render olur — hattın bu sabah ürettiği yazı bu yüzden patlamaz.
 
 ## İçerik hattı (günlük otomatik yazı)
 
@@ -130,7 +152,13 @@ mor-mavi "Miami Vice" gradyanı.
 - İmza öğeler: `fluted` (dikey yiv dokusu), `Ledge` / `Sunburst` (art-deco
   ayraç; `tone`: ink/flamingo/lagoon), `tabular` (rakam hizası), `rise`
   (giriş animasyonu).
-- Görsel yok — bilinçli. Stok fotoğraf özgünlük katmıyor, LCP'yi bozuyor.
+- **Fotoğraf katmanı** (2026-08): her sayfada TEK geniş "plaka" — başlıktan
+  sonra, içerikten önce. Kart DEĞİL: köşe yuvarlaması/gölge/çerçeve yok,
+  sayfanın geri kalanı gibi keskin; mobilde kenardan kenara taşar
+  (`-mx-5 sm:mx-0`, tablolardaki desenin aynısı), oran `3/2 → sm:16/7`.
+  Liste/ızgara küçük resmi YOK — kart ızgarası anti-referans olmayı sürdürüyor.
+  Künye şeridi mobilde tam genişlik bar, `sm:`'den itibaren köşe çipi
+  (`bg-ink/80`: en kötü fotoğrafta bile beyaz metinle ≥9:1).
 - **Krem/bej yasağı çalıştırılabilir:** `npm run check:renk`
   (`scripts/check-renk.mjs`) src'deki renk literallerini tarar; bilinen krem
   hex'lerini VE listede olmayan yeni sıcak nötrleri (R≈G>B, düşük chroma)
@@ -148,6 +176,10 @@ Tam liste + açıklamalar: `.env.example`.
   ölçümleme başlamaz.
 - `ANTHROPIC_API_KEY` — GitHub repo secret (Actions). Tarayıcıya GİTMEZ.
 - `BLOG_MODEL` (ops.) — üretim modelini geçici olarak değiştirir.
+- `UNSPLASH_ACCESS_KEY` — YALNIZCA yerel, tek seferlik görsel indirme
+  (`npm run images:fetch`). Ne tarayıcıya ne CI'a gider: fotoğraflar repo'da
+  hazır, canlıda API çağrısı yok. Demo uygulama kotası **50 istek/saat**,
+  hedef başına 2 istek — script devam edebilir (resumable).
 
 ## Geliştirme
 
@@ -156,6 +188,8 @@ npm run dev        # localhost:3000
 npm run build      # tüm sayfalar statik üretilmeli (sayı blog arttıkça büyür)
 npm run lint
 npm run check:renk # krem/bej koruma kapısı — src'de sıcak nötr var mı
+npm run images:check  # görsel hedef/içerik eşleşmesi + eksik alt metni (API'siz)
+npm run images:fetch  # Unsplash'ten eksik görselleri indir (UNSPLASH_ACCESS_KEY)
 ```
 
 Deploy: `main` push → Vercel otomatik.

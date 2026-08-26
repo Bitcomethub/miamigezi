@@ -66,6 +66,14 @@ jobs:
       - name: Krem/bej kapısı
         run: npm run check:renk
 
+      # Görsel manifesti kapısı — API'siz. İki şeyi denetler: (a) her rehberin
+      # bir görsel hedefi var mı, (b) manifestteki her kaydın Türkçe alt metni
+      # dolu mu (alt'sız görsel ekran okuyucuda sessizdir). Hattın eklediği YENİ
+      # yazının görseli henüz yoktur — bu UYARI'dır, kırmızı DEĞİL: yazı
+      # görselsiz de sorunsuz yayınlanır, log'da "eksik hedef" satırı görünür.
+      - name: Görsel manifesti kapısı
+        run: npm run images:check
+
       - name: Yazıyı üret
         id: generate
         continue-on-error: true # needs_review durumunda da state commit edilsin
