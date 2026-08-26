@@ -3,12 +3,19 @@ import type { Metadata } from 'next';
 import { GUIDES } from '@/content/guides';
 import { getRecentPosts } from '@/lib/blogData';
 import { Ledge, Sunburst } from '@/components/Ledge';
-import { SITE } from '@/lib/site';
+import { Photo } from '@/components/Photo';
+import { pageImage } from '@/content/images';
+import { SITE, abs } from '@/lib/site';
+
+const HERO = pageImage('home');
 
 export const metadata: Metadata = {
   title: "Miami Seyahat Rehberi — Uçak Bileti, Gezilecek Yerler, Oteller",
   description: SITE.description,
   alternates: { canonical: '/' },
+  openGraph: HERO
+    ? { images: [{ url: abs(HERO.src), width: HERO.width, height: HERO.height, alt: HERO.alt }] }
+    : undefined,
 };
 
 export default function HomePage() {
@@ -17,8 +24,9 @@ export default function HomePage() {
   return (
     <>
       {/* ── Açılış ────────────────────────────────────────────────────────
-          Fotoğraf yok — lisanslı görsel yok ve uydurma stok üretmiyoruz.
-          Hiyerarşi tamamen tipografiden ve yatay silmelerden geliyor. */}
+          Hiyerarşi önce tipografiden ve yatay silmelerden geliyor; fotoğraf
+          onun yerine değil ARDINA giriyor (başlık → ufuk gradyanı → plaka).
+          Görseller Unsplash'ten lisanslı ve künyeli (bkz. components/Photo). */}
       <section className="rise mx-auto max-w-[78rem] px-5 pt-14 pb-band sm:px-8 sm:pt-20">
         <p className="flex items-center gap-2.5 font-display text-label font-semibold tracking-[0.22em] text-flamingo-deep uppercase">
           <Sunburst className="h-3 w-5" />
@@ -48,6 +56,8 @@ export default function HomePage() {
           aria-hidden="true"
           className="mt-12 h-2.5 bg-gradient-to-r from-flamingo to-sunset sm:mt-14"
         />
+
+        <Photo image={HERO} priority className="mt-7 sm:mt-9" />
       </section>
 
       {/* ── Numaralı içindekiler ──────────────────────────────────────────

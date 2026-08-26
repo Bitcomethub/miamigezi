@@ -10,7 +10,9 @@
     "check:renk": "node scripts/check-renk.mjs",
     "blog:test": "node scripts/generate-blog-post.mjs --self-test",
     "blog:dry": "node scripts/generate-blog-post.mjs --mock --dry-run",
-    "blog:generate": "node scripts/generate-blog-post.mjs"
+    "blog:generate": "node scripts/generate-blog-post.mjs",
+    "images:fetch": "node scripts/fetch-images.mjs",
+    "images:check": "node scripts/fetch-images.mjs --check"
   },
   "dependencies": {
     "next": "16.3.0",
@@ -24,6 +26,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.0",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

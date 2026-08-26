@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ALL_POSTS, getPost } from '@/lib/blogData';
 import { Ledge } from '@/components/Ledge';
+import { Photo } from '@/components/Photo';
+import { postImage } from '@/content/images';
 import { abs } from '@/lib/site';
 import { blogPostingSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 
@@ -21,6 +23,8 @@ export async function generateMetadata({
   const post = getPost(slug);
   if (!post) return {};
 
+  const image = postImage(post.slug);
+
   return {
     title: post.title,
     description: post.excerpt,
@@ -34,6 +38,7 @@ export async function generateMetadata({
       locale: 'tr_TR',
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
+      images: image ? [{ url: abs(image.src), width: image.width, height: image.height, alt: image.alt }] : undefined,
     },
   };
 }
@@ -46,6 +51,10 @@ export default async function BlogPostPage({
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
+
+  // Hattın bu sabah ürettiği yeni yazının henüz görseli olmayabilir; Photo
+  // undefined'da hiçbir şey basmaz (bkz. src/content/images.ts).
+  const image = postImage(post.slug);
 
   const schema = [
     blogPostingSchema(post),
@@ -87,6 +96,8 @@ export default async function BlogPostPage({
           {post.question}
         </p>
       </header>
+
+      <Photo image={image} priority className="mt-10" />
 
       <Ledge className="mt-10" tone="flamingo" />
 

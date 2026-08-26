@@ -125,6 +125,26 @@ Manuel tetikleme: **Actions → "Günlük blog yazısı" → Run workflow**.
 **Marka gerçeği değişirse** (yayıncı adı, iletişim, konumlandırma): ÖNCE
 `public/llms.txt` güncellenir. Prompt oradan okuyor; script'e sabit yazma.
 
+**Yeni yazının görseli** (2026-08'den beri her sayfada bir fotoğraf var):
+
+Hat yazıyı üretir ama **görsel indirmez** — Unsplash anahtarı CI'da yok ve
+olması da istenmiyor (her sabah üçüncü parti bir API'ye bağımlı bir adım
+eklemek, hattın kırılma yüzeyini büyütür). Yeni yazı o gün **görselsiz**
+yayınlanır; bu bilinçli ve sayfayı bozmaz (`Photo`, anahtarı olmayan yazıda
+sessizce hiçbir şey basmaz).
+
+Görseli sonradan eklemek için:
+
+1. `scripts/fetch-images.mjs` içindeki `TARGETS` listesine satır ekle:
+   `{ key: 'blog:<slug>', query: '<İngilizce arama terimi>' }`
+2. `npm run images:fetch` — yalnızca eksikleri indirir, var olanlara dokunmaz.
+3. Manifestteki `alt` alanını **Türkçe** doldur (script `null` bırakır) ve
+   `illustrative`'i karar ver: karede Miami/Florida kanıtı yoksa `true` kalsın.
+4. `npm run images:check` yeşile dönmeli — alt metni boş kayıt kırmızı düşürür.
+
+Günlük workflow `images:check` çalıştırıyor: görselsiz yeni yazı **UYARI**
+üretir (kırmızı DEĞİL), ama alt metni eksik bir kayıt job'ı kırar.
+
 **`BlogPost` şekli değişirse**: `src/content/blog/types.ts` ve script'teki
 `OUTPUT_SCHEMA` **aynı commit'te** değişir, yoksa hat geçerli JSON üretip
 render'da patlar.
@@ -146,7 +166,10 @@ render'da patlar.
 
 ## 7. Bilinçli sınırlar
 
-- **Görsel üretilmiyor.** Yazılar metin; stok görsel eklemek özgünlük katmıyor.
+- **Hat görsel indirmiyor.** Fotoğraf katmanı var ama hattın dışında: görseller
+  elle (`npm run images:fetch`) indirilip repo'ya commit'leniyor. Sebep hem
+  kırılma yüzeyi hem de alt metni: Türkçe `alt`, karede gerçekten ne olduğunu
+  anlatmak zorunda ve bunu bir script uyduramaz.
 - **Yazar adı yok.** Yazılar hattın ürünü; künyede bu açıkça yazılı. Uydurma
   bir yazar kimliği yaratmak E-E-A-T değil, sahtelik olur.
 - **Günde tek yazı.** Hacim değil, kuyruğun bitene kadar tutarlı ritim hedefi.

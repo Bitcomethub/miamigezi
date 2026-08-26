@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 import { GUIDES, getGuide, getGuides } from '@/content/guides';
 import type { GuideSection } from '@/content/guides/types';
 import { Ledge, Sunburst } from '@/components/Ledge';
+import { Photo } from '@/components/Photo';
+import { guideImage } from '@/content/images';
 import { abs, miamiliUrl } from '@/lib/site';
 import {
   breadcrumbSchema,
@@ -29,6 +31,8 @@ export async function generateMetadata({
   const guide = getGuide(slug);
   if (!guide) return {};
 
+  const image = guideImage(guide.slug);
+
   return {
     title: guide.title,
     description: guide.excerpt,
@@ -40,6 +44,8 @@ export async function generateMetadata({
       description: guide.excerpt,
       url: abs(`/${guide.slug}`),
       locale: 'tr_TR',
+      // twitter card'ı 'summary_large_image' — görselsizken boş kalıyordu.
+      images: image ? [{ url: abs(image.src), width: image.width, height: image.height, alt: image.alt }] : undefined,
     },
   };
 }
@@ -54,6 +60,7 @@ export default async function GuidePage({
   if (!guide) notFound();
 
   const related = getGuides(guide.related);
+  const image = guideImage(guide.slug);
   const schema = [
     guideArticleSchema(guide),
     faqSchema(guide.faqs),
@@ -90,6 +97,11 @@ export default async function GuidePage({
           {guide.question}
         </p>
       </header>
+
+      {/* ── Fotoğraf plakası ─────────────────────────────────────────── */}
+      <div className="mx-auto max-w-[78rem] px-5 sm:px-8">
+        <Photo image={image} priority className="mt-10 sm:mt-12" />
+      </div>
 
       {/* ── Almanak: hızlı bilgiler ──────────────────────────────────── */}
       <section

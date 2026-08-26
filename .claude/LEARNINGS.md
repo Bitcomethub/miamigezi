@@ -58,6 +58,15 @@
   start`'ı **yeniden başlatmak** zorunlu: `next start` public dosyalarını build
   anındaki manifestten servis eder, sonradan eklenen dosya 404 döner. Harness
   ölçümden sonra silinir — commit'e girmez.
+- **Harness'in kör noktası:** iframe sondası `getBoundingClientRect()` ile
+  **eleman kutusu** taşmasını ölçer; kutunun İÇİNDEKİ satır kutusu taşıp metin
+  kırpılıyorsa taşma **0 görünür**. Metin kırpması iddiası ya
+  `scrollWidth > clientWidth` taramasıyla ya da gerçek top-level viewport'ta
+  (`chrome --headless --window-size=393,X --screenshot`) doğrulanır. Pozitif
+  kontrolü geçen sonda, HER taşma sınıfını gördüğünü kanıtlamaz.
+- "Bu benim regresyonum mu?" sorusu tartışmayla değil, **aynı karenin `main`'de
+  çekilmesiyle** yanıtlanır: main'i ayrı portta ayağa kaldır, aynı URL'i aynı
+  genişlikte çek, crop'ları yan yana koy.
 - Render edilmiş HTML'de metin ararken karakterin o katmandaki biçimini önce
   doğrula: React, JSX metnindeki düz kesme işaretini `&#x27;` olarak kaçırır,
   ham `'` HTML'de hiç bulunmaz. **"0 eşleşme" bir sonuç değil, ölü arama
@@ -71,6 +80,29 @@
   ASCII'leşmesi. Bu marka ailesinde bir kez toplu düzeltme gerektirdi.
 - Uydurma telefon/adres/işletme adı yasak — bu sitede yayınlanan bir telefon
   ya da fiziksel adres YOK, model boşluğu doldurmaya çalışır.
+
+## Görseller (Unsplash)
+
+- **Otomatik hattın yazdığı veri şekline, hattın üretemeyeceği alan eklenmez.**
+  Görsel metadata'sı bu yüzden `BlogPost`/`Guide` tipinde değil, slug ile
+  eşleşen ayrı manifestte (`src/content/images.json`). Okuma tarafı eksikliğe
+  **sessiz düşüşle** dayanır: `getImage()` undefined döner, `Photo` hiçbir şey
+  basmaz. Hattın bu sabah ürettiği yazı görselsiz ama sağlam yayınlanır.
+- Künye (fotoğrafçı adı + Unsplash profil linki) **API lisans şartı**, tasarım
+  tercihi değil. Kaldıran, hesabı askıya aldırır. `links.download_location`
+  bildirimi de aynı şekilde zorunlu — script atmasa da site çalışır, bu yüzden
+  sessizce kaybolmaya açık; kod yorumunda gerekçesiyle işaretli tutulur.
+- `alt` metnini **script uydurmaz**: Unsplash açıklaması `altSource`'ta denetim
+  izi olarak durur, `alt` null gelir ve elle doldurulur. Fotoğraflar yayına
+  girmeden **gözle** incelenir — Unsplash açıklamalarının bir kısmı ("Miami
+  Rules", "enjoy now") alt metni için kullanılamaz.
+- `illustrative` (temsilî) varsayılanı **true**: karede Miami/Florida kanıtı
+  yoksa künyede "temsilî" basılır. Uydurma rakam yasağının görsel karşılığı —
+  Abu Dabi'deki cami sessizce "Miami'de cami" diye sunulmaz.
+- Fotoğrafın üstüne binen künye şeridi **sabit koyu zeminle** kurulur
+  (`bg-ink/80`): fotoğrafın ne olacağı önceden bilinemez, kontrast şansa
+  bırakılamaz. Mobilde tam genişlik bar (`inset-x-0`), köşe çipi değil — en uzun
+  fotoğrafçı adı 393px'te köşeye sığmıyordu.
 
 ## Mimari
 

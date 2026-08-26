@@ -5,6 +5,56 @@
 
 ---
 
+## 2026-08-26 — 393px iframe harness'i, gerçek viewport'ta görünen yatay kırpmayı ÜRETMİYOR
+- **Problem:** Fotoğraf katmanı eklendikten sonra 393px ekran görüntüsünde blog
+  başlık altı `question` paragrafı kelime ortasından kesiliyordu ("...yer **bul**mak").
+  Bu projenin standart sondası — public/'a konan iframe harness'i — aynı sayfa için
+  `scrollWidth == clientWidth`, taşma **0** diyordu. İki ölçüm birbirini yalanlıyordu.
+- **Eliminated:** "yeni Photo bileşeni taşırıyor" → elendi, tüm elemanları tarayan
+  sonda Photo içinde 0 taşan eleman buldu · "webfont swap yarışı, screenshot fallback
+  fontla çekiliyor" → elendi, `--virtual-time-budget=90000` +
+  `--run-all-compositor-stages-before-draw` ile birebir aynı kırpma · "elemanın
+  kutusu taşıyor" → elendi, `getBoundingClientRect().right` viewport içindeydi;
+  taşan şey kutunun İÇİNDEKİ satır kutusuydu, rect bunu göstermez.
+- **Chosen:** İddia, ölçümün alındığı KATMANDA doğrulandı: aynı sayfa gerçek
+  393px top-level viewport'ta (`chrome --headless --window-size=393,X --screenshot`)
+  çekildi ve 460px/560px ile karşılaştırıldı. 460px'te aynı satır tamamen sığıyor,
+  393px'te kesiliyor → taşma gerçek. Ardından `main` build'i ayrı portta ayağa
+  kaldırılıp aynı kare çekildi: **birebir aynı kırpma** → bu PR'ın regresyonu değil.
+- **Evidence:** iframe sondası: `maks yatay taşma=0, künye>görsel=0` (22 sayfa,
+  iki genişlik). Pozitif kontrol koşusu (bilerek enjekte edilen taşma) `1607px`
+  yakaladı — yani sonda ölü değildi, sadece BU taşma sınıfına kör. Gerçek viewport
+  393/460/560 şerit karşılaştırması + main vs branch crop'ları kırpmayı gösterdi.
+- **Rule:** iframe harness'i **eleman kutusu** taşmasını ölçer, satır kutusunu değil.
+  Metin kırpması iddiası için ya `scrollWidth > clientWidth` taraması yapılır ya da
+  ölçüm gerçek top-level viewport'ta tekrarlanır. Bir sondanın pozitif kontrolü
+  geçmesi, o sondanın HER taşma sınıfını gördüğü anlamına GELMEZ. "Bu benim
+  regresyonum mu" sorusu her zaman aynı kareyi `main`'de çekerek yanıtlanır.
+
+## 2026-08-26 — Görsel metadata'sını içerik tipine gömmek, günlük hattı sessizce kırar
+- **Problem:** 22 sayfaya fotoğraf ekleniyor. Görsel bilgisi (src, boyut, alt,
+  fotoğrafçı, blur) nereye yazılacak? Doğal yer `Guide` ve `BlogPost` tipleri —
+  proje zaten "içerik veri olarak yazılır" kuralını işletiyor.
+- **Eliminated:** `BlogPost`/`Guide` tipine `image` alanı eklemek → **çalışırdı**,
+  ama blog yazıları her sabah `scripts/generate-blog-post.mjs` tarafından üretiliyor.
+  Alan zorunlu olsaydı `OUTPUT_SCHEMA` da değişmek zorunda kalırdı ve model,
+  indirmediği bir fotoğrafın metadata'sını UYDURURDU. Opsiyonel yapmak da çözmüyor:
+  tip opsiyonel olsa bile hattın ürettiği her yazı görselsiz kalır ve bunu kimse
+  fark etmez · Görselleri hattın kendisine indirtmek → her sabah üçüncü parti bir
+  API'ye bağımlı bir adım demek; kota/kesinti hattı kırar, üstelik Türkçe `alt`
+  metnini yine bir model uydurmuş olurdu.
+- **Chosen:** Slug ile eşleşen AYRI manifest (`src/content/images.json` +
+  `src/content/images.ts` okuma arayüzü). `getImage()` anahtar yoksa `undefined`
+  döner, `Photo` bileşeni hiçbir şey basmaz. Hattın bugün ürettiği yazı görselsiz
+  ama sorunsuz yayınlanır; görsel sonradan elle eklenir.
+- **Evidence:** `npm run build` 27 statik sayfa ✓, `blog:test` 14/5 ✓ (hat şeması
+  hiç değişmedi). `images:check` yeni yazıyı "UYARI eksik hedef" olarak raporluyor,
+  job'ı kırmıyor; buna karşılık boş `alt` bilerek yazıldığında exit 1.
+- **Rule:** Otomatik bir hattın YAZDIĞI veri şekline, hattın üretemeyeceği hiçbir
+  alan eklenmez. İnsan kararı gerektiren metadata (burada Türkçe `alt` ve "bu kare
+  gerçekten Miami mi") slug ile eşleşen ayrı bir manifeste konur ve okuma tarafı
+  eksikliğe **sessiz düşüşle** dayanacak şekilde yazılır.
+
 ## 2026-08-22 — Krem/bej kapısı: "sıcak" tek eşikle ölçülürse paletin kendi aksanlarını yer
 - **Problem:** "Krem/bej yasak" kuralı CLAUDE.md'de yazılıydı ama çalıştırılabilir
   değildi; denetim gözle yapılıyordu. Kapı yazılırken asıl zorluk şu: krem/bej ile
