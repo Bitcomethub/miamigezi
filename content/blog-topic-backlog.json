@@ -258,7 +258,8 @@
         "Amerika'da alkol yaşı"
       ],
       "angle": "Bağlayıcı kural: ABD'de alkol yaşı 21 ve kimlik kontrolü istisnasız — pasaport en güvenli belge, Türk kimliği kabul edilmez. Kulüp giriş politikası (dress code, guest list, masa rezervasyonu, kapıda seçim) özel işletme kararıdır, şikâyet edilecek bir kural değil. Bahşiş ve servis ücreti mantığının bar hesabına nasıl yansıdığı. FİYAT VE KULÜP ADI VERME. Güvenlik: içkini gözden ayırma, dönüş ulaşımını önceden planla, açık alanda alkol yasağı.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-08-27"
     },
     {
       "id": "everglades-tour",
