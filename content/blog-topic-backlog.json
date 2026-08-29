@@ -294,7 +294,8 @@
         "Miami Disney World ulaşım"
       ],
       "angle": "Üç seçeneği karar tablosuyla karşılaştır: araba (esneklik, yaklaşık üç buçuk-dört saatlik sürüş, otopark), Brightline treni (şehir merkezinden şehir merkezine, konfor, varışta araç ihtiyacı), iç hat uçuşu (havalimanı süreleriyle birlikte gerçek kazanç azalır). Orlando'ya tema parkı için gidiliyorsa park bileti ve konaklama planının ulaşımdan önce geldiğini söyle. BİLET FİYATI VERME. Günübirlik yapılabilir mi sorusuna dürüst cevap: tema parkı için hayır.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-08-29"
     },
     {
       "id": "boat-rental",
