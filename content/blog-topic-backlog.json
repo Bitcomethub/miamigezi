@@ -312,7 +312,8 @@
         "Biscayne Bay tekne"
       ],
       "angle": "İki modeli ayır: kaptanlı kiralama (çoğu turist için doğru seçenek) ve kaptansız kiralama (Florida'da doğum yılına bağlı tekne kullanma belgesi şartı olabilir — kesin tarih iddia etme, 'kiralama şirketi belge şartını söyler' de). Yakıt, temizlik ve kaptan bahşişinin genelde fiyata dahil olmadığını belirt. Can yeleği, hava ve dalga durumu, alkol ve tekne kullanımı. FİYAT VE ŞİRKET ADI VERME, rezervasyon linki verme.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-08-30"
     },
     {
       "id": "water-sports",
