@@ -330,7 +330,8 @@
         "jet ski kiralama kuralları"
       ],
       "angle": "Güvenlik ve sözleşme odaklı yaz: yaş ve belge şartı, zorunlu can yeleği, sorumluluk sözleşmesi (waiver) imzalamanın anlamı, hasar durumunda depozito ve sorumluluk, kiralama öncesi hasar fotoğrafı çekmenin pratik değeri. Rüzgâr, dalga ve trafik yoğun koylarda dikkat. Seyahat sigortasının bazı 'tehlikeli aktivite' başlıklarını kapsam dışı bırakabildiğini söyle. FİYAT VERME, işletme önerme.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-08-31"
     },
     {
       "id": "rainy-day",
