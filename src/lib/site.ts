@@ -46,3 +46,34 @@ export function miamiliUrl(path: string, campaign: string): string {
 export function abs(path: string): string {
   return new URL(path, SITE.url).toString();
 }
+
+
+/* ── Kardeş yayın ağı ──────────────────────────────────────────────────────
+   Dört site — miamili.com · floridarehberi.com · miamigezi.com ·
+   miamiendeksi.com — karşılıklı linkli. Kendi sitemiz listede YOK.
+
+   `rel="nofollow"` KULLANILMIYOR: bağ gerçek, dördü de aynı yayıncının.
+
+   UTM neden kardeş bağlantılarda da var: bu dosyanın başındaki gerekçe
+   miamili.com'a ÖZEL DEĞİL. Etiketsiz bir kardeş bağlantısı, ağın gerçekten
+   trafik taşıyıp taşımadığını ölçülemez kılar — tam da `miamiliUrl()`'in
+   var olma sebebi. Hedef sitenin canonical'ı UTM'li URL'i temiz sürüme
+   toplar, yani bağ sinyali bölünmez.
+
+   SIRALAMA: bu dizi footer'da olduğu gibi çizilir; ekleme yaparken alfabe
+   değil, ağdaki ağırlık sırası korunur (önce miamili).
+   ────────────────────────────────────────────────────────────────────── */
+export const KARDES_SITELER = [
+  { ad: 'MiamiLi', alan: 'miamili.com', href: miamiliUrl('/', 'kardes-siteler') },
+  { ad: 'Florida Rehberi', alan: 'floridarehberi.com', href: kardesUrl('https://floridarehberi.com', 'kardes-siteler') },
+  { ad: 'Miami Endeksi', alan: 'miamiendeksi.com', href: kardesUrl('https://miamiendeksi.com', 'kardes-siteler') },
+] as const;
+
+/** Kardeş siteye giden bağlantı — `miamiliUrl()` ile AYNI atıf deseni. */
+function kardesUrl(site: string, campaign: string): string {
+  const url = new URL('/', site);
+  url.searchParams.set('utm_source', 'miamigezi');
+  url.searchParams.set('utm_medium', 'referral');
+  url.searchParams.set('utm_campaign', campaign);
+  return url.toString();
+}

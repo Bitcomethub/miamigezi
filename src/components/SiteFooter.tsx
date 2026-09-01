@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { GUIDES } from '@/content/guides';
-import { PUBLISHER, SITE, miamiliUrl } from '@/lib/site';
+import { KARDES_SITELER, PUBLISHER, SITE, miamiliUrl } from '@/lib/site';
 import { Sunburst } from './Ledge';
 
 export function SiteFooter() {
@@ -84,6 +84,36 @@ export function SiteFooter() {
             </ul>
           </nav>
         </div>
+
+        {/* ── İlgili siteler — kardeş yayın ağı ──────────────────────────
+            Dört site karşılıklı linkli; liste ve atıf parametreleri
+            `lib/site.ts` → `KARDES_SITELER`'den gelir (elle URL YAZMA,
+            utm sessizce düşer). `rel="nofollow"` YOK: bağ gerçek. */}
+        <section aria-labelledby="footer-ag" className="mt-12 border-t border-paper/14 pt-7">
+          <h2
+            id="footer-ag"
+            className="font-display text-label font-semibold tracking-[0.16em] text-paper/56 uppercase"
+          >
+            İlgili siteler
+          </h2>
+          <ul className="mt-5 grid gap-3 sm:grid-cols-3">
+            {KARDES_SITELER.map((site) => (
+              <li key={site.alan}>
+                <a
+                  href={site.href}
+                  rel="noopener"
+                  className="group block border border-paper/14 px-4 py-3 no-underline transition-colors duration-200 hover:border-sun/60 hover:bg-paper/5"
+                >
+                  <span className="block text-small font-medium text-paper/88 transition-colors group-hover:text-sun">
+                    {site.ad}
+                  </span>
+                  {/* /56: lacivert zeminde 6.19:1 — /40 AA'nın altında kalır. */}
+                  <span className="mt-0.5 block text-[0.8125rem] text-paper/56">{site.alan}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
 
         {/* Künye — sahiplik açık beyanı. Tek satır, gizlenmemiş, utm'li. */}
         <div className="mt-12 flex flex-col gap-2 border-t border-paper/14 pt-6 sm:flex-row sm:items-baseline sm:justify-between">
