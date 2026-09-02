@@ -348,7 +348,8 @@
         "yağmurlu günde Miami"
       ],
       "angle": "Önce beklentiyi düzelt: yaz aylarında yağmur genellikle gün boyu değil, öğleden sonra kısa ve şiddetli geçer — planı iptal etmek yerine kaydırmak çoğu zaman yeterli. Kapalı alan alternatifleri: müzeler, akvaryum yerine bilim merkezi, sanat mekânları, alışveriş merkezleri, kapalı gıda pazarları, sinema. Fırtına sırasında plaj ve tekne turlarının neden kapandığı, şimşek kuralı. SAAT VE BİLET FİYATI VERME — mekânların güncel saatini kendi sayfasından kontrol et de.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-09-02"
     },
     {
       "id": "cruise-port",
