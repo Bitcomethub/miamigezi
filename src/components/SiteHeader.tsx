@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Sunburst } from './Ledge';
+import { SiteMark } from './SiteMark';
 
 // Hamburger menü YOK: 8 bağlantı mobilde yatay kaydırılan bir ray olarak
 // duruyor. Gerekçe — açılır menü bir state, bir focus tuzağı ve bir Escape
@@ -32,7 +32,10 @@ export function SiteHeader() {
           href="/"
           className="group -my-1.5 flex shrink-0 items-baseline gap-2 py-1.5 font-display text-ink no-underline"
         >
-          <Sunburst className="h-3 w-5 translate-y-[1px] text-flamingo transition-transform duration-300 group-hover:-translate-y-px" />
+          {/* Marka kilidi. `text-flamingo` YOK: işaret iki renkli ve
+              renklerini kendi taşıyor — currentColor tek renge düşürüp
+              güneş/dalga ayrımını yok ederdi. */}
+          <SiteMark className="h-[1.15rem] w-[1.15rem] shrink-0 translate-y-[2px] transition-transform duration-300 group-hover:-translate-y-px" />
           <span
             className="text-[1.32rem] leading-none font-semibold tracking-[-0.02em]"
             style={{ fontStretch: '112%' }}
