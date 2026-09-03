@@ -366,7 +366,8 @@
         "cruise check-in"
       ],
       "angle": "Limanın şehir merkezine yakınlığı, havalimanından ulaşım seçenekleri, terminal ve check-in saatinin gemi şirketi tarafından belirlendiği. En kritik pratik tavsiye: kalkış günü uçuşuyla gelmemek, bir gece önceden şehirde olmak. Pasaport ve vize meselesi — kruvaziyerin uğradığı ülkelerin ayrı vize isteyebileceği, bunun gemi şirketinden teyit edilmesi gerektiği. Otopark ve bagaj teslimi. GEMİ ŞİRKETİ ÖNERME, fiyat verme.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-09-03"
     },
     {
       "id": "jet-lag",
