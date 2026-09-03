@@ -5,6 +5,28 @@
 
 ---
 
+## 2026-09-03 — fal.ai "logo" istendi, editoryal illüstrasyon geldi; suçlu prompt değil MODELdi
+- **Problem:** Başlıktaki kaba concentric-arc işaretin yerine profesyonel marka
+  işareti üretilecekti. `recraft-v3` + `vector_illustration` gün batımı MANZARASI
+  çizdi (ağaçlar, martı, yürüyen adam) — logo değil, editoryal illüstrasyon.
+- **Eliminated:** Prompt'a "no scene / no people / minimalist" yazmak → Recraft V3
+  **negative prompt'u hiç onurlandırmıyor**, iki tur ispatladı. · Alt stiller
+  (`cutout`, `roundish_flat`) → DAHA KÖTÜ; stil ailesi illüstrasyon üzerine
+  eğitilmiş, alt stil onu derinleştiriyor. · `icon/*` stil seti → fal'ın hiçbir
+  Recraft ucunda enum'da YOK (şemadan doğrulandı, hafızadan varsayılmadı).
+- **Chosen:** `fal-ai/ideogram/v3`, `style: DESIGN` + `negative_prompt` +
+  `color_palette` + **`expand_prompt: false`** (sonuncusu şart: açıkken
+  MagicPrompt prompt'u süsleyip manzarayı geri getiriyor). Raster çıktı yerel
+  `potrace` ile ALFADAN izlendi — `recraft/vectorize` alfayı düzleştirip işareti
+  "dolu dikdörtgen + oyan yollar" olarak kuruyor, oymayı silince blok kalıyor.
+- **Evidence:** Aynı motifle 4 tur: recraft 15 aday → 0 kullanılabilir; ideogram
+  DESIGN 12 aday → 9'u gerçek marka işareti. Şema: `curl
+  "https://fal.ai/api/openapi/queue/openapi.json?endpoint_id=fal-ai/ideogram/v3"`.
+  Sonuç 3,0 KB SVG, beyazda ve lacivertte, 24px ve 1024px'te doğru çizildi.
+- **Rule:** "Logo/ikon" istiyorsan illüstrasyon modeline prompt yazma; işi görsel
+  KİMLİK olan modele git ve yeteneğini şema enum'undan doğrula. Raster→SVG'de
+  alfayı kaynak alan bir izleyici kullan.
+
 ## 2026-08-26 — 393px iframe harness'i, gerçek viewport'ta görünen yatay kırpmayı ÜRETMİYOR
 - **Problem:** Fotoğraf katmanı eklendikten sonra 393px ekran görüntüsünde blog
   başlık altı `question` paragrafı kelime ortasından kesiliyordu ("...yer **bul**mak").
