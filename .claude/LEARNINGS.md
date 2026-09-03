@@ -83,6 +83,19 @@
 
 ## Görseller (Unsplash)
 
+- **Üretilen marka görseli Unsplash hattından AYRIDIR** ve o hattın künye/lisans
+  kurallarına tabi değildir (`SiteMark.tsx`, `app/icon.svg`). Üretirken: Recraft'ın
+  `*_illustration` aileleri logo değil editoryal SAHNE çizer ve negative prompt'u
+  onurlandırmaz — prompt sıkılaştırmak çözmez. Marka işareti için
+  `fal-ai/ideogram/v3` + `style: DESIGN` + `negative_prompt` + `color_palette`,
+  ve **`expand_prompt: false`** (açıksa MagicPrompt manzarayı geri getirir).
+  Model yeteneğini şema enum'undan doğrula. Raster→SVG'de `recraft/vectorize`
+  ALFAYI DÜZLEŞTİRİR (işareti "dolu dikdörtgen + oyan yollar" kurar) — yerel
+  `potrace` ile alfadan izle. Anahtar:
+  `~/.config/superpowers/worktrees/vitrin-ai/fal-logo/.env.local`.
+- **Başlıktaki `Sunburst` süs olarak YAŞIYOR** (page/[slug]/footer); yalnız marka
+  kilidi `SiteMark`'a geçti. İşaret iki rengi kendi taşır → `currentColor` verme.
+
 - **Otomatik hattın yazdığı veri şekline, hattın üretemeyeceği alan eklenmez.**
   Görsel metadata'sı bu yüzden `BlogPost`/`Guide` tipinde değil, slug ile
   eşleşen ayrı manifestte (`src/content/images.json`). Okuma tarafı eksikliğe
