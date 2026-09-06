@@ -420,7 +420,8 @@
         "Miami etkinlik takvimi"
       ],
       "angle": "Haftanın tek bir fuardan ibaret olmadığını anlat: ana fuarın yanında şehre yayılan uydu fuarlar, galeri açılışları ve sokak sanatı etkinlikleri. Kime uygun: sanatla ilgilenen, kalabalığa ve yüksek fiyata hazır olan. Kime uygun değil: sakin plaj tatili arayan. Otel ve ulaşımın bu haftada zorlaştığını, erken planlamanın şart olduğunu göreli olarak söyle — FİYAT ARTIŞ ORANI UYDURMA. Tarihler yıldan yıla değişir; resmî etkinlik sayfasından teyit et.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-09-06"
     },
     {
       "id": "alcohol-rules",
