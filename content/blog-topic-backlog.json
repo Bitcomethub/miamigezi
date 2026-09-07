@@ -438,7 +438,8 @@
         "açık kapta alkol ABD"
       ],
       "angle": "21 yaş kuralı ve kimlik kontrolünün istisnasızlığı; pasaportun tek güvenli belge olması. Açık kapta alkolun sokakta ve plajda yasak olduğu, bunun ciddi bir para cezası doğurabileceği. Satış saatlerinin ve market/dükkân türüne göre kısıtların BELEDİYEDEN BELEDİYEYE değiştiği — tek bir saat iddia etme, 'satın alacağın yerin kuralı geçerlidir' de. Alkollü araç kullanmanın ABD'deki ağır sonuçları. Kiralık araçta açık şişe taşıma kuralı.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-09-07"
     },
     {
       "id": "accessibility",
