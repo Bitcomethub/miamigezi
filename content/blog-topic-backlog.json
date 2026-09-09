@@ -474,7 +474,8 @@
         "FAA drone kayıt"
       ],
       "angle": "Drone kısmını ciddiye al: ABD'de drone uçurmak federal düzenlemeye tabi, havalimanı çevresi ve bazı bölgeler uçuşa kapalı, kayıt ve uygulama üzerinden izin gerekebilir. KESİN PROSEDÜR VE AĞIRLIK EŞİĞİ İDDİA ETME — FAA'nın güncel sayfasına ve resmî uygulamasına yönlendir; ihlalin cezası ağır. Fotoğraf tarafı: Art Deco cephelerinin ışığı, gün doğumu ve gün batımının hangi kıyıda çalıştığı, özel mülk ve müze içi çekim izinleri, insan fotoğraflamada nezaket.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-09-09"
     },
     {
       "id": "pets",
