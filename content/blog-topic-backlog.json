@@ -492,7 +492,8 @@
         "köpek plajı Miami"
       ],
       "angle": "En kritik uyarı: ABD'ye evcil hayvan girişi kuralları (aşı, mikroçip, sağlık sertifikası, bazı ülkeler için ek şartlar) değişkendir ve HAVAYOLUNUN kuralı ile ÜLKENİN kuralı ayrı ayrı sağlanmalıdır — kesin belge listesi yazma, CDC ve havayolunun resmî sayfasına yönlendir. Kabin/kargo ayrımı, sıcak hava nedeniyle bazı dönemlerde kargo taşımasının durabilmesi. Şehirde: pet-friendly otel talebinin ayrıca sorulması, köpeklerin yasak olduğu plajlar ve köpek dostu alanların varlığı. TESİS ADI UYDURMA.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-09-10"
     },
     {
       "id": "luggage-storage",
