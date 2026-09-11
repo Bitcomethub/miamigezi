@@ -510,7 +510,8 @@
         "havalimanı emanet"
       ],
       "angle": "En basit ve ücretsiz çözümle başla: otelin check-out sonrası bagaj saklama hizmeti — çoğu otel yapar, sormak yeterli. Sonra ücretli seçenekler: bagaj emanet uygulamaları üzerinden dükkân/otel noktaları, havalimanı emanet hizmetinin varlığının terminale göre değiştiği. Kruvaziyer ve uzun aktarma senaryoları. Değerli eşyanın emanete bırakılmaması, sigorta kapsamının okunması. FİYAT VE MARKA ÖNERME — 'kapasitesi ve saatleri değişir, aynı gün teyit et' de.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-09-11"
     },
     {
       "id": "restaurant-booking",
