@@ -528,7 +528,8 @@
         "restoran rezervasyon iptal ücreti"
       ],
       "angle": "Sistemi anlat: rezervasyon uygulamaları üzerinden masaların belirli bir gün önceden açılması, popüler yerlerde saatlerin dakikalar içinde dolması, bar tarafının çoğu zaman rezervasyonsuz kabul etmesi, bekleme listesi mantığı. Gelmemenin (no-show) kredi kartından ücret doğurabildiği. Erken saatlerin ve hafta içi günlerin avantajı. RESTORAN ADI VE FİYAT VERME. Kıyafet kuralı ve grup rezervasyonunda otomatik servis ücretine kısa değin.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-09-12"
     },
     {
       "id": "golf",
