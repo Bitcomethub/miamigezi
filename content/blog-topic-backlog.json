@@ -546,7 +546,8 @@
         "golf tee time rezervasyon"
       ],
       "angle": "Ayrımı kur: halka açık (public/municipal) sahalar herkese açıktır, özel kulüpler üyelik ya da üye davetiyle çalışır — turist için doğru arama terimi 'public course'. Tee time rezervasyonunun online sistemlerle nasıl yapıldığı, ekipman kiralama, golf arabası (cart) kullanımının çoğu sahada standart olması, kıyafet kuralı. Sıcak ve nem nedeniyle sabah erken saatlerin tercih edilmesi, yaz aylarında öğleden sonra şimşek nedeniyle sahaların kapanabilmesi. SAHA ADI, GREEN FEE VE PUAN VERME.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-09-13"
     }
   ]
 }
