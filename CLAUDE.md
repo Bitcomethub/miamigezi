@@ -79,7 +79,7 @@ değişiklik, sitenin varlık sebebini ters çevirir.
 | Hosting | Vercel (proje: `miamigezi`) — repo kökü app kökü, alt dizin YOK |
 | İçerik | Repo içi TypeScript/JSON (CMS yok, backend yok) |
 | Görsel | `public/images/*.webp` (commit'li) + `next/image`, Unsplash künyeli |
-| Ölçümleme | GA4, onay-kapılı (`src/components/Analytics.tsx`) |
+| Ölçümleme | Cloudflare Web Analytics beacon onay-kapılı: yalnızca `mg-consent-v1 === 'granted'` iken render edilir. Onay banner'ı consent `unknown` olduğunda HER ZAMAN render edilir ve GA4 measurement id'sine KASITLI OLARAK bağlı değildir. GA4 prod'da KAPALI; yalnızca `NEXT_PUBLIC_GA4_MEASUREMENT_ID` tanımlıysa devreye girer (NEXT_PUBLIC = build-time, rebuild gerekir). |
 
 ### Route haritası
 
