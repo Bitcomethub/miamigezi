@@ -23,7 +23,7 @@
 //   3. Yayımlanan konu backlog'da 'published' olur, bir daha seçilmez.
 //
 // Kullanım:
-//   OPENROUTER_API_KEY=... node scripts/generate-blog-post.mjs     # gerçek üretim
+//   ANTHROPIC_API_KEY=... node scripts/generate-blog-post.mjs     # gerçek üretim
 //   node scripts/generate-blog-post.mjs --mock --dry-run           # API'siz uçtan uca prova
 //   node scripts/generate-blog-post.mjs --self-test                # kalite kapısı birim testi
 //   Flags: --dry-run (dosya yazma), --mock (API yerine fixture),
@@ -49,13 +49,13 @@ const PATHS = {
 };
 
 const SITE = 'https://miamigezi.com';
-// Model env ile değiştirilebilir. Tüm projeler OpenRouter üzerinden çalışır
+// Model env ile değiştirilebilir. Tüm projeler Anthropic üzerinden çalışır
 // (Metin'in standardı: doğrudan Anthropic API değil, her şey OpenRouter).
-// Varsayılan: claude-sonnet-5 (OpenRouter üzerinden, $2/$10 — 4.6'dan ucuz).
+// Varsayılan: claude-sonnet-5 (Anthropic üzerinden, $2/$10 — 4.6'dan ucuz).
 // gemini-2.5-flash denendi — kalite kapısının kelime hedeflerini tutturamadı
 // (87-91 kelime / hedef 135-170, 2 retry'da da reddedildi, run #1).
 // Kapı spesifikasyonu Claude'a göre ayarlı.
-const MODEL = process.env.BLOG_MODEL || 'anthropic/claude-sonnet-5';
+const MODEL = process.env.BLOG_MODEL || 'claude-sonnet-5-5';
 
 const args = process.argv.slice(2);
 const FLAGS = {
@@ -414,9 +414,9 @@ async function generateDraft(topic, brandFacts, feedback) {
     log('mock mod: fixtures/mock-post.json kullanılıyor');
     return readJSON(PATHS.mockFixture);
   }
-  if (!process.env.OPENROUTER_API_KEY) {
+  if (!process.env.ANTHROPIC_API_KEY) {
     throw new Error(
-      'OPENROUTER_API_KEY tanımlı değil. GitHub repo secret olarak eklenmeli ' +
+      'ANTHROPIC_API_KEY tanımlı değil. GitHub repo secret olarak eklenmeli ' +
         '(Settings → Secrets and variables → Actions). Bkz. docs/blog-pipeline.md'
     );
   }
@@ -432,13 +432,11 @@ async function generateDraft(topic, brandFacts, feedback) {
     });
   }
 
-  const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+  const res = await fetch('https://api.anthropic.com/v1/chat/completions', {
     method: 'POST',
     headers: {
-      Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
+      Authorization: `Bearer ${process.env.ANTHROPIC_API_KEY}`,
       'Content-Type': 'application/json',
-      'HTTP-Referer': 'https://miamigezi.com',
-      'X-Title': 'miamigezi-blog',
     },
     body: JSON.stringify({
       model: MODEL,
@@ -455,7 +453,7 @@ async function generateDraft(topic, brandFacts, feedback) {
   });
   if (!res.ok) {
     const errBody = await res.text().catch(() => '');
-    throw new Error(`OpenRouter ${res.status}: ${errBody.slice(0, 300)}`);
+    throw new Error(`Anthropic ${res.status}: ${errBody.slice(0, 300)}`);
   }
   const data = await res.json();
   const choice = data.choices?.[0];
