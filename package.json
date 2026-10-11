@@ -12,7 +12,8 @@
     "blog:dry": "node scripts/generate-blog-post.mjs --mock --dry-run",
     "blog:generate": "node scripts/generate-blog-post.mjs",
     "images:fetch": "node scripts/fetch-images.mjs",
-    "images:check": "node scripts/fetch-images.mjs --check"
+    "images:check": "node scripts/fetch-images.mjs --check",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "next": "16.3.0",

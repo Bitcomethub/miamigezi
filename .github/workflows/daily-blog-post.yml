@@ -105,26 +105,27 @@ jobs:
             echo "pushed=true" >> "$GITHUB_OUTPUT"
           fi
 
-      # IndexNow: Bing/Yandex'e yeni URL'i bildir. Anahtar gizli DEĞİL — protokol
-      # gereği public/<key>.txt olarak yayınlanıyor, doğrulama bu dosyayla yapılıyor.
-      # Vercel deploy'u ~2-3 dk sürdüğü için önce bekliyoruz; motorlar URL'i hemen
-      # taramaz, kuyruğa alır.
-      - name: IndexNow ping
+      # IndexNow: yeni URL'i Bing/Yandex'e bildirir.
+      #
+      # Anahtar artık burada SABİT DEĞİL. `scripts/indexnow.mjs` onu yayımlanan
+      # `public/<key>.txt` dosyasından okur — çünkü IndexNow, `key` alanı ile
+      # `keyLocation` içeriğinin BİREBİR aynı olmasını şart koşuyor. Anahtarın
+      # ikinci bir kopyasını burada tutmak, ikisinin ayrıştığı güne kadar
+      # sessizce çalışan bir kurulum demekti.
+      #
+      # Sabit `sleep 180` yerine `--wait-for-key`: anahtar dosyası gerçekten
+      # yayına girene kadar bekler, girmezse ping ATMAZ. Yayında olmayan bir
+      # anahtarla atılan ping 403 döner, yani boşa gider.
+      #
+      # Hata deploy'u KIRMAZ: script `--strict` olmadan her zaman 0 döner.
+      - name: IndexNow bildirimi
         if: steps.generate.outputs.published == 'true' && steps.push.outputs.pushed == 'true'
+        continue-on-error: true
         run: |
-          sleep 180
-          curl -sS -X POST "https://api.indexnow.org/indexnow" \
-            -H "Content-Type: application/json; charset=utf-8" \
-            -d '{
-              "host": "miamigezi.com",
-              "key": "6cedaa49efb91eaf5e0331d26a30ed2f",
-              "keyLocation": "https://miamigezi.com/6cedaa49efb91eaf5e0331d26a30ed2f.txt",
-              "urlList": [
-                "${{ steps.generate.outputs.post_url }}",
-                "https://miamigezi.com/blog",
-                "https://miamigezi.com/sitemap.xml"
-              ]
-            }' -w "\nIndexNow HTTP %{http_code}\n"
+          node scripts/indexnow.mjs \
+            "${{ steps.generate.outputs.post_url }}" \
+            "https://miamigezi.com/blog" \
+            --wait-for-key
 
       # Kalite kapısı 2 kez başarısız olduysa (needs_review) job'u kırmızıya
       # boya → GitHub e-posta bildirimi. Taslak content/rejected-drafts/ altında.
