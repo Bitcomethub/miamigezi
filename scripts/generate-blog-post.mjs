@@ -69,6 +69,54 @@ const log = (...m) => console.log('[icerik-hatti]', ...m);
 const readJSON = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
 const writeJSON = (p, v) => fs.writeFileSync(p, JSON.stringify(v, null, 2) + '\n');
 
+// ── Sessiz takılma koruması ───────────────────────────────────────────────
+// Geçmişte yaşanan: kuyrukta 'pending' konu kalmayınca script 0 dönüyordu ve
+// günlük iş YEŞİL görünüyordu. Site 2026-09-13'te sessizce dondu, kimse fark
+// etmedi. Kural: yayımlanabilir konu yoksa GÖRÜNÜR ol (özet + kırmızı dönüş).
+// 'needs_review' KALICI bir çıkmaz değil: sınırlı sayıda yeniden denenir; hak
+// bitince 'stuck' olur ve özet ekranında insan müdahalesi bekler.
+const MAX_REVIEW_ATTEMPTS = 2;
+
+function writeJobSummary(lines) {
+  const out = process.env.GITHUB_STEP_SUMMARY;
+  if (out) fs.appendFileSync(out, lines.join('\n') + '\n');
+  lines.forEach((l) => log(l));
+}
+
+// Kuyruğun gerçek durumunu tek ekranda göster.
+function queueReport(backlog) {
+  const by = (s) => backlog.topics.filter((t) => (t.status ?? 'pending') === s);
+  const pending = by('pending');
+  const review = by('needs_review');
+  const stuck = by('stuck');
+  const lines = [
+    '## ⛔ Yayımlanabilir konu yok — üretim durdu',
+    '',
+    '| durum | adet |',
+    '|---|---|',
+    `| pending (yayıma hazır) | ${pending.length} |`,
+    `| needs_review (yeniden denenecek) | ${review.length} |`,
+    `| stuck (deneme hakkı bitti, insan gerekli) | ${stuck.length} |`,
+    '',
+  ];
+  if (review.length) {
+    lines.push('### Yeniden denenecek konular', '');
+    review.forEach((t) => lines.push(`- \`${t.slug}\` — deneme ${t.reviewAttempts ?? 0}/${MAX_REVIEW_ATTEMPTS}`));
+    lines.push('');
+  }
+  if (stuck.length) {
+    lines.push('### Takılı konular — elle inceleme gerekli', '');
+    stuck.forEach((t) =>
+      lines.push(`- \`${t.slug}\` — ${(t.problems || []).slice(0, 2).join(' · ') || 'bkz. content/rejected-drafts/'}`)
+    );
+    lines.push('');
+  }
+  if (!review.length && !stuck.length) {
+    lines.push('Kuyruk tükendi: `content/blog-topic-backlog.json` dosyasına yeni konu ekle.', '');
+  }
+  return lines;
+}
+
 // ── Tarih (UTC gün bazlı — cron UTC çalışır) ──────────────────────────────
 function todayISO() {
   if (FLAGS.date) return FLAGS.date;
@@ -113,15 +161,31 @@ function loadExistingSlugs() {
 }
 
 // ── Konu seçimi ───────────────────────────────────────────────────────────
+// Önce 'pending'. Kalmadıysa, kalite kapısından dönmüş ('needs_review') ama
+// deneme hakkı tükenmemiş konular yeniden denenir — reddedilen bir konu
+// kuyruğu kalıcı olarak tıkamaz. Hakkı biten konu 'stuck' işaretlenir ve
+// yalnızca özet ekranında görünür (seçilmez).
+function isSelectable(t) {
+  if ((t.status ?? 'pending') === 'pending') return true;
+  if (t.status === 'needs_review') return (t.reviewAttempts ?? 0) < MAX_REVIEW_ATTEMPTS;
+  return false;
+}
+
 function pickTopic(backlog, existingSlugs) {
-  const pending = backlog.topics
-    .filter((t) => t.status === 'pending')
-    .sort((a, b) => (a.priority ?? 9) - (b.priority ?? 9));
-  for (const topic of pending) {
+  const candidates = backlog.topics
+    .filter(isSelectable)
+    .sort((a, b) => {
+      const rank = (t) => ((t.status ?? 'pending') === 'pending' ? 0 : 1);
+      return rank(a) - rank(b) || (a.priority ?? 9) - (b.priority ?? 9);
+    });
+  for (const topic of candidates) {
     if (existingSlugs.has(topic.slug)) {
       topic.status = 'skipped_duplicate';
       log(`slug çakışması, atlandı: ${topic.slug}`);
       continue;
+    }
+    if (topic.status === 'needs_review') {
+      log(`kapıdan dönmüş konu yeniden deneniyor (deneme ${(topic.reviewAttempts ?? 0) + 1}/${MAX_REVIEW_ATTEMPTS}): ${topic.slug}`);
     }
     return topic;
   }
@@ -504,7 +568,12 @@ function publish(post, backlog, topic) {
 }
 
 function flagForReview(draft, topic, backlog, problems, dateISO) {
-  topic.status = 'needs_review';
+  const attempts = (topic.reviewAttempts ?? 0) + 1;
+  topic.reviewAttempts = attempts;
+  topic.problems = problems.slice(0, 3);
+  // Deneme hakkı bitti mi? Bittiyse kalıcı çıkmaz bırakma: 'stuck' işaretle,
+  // özet ekranında insan müdahalesi bekleyen bir satır olarak görünsün.
+  topic.status = attempts >= MAX_REVIEW_ATTEMPTS ? 'stuck' : 'needs_review';
   if (!FLAGS.dryRun) {
     fs.mkdirSync(PATHS.rejectedDir, { recursive: true });
     writeJSON(path.join(PATHS.rejectedDir, `${dateISO}-${topic.slug}.json`), {
@@ -515,7 +584,12 @@ function flagForReview(draft, topic, backlog, problems, dateISO) {
     });
     writeJSON(PATHS.backlog, backlog);
   }
-  log(`İNSAN İNCELEMESİ GEREKLİ — taslak 2 kez kalite kapısından döndü: ${topic.slug}`);
+  const kalan = MAX_REVIEW_ATTEMPTS - attempts;
+  log(
+    topic.status === 'stuck'
+      ? `KONU TAKILDI — deneme hakkı bitti (${attempts}/${MAX_REVIEW_ATTEMPTS}): ${topic.slug} — elle inceleme gerekli`
+      : `KALİTE KAPISI REDDETTİ — ${kalan} deneme hakkı kaldı: ${topic.slug}`
+  );
   problems.forEach((p) => log('  ✗', p));
 }
 
@@ -610,10 +684,14 @@ async function main() {
   // Dedupe guard 2+3: slug tekilliği (rehberler dahil) + published konular seçilmez
   const topic = pickTopic(backlog, loadExistingSlugs());
   if (!topic) {
-    log(`backlog'da pending konu kalmadı — yeni konu ekleme rehberi: docs/blog-pipeline.md`);
+    // Sessiz takılma yok: kuyruk durumunu özet ekranına yaz ve KIRMIZI dön.
+    // 'published=false' ile yeşil çıkmak, bu hattın bir aydır fark edilmeyen
+    // arızasıydı (site 2026-09-13'te dondu).
+    log(`yayımlanabilir konu yok — kuyruk tükendi ya da kalan konular kapıda takılı.`);
+    writeJobSummary(queueReport(backlog));
     emitGithubOutput('published', 'false');
     if (!FLAGS.dryRun) writeJSON(PATHS.backlog, backlog); // skipped_duplicate işaretleri kalıcı olsun
-    return;
+    process.exit(1);
   }
   log(`konu seçildi: [${topic.id}] ${topic.title}`);
 

@@ -127,10 +127,14 @@ jobs:
             "https://miamigezi.com/blog" \
             --wait-for-key
 
-      # Kalite kapısı 2 kez başarısız olduysa (needs_review) job'u kırmızıya
-      # boya → GitHub e-posta bildirimi. Taslak content/rejected-drafts/ altında.
+      # Kalite kapısı 2 kez başarısız olduysa (needs_review) ya da kuyrukta
+      # yayımlanabilir konu kalmadıysa job'u kırmızıya boya → GitHub e-posta
+      # bildirimi. Ayrıntı iş özetinde (Summary) ve content/rejected-drafts/.
+      #
+      # NEDEN 'kuyruk boş' DA BURADA: 2026-09-13'te kuyruk tükendi, üretici
+      # sessizce 0 döndü ve iş yeşil kaldı — site bir ay fark edilmeden durdu.
       - name: İnceleme gerekiyorsa kırmızıya boya
         if: steps.generate.outcome == 'failure'
         run: |
-          echo "::error::Yazı kalite kapısından 2 kez döndü veya üretim hatası oluştu. content/rejected-drafts/ ve yukarıdaki logu incele."
+          echo "::error::Yazı kalite kapısından 2 kez döndü, üretim hatası oluştu veya kuyrukta yayımlanabilir konu yok. Yukarıdaki iş özetini (Summary) ve content/rejected-drafts/ klasörünü incele."
           exit 1
