@@ -566,7 +566,8 @@
         "resort fee nedir"
       ],
       "angle": "Resort/destinasyon ücretinin ne olduğunu, odaya yazılan fiyattan neden ayrı gösterildiğini ve ödeme sırasında (online rezervasyon vs otelde) nasıl çıkabildiğini anlat. Rezervasyon öncesi toplam fiyat ekranında ve otelin kendi şartlar sayfasında aranacak ifadeleri say. Otopark ücretinin de ayrı alınabileceğine değin. Tutar verme. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-10-20"
     },
     {
       "id": "mia-fll-havalimani",
