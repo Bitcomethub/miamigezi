@@ -550,6 +550,499 @@
       "angle": "Ayrımı kur: halka açık (public/municipal) sahalar herkese açıktır, özel kulüpler üyelik ya da üye davetiyle çalışır — turist için doğru arama terimi 'public course'. Tee time rezervasyonunun online sistemlerle nasıl yapıldığı, ekipman kiralama, golf arabası (cart) kullanımının çoğu sahada standart olması, kıyafet kuralı. Sıcak ve nem nedeniyle sabah erken saatlerin tercih edilmesi, yaz aylarında öğleden sonra şimşek nedeniyle sahaların kapanabilmesi. SAHA ADI, GREEN FEE VE PUAN VERME.",
       "status": "published",
       "publishedAt": "2026-09-13"
+    },
+    {
+      "id": "resort-fee",
+      "slug": "miamide-otel-resort-ucreti-ve-gizli-masraflar",
+      "title": "Miami'de Otel Resort Ücreti ve Gizli Masraflar",
+      "question": "Miami otellerinde gecelik fiyata dahil olmayan resort ücreti nedir?",
+      "category": "Pratik Bilgi",
+      "cluster": "pratik",
+      "priority": 1,
+      "keywords": [
+        "Miami resort fee",
+        "otel gizli ücret Miami",
+        "Miami otel vergi ve ücretler",
+        "resort fee nedir"
+      ],
+      "angle": "Resort/destinasyon ücretinin ne olduğunu, odaya yazılan fiyattan neden ayrı gösterildiğini ve ödeme sırasında (online rezervasyon vs otelde) nasıl çıkabildiğini anlat. Rezervasyon öncesi toplam fiyat ekranında ve otelin kendi şartlar sayfasında aranacak ifadeleri say. Otopark ücretinin de ayrı alınabileceğine değin. Tutar verme. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "mia-fll-havalimani",
+      "slug": "miami-mi-fort-lauderdale-mi-havalimani-secimi",
+      "title": "Miami mi Fort Lauderdale mi? Havalimanı Seçimi",
+      "question": "Miami tatili için Miami (MIA) yerine Fort Lauderdale (FLL) havalimanına inmek mantıklı mı?",
+      "category": "Ulaşım",
+      "cluster": "ucus",
+      "priority": 1,
+      "keywords": [
+        "MIA FLL farkı",
+        "Fort Lauderdale havalimanı Miami",
+        "Miami havalimanı seçimi",
+        "FLL MIA hangisi yakın"
+      ],
+      "angle": "İki havalimanının konumunu, hangi bölgeye yakın olduğunu ve ilgilenen yolcunun karar kriterlerini (otel bölgesi, bağlantı, araç kiralama, havayolu seçeneği) anlat. Süre/fiyat farkı için sayı verme; harita aracıyla kontrol önerisi yeterli. Şehir içi ulaşım genel rehberine girme. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "sunpass-toll",
+      "slug": "miamide-sunpass-ve-ucretli-yollar",
+      "title": "Miami'de SunPass ve Ücretli Yollar: Kiralık Araçta Ne Olur?",
+      "question": "Miami’de kiralık araçla ücretli yollardan geçince ücret nasıl ödenir?",
+      "category": "Ulaşım",
+      "cluster": "arac",
+      "priority": 1,
+      "keywords": [
+        "SunPass nedir",
+        "Miami ücretli yol",
+        "kiralık araç toll ücreti",
+        "Florida toll sistemi"
+      ],
+      "angle": "Florida'da birçok ücretli yolun nakit yerine elektronik tahsil ettiğini, kiralık araçta firmanın toll paketi/transponder seçeneklerini ve idari ücret kalemlerini kavramsal olarak anlat. Teslim alırken şirketten toll politikasını yazılı sormayı öner. Tutar uydurma. Araç kiralama genel rehberine (ehliyet) girme. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "travel-insurance",
+      "slug": "miamide-seyahat-sigortasi-nasil-secilir",
+      "title": "Miami Seyahatinde Sağlık ve Seyahat Sigortası Nasıl Seçilir?",
+      "question": "ABD gezisi için seyahat sağlık sigortasında nelere bakılmalı?",
+      "category": "Pratik Bilgi",
+      "cluster": "saglik",
+      "priority": 1,
+      "keywords": [
+        "ABD seyahat sigortası",
+        "Miami sağlık sigortası",
+        "seyahat sigortası teminat limiti",
+        "tatil sigortası ABD"
+      ],
+      "angle": "ABD'de sağlık maliyetlerinin yüksek olabildiği, bu yüzden teminat kapsamı ve limitine bakmak gerektiği; ön koşullar, hazır istisnalar, iptal/gecikme teminatı ve poliçe alım tarihi gibi kritik ayrıntıları öğret. Belirli şirket adı önerme, rakam verme. Acil sağlık yazısının tekrarına girme. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "cbp-entry",
+      "slug": "miami-havalimaninda-cbp-pasaport-kontrolu",
+      "title": "Miami Havalimanında Pasaport Kontrolü (CBP) Nasıl İşler?",
+      "question": "ABD’ye Miami’den girişte sınır görevlisi ne sorar ve süreç nasıl işler?",
+      "category": "Vize & Giriş",
+      "cluster": "giris",
+      "priority": 1,
+      "keywords": [
+        "CBP pasaport kontrolü",
+        "Miami havalimanı giriş",
+        "ABD sınır görevlisi soruları",
+        "ABD girişte ne sorarlar"
+      ],
+      "angle": "Varışta sırayla pasaport kontrol, parmak izi/fotoğraf ve kısa görüşme akışını anlat. Dürüst, kısa, belgelerle uyumlu cevap vermenin önemini; kalış amacı, kalacak yer ve dönüş biletinin hazır olmasını belirt. Sonuç garantisi verme, görevlinin takdir yetkisini belirt. Vize randevusu yazısının ve dönüşte gümrük yazısının içeriğine girme. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "tipping",
+      "slug": "miamide-bahsis-kulturu",
+      "title": "Miami'de Bahşiş Kültürü: Nerede, Ne Kadar Beklenir?",
+      "question": "Miami’de restoran, otel ve taksi bahşişi nasıl verilir?",
+      "category": "Pratik Bilgi",
+      "cluster": "pratik",
+      "priority": 2,
+      "keywords": [
+        "Miami bahşiş",
+        "ABD bahşiş kuralları",
+        "restoran bahşişi Miami",
+        "tip nasıl verilir"
+      ],
+      "angle": "ABD'de bahşişin ücretin bir parçası gibi görüldüğünü, hesapta 'gratuity' veya servis bedeli eklenip eklenmediğini kontrol etmeyi anlat. Restoran, bar, otel personeli ve araç hizmetlerinde mantığı kavramsal ver. Yüzde ya da tutar yazma; 'yerel alışkanlık değişebilir, hesabı okuyun' çerçevesinde kal. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "sales-tax",
+      "slug": "miamide-fiyat-etiketi-ve-satis-vergisi",
+      "title": "Miami'de Fiyat Etiketine Vergi Neden Sonradan Eklenir?",
+      "question": "Miami’de raf fiyatı ile kasadaki toplam tutar neden farklı çıkar?",
+      "category": "Pratik Bilgi",
+      "cluster": "pratik",
+      "priority": 2,
+      "keywords": [
+        "Miami satış vergisi",
+        "ABD fiyat etiketi vergi",
+        "Florida sales tax turist",
+        "kasada fiyat farkı"
+      ],
+      "angle": "ABD'de etiket fiyatının çoğunlukla vergisiz yazıldığını, vergi ve servis bedelinin kasada/hesapta eklendiğini anlat. Alışveriş bütçesi yaparken bunu hesaba katmanın mantığını ver. Oran verme; güncel oranı resmî kurumdan öğrenmeyi söyle. Alışveriş hub rehberinin outlet/marka içeriğine girme. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "scams",
+      "slug": "miamide-turist-tuzaklari-ve-dolandiricilik",
+      "title": "Miami'de Turist Tuzakları ve Sık Görülen Dolandırıcılıklar",
+      "question": "Miami’de turistleri hedef alan yaygın tuzaklar nelerdir?",
+      "category": "Pratik Bilgi",
+      "cluster": "guvenlik",
+      "priority": 2,
+      "keywords": [
+        "Miami turist tuzakları",
+        "Miami dolandırıcılık",
+        "sahte taksi Miami",
+        "turist dolandırıcılığı"
+      ],
+      "angle": "Genel güvenlik rehberini tekrarlama; yalnız dolandırıcılık biçimlerini (sahte taksi/araç, aşırı fiyatlı tur satıcısı, sahte bilet, ödeme sırasında kart kopyalama riski) önleme odağıyla anlat. Korku dili kullanma, 'şehir güvenli/tehlikeli' hükmü verme, suç istatistiği uydurma. Şüphede resmî yönlendirme ve kart şirketini aramayı öner. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "holidays",
+      "slug": "miamide-yilbasi-ve-resmi-tatillerde-ne-acik",
+      "title": "Miami'de Yılbaşı ve Resmî Tatillerde Ne Açık, Ne Kapalı?",
+      "question": "Miami’de resmî tatil günlerinde mağaza ve ulaşım çalışır mı?",
+      "category": "Etkinlik & Sezon",
+      "cluster": "sezon",
+      "priority": 2,
+      "keywords": [
+        "Miami resmi tatiller",
+        "Miami yılbaşı",
+        "ABD tatil günleri kapalı",
+        "Thanksgiving Miami"
+      ],
+      "angle": "ABD resmî tatillerinin (Thanksgiving, Independence Day, Christmas vb.) seyahati nasıl etkilediğini: bazı devlet kurumlarının kapanması, ulaşım sıklığı değişimi, otel ve restoran yoğunluğu ve rezervasyon ihtiyacı. Tarih ve saat uydurma; güncel çalışma saatlerini işletmeden doğrulamayı söyle. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "budget-tips",
+      "slug": "miamide-butce-dostu-seyahat-ipuclari",
+      "title": "Miami'de Bütçe Dostu Seyahat İpuçları",
+      "question": "Miami tatilinde harcamayı azaltmanın yolları nelerdir?",
+      "category": "Pratik Bilgi",
+      "cluster": "pratik",
+      "priority": 2,
+      "keywords": [
+        "Miami ucuz tatil",
+        "Miami bütçe ipuçları",
+        "Miami tasarruf",
+        "ucuz Miami seyahati"
+      ],
+      "angle": "Maliyeti düşüren davranışları (sezon dışı seçimler, otel dışındaki ücretler, ücretsiz halka açık alanlar, market alışverişi, ortak ulaşım) anlat. Hiçbir fiyat, yüzde veya 'günlük bütçe şu kadar' rakamı yazma. Hub rehberlerin (otel, yeme-içme, ulaşım) ana sorularını yeniden ifade etme; yalnızca tasarruf mantığı. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "luggage-rights",
+      "slug": "ucus-gecikmesi-ve-kayip-bagaj-haklari-miami",
+      "title": "Miami Uçuşunda Gecikme ve Kayıp Bagaj: Ne Yapılır?",
+      "question": "Miami’ye uçarken bagajım kaybolursa veya uçuşum gecikirse ne yapmalıyım?",
+      "category": "Ulaşım",
+      "cluster": "ucus",
+      "priority": 2,
+      "keywords": [
+        "kayıp bagaj ne yapılır",
+        "uçuş gecikmesi hakları",
+        "ABD uçuş bagaj kaybı",
+        "PIR bagaj raporu"
+      ],
+      "angle": "Bagaj gelmediğinde havalimanında havayolu bagaj masasına hemen başvurmayı (kayıp bagaj raporu), referans numarasını saklamayı, zorunlu masrafların fişini toplamayı ve sigortayla ilişkisini anlat. Tazminat tutarı/süre uydurma; havayolu ve yetkili makamın güncel kurallarına yönlendir. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "short-term-rental",
+      "slug": "miamide-airbnb-ve-kisa-sureli-kiralama",
+      "title": "Miami'de Airbnb ve Kısa Süreli Konaklama Kuralları",
+      "question": "Miami’de turist olarak kısa süreli ev kiralamak güvenli ve yasal mı?",
+      "category": "Pratik Bilgi",
+      "cluster": "pratik",
+      "priority": 2,
+      "keywords": [
+        "Miami Airbnb",
+        "kısa dönem kiralama Miami",
+        "Airbnb kuralları Florida",
+        "Miami ev kiralama tatil"
+      ],
+      "angle": "Bölgeye göre kısa süreli kiralama kurallarının değişebildiğini, ilanın lisans/kayıt bilgisini sorma mantığını, temizlik ve depozito ücretlerinin toplam fiyatta nasıl göründüğünü ve otel alternatifiyle karar kriterlerini anlat. Hukuki hüküm verme, rakam yazma; şehir/ilçe resmî sayfasına yönlendir. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "sports-tickets",
+      "slug": "miamide-spor-maci-bileti-nasil-alinir",
+      "title": "Miami'de Spor Maçı Bileti Nasıl Alınır?",
+      "question": "Miami’de basketbol, futbol veya beyzbol maçına turist olarak nasıl bilet alınır?",
+      "category": "Etkinlik & Sezon",
+      "cluster": "aktivite",
+      "priority": 2,
+      "keywords": [
+        "Miami maç bileti",
+        "Miami Heat bilet",
+        "Inter Miami bilet",
+        "resmi bilet satış"
+      ],
+      "angle": "Resmî takım/stadyum bilet kanalını, ikincil piyasadaki sahte/pahalı bilet riskini, stadyuma giriş kurallarını (çanta, kimlik, mobil bilet) ve ulaşım/otopark planlamasını anlat. Belirli maç, oyuncu, fiyat veya tarih uydurma; sezon takvimini resmî siteden kontrol etmeyi söyle. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "little-havana",
+      "slug": "little-havana-gezi-rehberi",
+      "title": "Little Havana Gezi Rehberi: Calle Ocho'da Bir Gün",
+      "question": "Little Havana’da turist olarak ne yapılır, nasıl gezilir?",
+      "category": "Günübirlik",
+      "cluster": "gezi",
+      "priority": 3,
+      "keywords": [
+        "Little Havana",
+        "Calle Ocho",
+        "Küba kültürü Miami",
+        "Domino Park"
+      ],
+      "angle": "Küba göçmen kültürünün izini: yürüyüş rotası mantığı, Küba kahvesi molası, domino oynanan park, puro atölyesi vitrinleri ve müzik. Saat/fiyat verme; en iyi dönem için resmî etkinlik takvimine bak de. Genel gezilecek yerler hub'ına girme. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "wynwood",
+      "slug": "wynwood-sokak-sanati-rehberi",
+      "title": "Wynwood Sokak Sanatı Rehberi: Nasıl Gezilir?",
+      "question": "Wynwood duvar resimleri nasıl gezilir ve neye dikkat edilir?",
+      "category": "Günübirlik",
+      "cluster": "gezi",
+      "priority": 3,
+      "keywords": [
+        "Wynwood Walls",
+        "Miami sokak sanatı",
+        "Wynwood gezi",
+        "graffiti Miami"
+      ],
+      "angle": "Duvar resimlerinin sürekli değiştiğini, ücretli bahçe ile serbest sokak galerileri arasındaki farkı, yürüyüş için uygun zamanı ve fotoğraf nezaketini anlat. Giriş ücreti, saat veya sanatçı adı uydurma. Çevredeki kafe/galeri öner ama mekân adı uydurma. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "coral-gables",
+      "slug": "coral-gables-ve-venetian-pool-gezisi",
+      "title": "Coral Gables ve Venetian Pool: Miami'nin Sakin Yüzü",
+      "question": "Coral Gables’ta turist olarak neler yapılır?",
+      "category": "Günübirlik",
+      "cluster": "gezi",
+      "priority": 3,
+      "keywords": [
+        "Coral Gables",
+        "Venetian Pool",
+        "Miami tarihi bölge",
+        "Miracle Mile"
+      ],
+      "angle": "Plajdan farklı bir gün: planlı şehir mimarisi, tarihi havuz (Venetian Pool) kavramı, yürüyüş caddeleri. Havuz giriş şartlarının mevsime göre değişebildiğini ve resmî siteden kontrol gerektiğini belirt. Fiyat/saat verme. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "biscayne-cruise",
+      "slug": "miamide-biscayne-koyu-tekne-turlari",
+      "title": "Miami'de Biscayne Koyu Tekne Turları: Ne Görülür?",
+      "question": "Biscayne Koyu tekne turu nasıl seçilir, ne görülür?",
+      "category": "Günübirlik",
+      "cluster": "aktivite",
+      "priority": 3,
+      "keywords": [
+        "Biscayne Bay tur",
+        "Miami tekne turu",
+        "ünlü evleri tekne turu",
+        "Miami deniz turu"
+      ],
+      "angle": "Koydaki ada ve yat bölgelerini görmenin tur mantığını, ses/rehber dilinin kontrolü ve iptal koşullarını anlat. Kiralama ve su sporları yazılarına girme; fiyat/süre uydurma, operatör adı uydurma. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "miami-apps",
+      "slug": "miami-seyahati-icin-faydali-mobil-uygulamalar",
+      "title": "Miami Seyahati İçin Faydalı Mobil Uygulamalar",
+      "question": "Miami’de seyahat ederken telefonda hangi uygulamalar işe yarar?",
+      "category": "Pratik Bilgi",
+      "cluster": "pratik",
+      "priority": 3,
+      "keywords": [
+        "Miami mobil uygulama",
+        "seyahat uygulamaları ABD",
+        "harita ve ulaşım uygulaması",
+        "çeviri uygulaması"
+      ],
+      "angle": "Uygulama türlerini (harita, araç çağırma, çeviri, havayolu/otel, çevrimdışı harita, banka) ve ne zaman gerekli olduklarını anlat. İnternet/eSIM hub rehberinin içeriğine girme. Belirli abonelik ücreti/özellik iddiası yazma. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "city-pass",
+      "slug": "miami-turist-kartlari-ve-city-pass-mantikli-mi",
+      "title": "Miami Turist Kartları ve City Pass: Mantıklı mı?",
+      "question": "Miami’de turist kartı veya city pass almak gerçekten tasarruf sağlar mı?",
+      "category": "Pratik Bilgi",
+      "cluster": "pratik",
+      "priority": 3,
+      "keywords": [
+        "Miami city pass",
+        "turist kartı Miami",
+        "Go City Miami",
+        "gezi kartı mantıklı mı"
+      ],
+      "angle": "Kart almadan önce yapılması gereken karşılaştırmayı anlat: planlanan mekânların tek tek toplamı, geçerlilik süresi, rezervasyon zorunluluğu. Kartın kesin tasarruf sağladığı iddiasında bulunma; fiyat uydurma; resmî satıcı sayfasından güncel kapsama bak. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "heat-sun",
+      "slug": "miamide-gunes-yaniklari-ve-sicak-carpmasi",
+      "title": "Miami'de Güneş Yanığı ve Sıcak Çarpması: Önlemler",
+      "question": "Miami’de yazın sıcak çarpmasından ve güneş yanığından nasıl korunulur?",
+      "category": "Pratik Bilgi",
+      "cluster": "saglik",
+      "priority": 3,
+      "keywords": [
+        "Miami güneş yanığı",
+        "sıcak çarpması önlemi",
+        "UV Miami",
+        "güneş kremi tatil"
+      ],
+      "angle": "Genel tıbbi öneri değil, seyahat hazırlığı: öğle saatlerinden kaçınma, gölge/su, uygun giyim, güneş koruyucu. Belirtiler ağırsa acil hatta/doktora başvurmayı söyle. Teşhis, doz, UV indeksi sayısı verme; resmî sağlık kurumlarına yönlendir. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "power-adapter",
+      "slug": "miamide-elektrik-prizi-ve-sarj-adaptoru",
+      "title": "Miami'de Elektrik Prizi ve Şarj Adaptörü: Hazırlık",
+      "question": "Türkiye’den Miami’ye giderken priz adaptörü ve voltaj için ne gerekir?",
+      "category": "Pratik Bilgi",
+      "cluster": "pratik",
+      "priority": 3,
+      "keywords": [
+        "ABD priz tipi",
+        "Miami adaptör",
+        "voltaj farkı",
+        "şarj adaptörü ABD"
+      ],
+      "angle": "ABD'de priz şeklinin ve şebeke geriliminin Türkiye'den farklı olduğunu, cihaz şarj cihazının etiketinde giriş aralığını kontrol etmenin önemini ve ısıtıcı/saç kurutma gibi cihazlarda dikkat edilecek noktayı anlat. Kesin voltaj değeri yerine etiket okuma mantığına odaklan. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "language",
+      "slug": "miamide-ispanyolca-ve-ingilizce-iletisim",
+      "title": "Miami'de Dil: Ingilizce mi, Ispanyolca mı?",
+      "question": "Miami’de İngilizce bilmeden idare edilir mi, yoksa İspanyolca mı gerekir?",
+      "category": "Pratik Bilgi",
+      "cluster": "pratik",
+      "priority": 3,
+      "keywords": [
+        "Miami hangi dil",
+        "Miami Ispanyolca",
+        "Miami İngilizce",
+        "dil bariyeri seyahat"
+      ],
+      "angle": "Şehrin çok dilli yapısını, turizm sektöründe İngilizcenin genellikle yeterli olduğunu, İspanyolca kelimelerin bazı bölgelerde işe yaradığını ve çeviri uygulamalarının rolünü anlat. Nüfus/oran uydurma; kalıplaşmış hükümlerden kaçın. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "smoking-vape",
+      "slug": "miamide-sigara-ve-vape-kurallari",
+      "title": "Miami'de Sigara ve Vape Kuralları: Nerede Yasak?",
+      "question": "Miami’de sigara veya vape içmek nerelerde yasak?",
+      "category": "Pratik Bilgi",
+      "cluster": "pratik",
+      "priority": 3,
+      "keywords": [
+        "Miami sigara yasağı",
+        "vape kuralları Florida",
+        "sigara içilen yerler",
+        "plaj sigara"
+      ],
+      "angle": "Kapalı mekân, restoran, otel odası ve bazı halka açık alanlardaki kısıtlamaların farklı olabildiğini; ceza tutarı veya madde numarası vermeden kavramsal anlat. Otelin kendi politikasını ve yerel belediye kurallarını kontrol etmeyi söyle. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "vegan",
+      "slug": "miamide-vegan-ve-vejetaryen-yemek",
+      "title": "Miami'de Vegan ve Vejetaryen Yemek Rehberi",
+      "question": "Miami’de vegan veya vejetaryen beslenmek kolay mı?",
+      "category": "Yeme İçme",
+      "cluster": "pratik",
+      "priority": 3,
+      "keywords": [
+        "Miami vegan",
+        "vejetaryen restoran Miami",
+        "vegan yemek ABD",
+        "bitkisel beslenme tatil"
+      ],
+      "angle": "Menüde alerjen/içerik sorma pratiğini, 'plant-based' ifadesini, otel kahvaltısında sınırlı seçenek olabilmesini ve marketten tamamlama stratejisini anlat. Belirli restoran adı veya puan/öneri uydurma. Helal yazısının içeriğine girme. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "brunch",
+      "slug": "miamide-brunch-ve-kahvalti-kulturu",
+      "title": "Miami'de Brunch ve Kahvaltı Kültürü",
+      "question": "Miami’de brunch nasıl yapılır, rezervasyon gerekir mi?",
+      "category": "Yeme İçme",
+      "cluster": "pratik",
+      "priority": 3,
+      "keywords": [
+        "Miami brunch",
+        "Miami kahvaltı",
+        "hafta sonu brunch",
+        "bottomless brunch"
+      ],
+      "angle": "Brunch'ın hafta sonu sosyal bir alışkanlık olduğunu, yoğun saatlerde rezervasyon veya bekleme ihtimalini, sınırsız içecek paketlerinde alkol yaş kuralını anlat. Restoran adı, menü fiyatı ve saat uydurma. Yeme-içme hub ve alkol kuralları yazısını tekrar etme. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "cafecito",
+      "slug": "miamide-kuba-kahvesi-ve-cafecito-kulturu",
+      "title": "Miami'de Küba Kahvesi ve Cafecito Kültürü",
+      "question": "Miami’de cafecito nedir, nasıl sipariş edilir?",
+      "category": "Yeme İçme",
+      "cluster": "pratik",
+      "priority": 3,
+      "keywords": [
+        "cafecito Miami",
+        "Küba kahvesi",
+        "ventanita",
+        "Miami kahve kültürü"
+      ],
+      "angle": "Pencere kafelerde (ventanita) küçük, güçlü kahve servisini, paylaşarak içme alışkanlığını ve basit sipariş kalıplarını anlat. Fiyat ve mekân adı uydurma; kültürel bağlamı saygılı anlat. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "event-weeks",
+      "slug": "miamide-buyuk-etkinlik-haftalarinda-otel-ve-ulasim",
+      "title": "Miami'de Büyük Etkinlik Haftalarında Otel ve Ulaşım",
+      "question": "Miami’de büyük etkinlik dönemlerinde otel ve ulaşım nasıl etkilenir?",
+      "category": "Etkinlik & Sezon",
+      "cluster": "sezon",
+      "priority": 3,
+      "keywords": [
+        "Miami etkinlik takvimi",
+        "konser ve festival Miami",
+        "yoğun dönem Miami",
+        "otel bulunabilirliği"
+      ],
+      "angle": "Büyük etkinliklerin otel doluluğu, trafik ve ulaşım üzerindeki genel etkisini ve erken planlama mantığını anlat. Belirli etkinlik adı/tarih ve fiyat artışı oranı uydurma; Art Basel yazısını tekrarlama; güncel takvimi resmî duyurudan öğren. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "ocean-drive",
+      "slug": "ocean-drive-yuruyus-rotasi-gece-ve-gunduz",
+      "title": "Ocean Drive Yürüyüş Rotası: Gündüz mü, Gece mi?",
+      "question": "Ocean Drive’da gündüz mü gece mi gezmek daha iyi?",
+      "category": "Gece Hayatı",
+      "cluster": "gece",
+      "priority": 3,
+      "keywords": [
+        "Ocean Drive",
+        "South Beach yürüyüş",
+        "Art Deco bölgesi",
+        "Miami Beach gece"
+      ],
+      "angle": "Art Deco binalarının gündüz fotoğraf, akşam canlı atmosfer olarak nasıl farklı hissettirdiğini ve restoran önündeki çağrı yapan görevlilerle ilgili 'fiyatı önceden sor' tavsiyesini anlat. Güvenlik hükmü verme, fiyat uydurma. Plaj rehberine girme. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
+    },
+    {
+      "id": "honeymoon",
+      "slug": "miamide-romantik-aksam-ve-balayi-plani",
+      "title": "Miami'de Romantik Akşam ve Balayı Planı",
+      "question": "Miami’de çiftler için romantik bir akşam nasıl planlanır?",
+      "category": "Gece Hayatı",
+      "cluster": "gece",
+      "priority": 3,
+      "keywords": [
+        "Miami balayı",
+        "romantik Miami",
+        "çiftler için Miami",
+        "gün batımı Miami"
+      ],
+      "angle": "Gün batımı noktası, sakin restoran, tekne/yürüyüş seçenekleri ve rezervasyonu erken yapma mantığını anlat. Belirli mekân veya fiyat uydurma; gece hayatı kuralları yazısını tekrar etme. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
+      "status": "pending"
     }
   ]
 }
