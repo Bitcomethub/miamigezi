@@ -37,4 +37,22 @@ export function getRecentPosts(limit: number): BlogPost[] {
   return ALL_POSTS.slice(0, limit);
 }
 
+/**
+ * İlgili yazılar: ortak anahtar kelime sayısı çoksa önce; eşitlikte yayın
+ * sırasında bu yazıdan SONRA gelenler (sona gelince başa sarar), böylece
+ * gelen bağlantı tüm yazılara dağılır ve hiçbir yazı yetim kalmaz.
+ */
+export function getRelatedPosts(slug: string, limit = 4): BlogPost[] {
+  const i = ALL_POSTS.findIndex((p) => p.slug === slug);
+  if (i < 0) return [];
+  const words = new Set(ALL_POSTS[i].keywords.map((k) => k.toLowerCase()));
+  const overlap = (p: BlogPost) => p.keywords.filter((k) => words.has(k.toLowerCase())).length;
+  const rotated = [...ALL_POSTS.slice(i + 1), ...ALL_POSTS.slice(0, i)];
+  return rotated
+    .map((p, order) => ({ p, order, score: overlap(p) }))
+    .sort((a, b) => b.score - a.score || a.order - b.order)
+    .slice(0, limit)
+    .map((x) => x.p);
+}
+
 export type { BlogPost } from '@/content/blog/types';

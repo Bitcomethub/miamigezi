@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { ALL_POSTS, getPost } from '@/lib/blogData';
+import { ALL_POSTS, getPost, getRelatedPosts } from '@/lib/blogData';
 import { Ledge } from '@/components/Ledge';
 import { Photo } from '@/components/Photo';
 import { postImage } from '@/content/images';
@@ -181,6 +181,28 @@ export default async function BlogPostPage({
             </div>
           ))}
         </dl>
+      </section>
+
+      <section className="mt-band" aria-labelledby="ilgili">
+        <h2
+          id="ilgili"
+          className="font-display text-label font-semibold tracking-[0.2em] text-mute uppercase"
+        >
+          İlgili yazılar
+        </h2>
+        <Ledge className="mt-3" />
+        <ul className="mt-6 max-w-[72ch]">
+          {getRelatedPosts(post.slug).map((r) => (
+            <li key={r.slug} className="border-t border-ink/12 py-4 first:border-t-0 first:pt-0">
+              <Link
+                href={`/blog/${r.slug}`}
+                className="font-display text-h3 font-semibold tracking-[-0.015em] text-ink no-underline transition-colors hover:text-flamingo-deep"
+              >
+                {r.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <p className="mt-stack text-small text-mute">
