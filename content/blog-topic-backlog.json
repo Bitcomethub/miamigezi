@@ -584,7 +584,8 @@
         "FLL MIA hangisi yakın"
       ],
       "angle": "İki havalimanının konumunu, hangi bölgeye yakın olduğunu ve ilgilenen yolcunun karar kriterlerini (otel bölgesi, bağlantı, araç kiralama, havayolu seçeneği) anlat. Süre/fiyat farkı için sayı verme; harita aracıyla kontrol önerisi yeterli. Şehir içi ulaşım genel rehberine girme. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-10-21"
     },
     {
       "id": "sunpass-toll",
