@@ -602,7 +602,8 @@
         "Florida toll sistemi"
       ],
       "angle": "Florida'da birçok ücretli yolun nakit yerine elektronik tahsil ettiğini, kiralık araçta firmanın toll paketi/transponder seçeneklerini ve idari ücret kalemlerini kavramsal olarak anlat. Teslim alırken şirketten toll politikasını yazılı sormayı öner. Tutar uydurma. Araç kiralama genel rehberine (ehliyet) girme. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-10-22"
     },
     {
       "id": "travel-insurance",
