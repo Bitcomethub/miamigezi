@@ -620,7 +620,8 @@
         "tatil sigortası ABD"
       ],
       "angle": "ABD'de sağlık maliyetlerinin yüksek olabildiği, bu yüzden teminat kapsamı ve limitine bakmak gerektiği; ön koşullar, hazır istisnalar, iptal/gecikme teminatı ve poliçe alım tarihi gibi kritik ayrıntıları öğret. Belirli şirket adı önerme, rakam verme. Acil sağlık yazısının tekrarına girme. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-10-23"
     },
     {
       "id": "cbp-entry",
