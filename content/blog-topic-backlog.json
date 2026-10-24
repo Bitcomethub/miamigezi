@@ -638,7 +638,8 @@
         "ABD girişte ne sorarlar"
       ],
       "angle": "Varışta sırayla pasaport kontrol, parmak izi/fotoğraf ve kısa görüşme akışını anlat. Dürüst, kısa, belgelerle uyumlu cevap vermenin önemini; kalış amacı, kalacak yer ve dönüş biletinin hazır olmasını belirt. Sonuç garantisi verme, görevlinin takdir yetkisini belirt. Vize randevusu yazısının ve dönüşte gümrük yazısının içeriğine girme. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-10-24"
     },
     {
       "id": "tipping",
