@@ -674,7 +674,8 @@
         "kasada fiyat farkı"
       ],
       "angle": "ABD'de etiket fiyatının çoğunlukla vergisiz yazıldığını, vergi ve servis bedelinin kasada/hesapta eklendiğini anlat. Alışveriş bütçesi yaparken bunu hesaba katmanın mantığını ver. Oran verme; güncel oranı resmî kurumdan öğrenmeyi söyle. Alışveriş hub rehberinin outlet/marka içeriğine girme. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-10-26"
     },
     {
       "id": "scams",
