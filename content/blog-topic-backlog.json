@@ -692,7 +692,8 @@
         "turist dolandırıcılığı"
       ],
       "angle": "Genel güvenlik rehberini tekrarlama; yalnız dolandırıcılık biçimlerini (sahte taksi/araç, aşırı fiyatlı tur satıcısı, sahte bilet, ödeme sırasında kart kopyalama riski) önleme odağıyla anlat. Korku dili kullanma, 'şehir güvenli/tehlikeli' hükmü verme, suç istatistiği uydurma. Şüphede resmî yönlendirme ve kart şirketini aramayı öner. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-10-27"
     },
     {
       "id": "holidays",
