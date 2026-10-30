@@ -710,7 +710,8 @@
         "Thanksgiving Miami"
       ],
       "angle": "ABD resmî tatillerinin (Thanksgiving, Independence Day, Christmas vb.) seyahati nasıl etkilediğini: bazı devlet kurumlarının kapanması, ulaşım sıklığı değişimi, otel ve restoran yoğunluğu ve rezervasyon ihtiyacı. Tarih ve saat uydurma; güncel çalışma saatlerini işletmeden doğrulamayı söyle. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-10-30"
     },
     {
       "id": "budget-tips",
