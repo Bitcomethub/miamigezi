@@ -4,6 +4,7 @@ export const ulasim: Guide = {
   slug: 'ulasim',
   number: '07',
   title: "Miami’de Ulaşım: Araba Kiralamalı mı, Kiralamamalı mı?",
+  seoTitle: "Miami’de Ulaşım: Araç Kiralama Rehberi",
   navLabel: 'Ulaşım',
   question: "Miami’de araba kiralamak şart mı, toplu taşıma yeterli mi?",
   excerpt:

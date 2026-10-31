@@ -56,6 +56,8 @@ export interface Guide {
   /** Editoryal içindekiler numarası — '01'…'10' */
   number: string;
   title: string;
+  /** <title> etiketi için kısa başlık (<=60 kr). Yoksa title kullanılır; H1 her zaman title. */
+  seoTitle?: string;
   navLabel: string;
   /** Rehberin doğrudan yanıtladığı çekirdek soru */
   question: string;

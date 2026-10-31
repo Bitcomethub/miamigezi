@@ -4,6 +4,7 @@ export const aileceMiami: Guide = {
   slug: 'ailece-miami',
   number: '10',
   title: "Ailece Miami: Çocuklu Tatil İçin Tam Rehber",
+  seoTitle: "Ailece Miami: Çocuklu Tatil Rehberi",
   navLabel: 'Ailece Miami',
   question: "Miami çocuklu aileler için uygun bir tatil şehri mi?",
   excerpt:

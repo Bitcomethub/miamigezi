@@ -4,6 +4,7 @@ export const oteller: Guide = {
   slug: 'oteller',
   number: '03',
   title: "Miami’de Nerede Kalınır? Semt Semt Otel Bölgesi Rehberi",
+  seoTitle: "Miami’de Nerede Kalınır? Semt Semt Oteller",
   navLabel: 'Nerede Kalınır',
   question: "Miami’de hangi semtte kalmak hangi gezgin için doğru?",
   excerpt:

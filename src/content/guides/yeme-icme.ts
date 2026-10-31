@@ -4,6 +4,7 @@ export const yemeIcme: Guide = {
   slug: 'yeme-icme',
   number: '08',
   title: "Miami’de Yeme İçme: Ne Yenir, Nerede Yenir, Hesap Nasıl Ödenir?",
+  seoTitle: "Miami’de Yeme İçme: Ne Yenir, Hesap Nasıl?",
   navLabel: 'Yeme-İçme',
   question: "Miami’de mutlaka denenmesi gereken yemekler neler?",
   excerpt:

@@ -4,6 +4,7 @@ export const ilkKez: Guide = {
   slug: 'ilk-kez',
   number: '01',
   title: "İlk Kez Miami’ye Gidenler İçin Rehber: Vize, Bütçe ve Pratik Bilgiler",
+  seoTitle: "İlk Kez Miami: Vize, Bütçe, Pratik Bilgiler",
   navLabel: 'İlk Kez Gidenler',
   question: "Miami’ye ilk kez giden bir Türk gezginin önceden bilmesi gerekenler neler?",
   excerpt:

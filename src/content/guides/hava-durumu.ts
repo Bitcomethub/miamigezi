@@ -4,6 +4,7 @@ export const havaDurumu: Guide = {
   slug: 'hava-durumu',
   number: '06',
   title: "Miami Hava Durumu ve Aylara Göre Gitme Zamanı",
+  seoTitle: "Miami Hava Durumu: Aylara Göre Gitme",
   navLabel: 'Hava ve Aylar',
   question: "Miami’ye hangi ayda gitmek en iyisi?",
   excerpt:

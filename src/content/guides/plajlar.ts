@@ -4,6 +4,7 @@ export const plajlar: Guide = {
   slug: 'plajlar',
   number: '05',
   title: "Miami Plajları: Hangi Plaj Kime Göre?",
+  seoTitle: "Miami Plajları: Hangi Plaj Kime Göre?",
   navLabel: 'Plajlar',
   question: "Miami’de hangi plaja gitmek gerekir?",
   excerpt:

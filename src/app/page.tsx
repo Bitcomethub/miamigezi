@@ -10,7 +10,7 @@ import { SITE, abs } from '@/lib/site';
 const HERO = pageImage('home');
 
 export const metadata: Metadata = {
-  title: "Miami Seyahat Rehberi — Uçak Bileti, Gezilecek Yerler, Oteller",
+  title: "Miami Seyahat Rehberi: Bilet, Otel, Gezilecek Yer",
   description: SITE.description,
   alternates: { canonical: '/' },
   openGraph: HERO

@@ -4,6 +4,7 @@ export const alisveris: Guide = {
   slug: 'alisveris',
   number: '09',
   title: "Miami’de Alışveriş: Outlet, AVM ve Vergi Gerçeği",
+  seoTitle: "Miami Alışveriş: Outlet, AVM ve Vergi",
   navLabel: 'Alışveriş',
   question: "Miami’de alışveriş için nereye gidilir, vergi iadesi var mı?",
   excerpt:

@@ -4,6 +4,7 @@ export const ucakBileti: Guide = {
   slug: 'ucak-bileti',
   number: '02',
   title: "Miami Uçak Bileti Rehberi: Ucuza Nasıl Alınır, Hangi Rota Mantıklı?",
+  seoTitle: "Miami Uçak Bileti: Ucuz Bilet ve Rota Rehberi",
   navLabel: 'Uçak Bileti',
   question: "Türkiye’den Miami’ye en uygun uçak bileti nasıl bulunur?",
   excerpt:

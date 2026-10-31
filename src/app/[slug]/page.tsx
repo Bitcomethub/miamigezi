@@ -34,13 +34,13 @@ export async function generateMetadata({
   const image = guideImage(guide.slug);
 
   return {
-    title: guide.title,
+    title: guide.seoTitle ?? guide.title,
     description: guide.excerpt,
     keywords: guide.keywords,
     alternates: { canonical: `/${guide.slug}` },
     openGraph: {
       type: 'article',
-      title: guide.title,
+      title: guide.seoTitle ?? guide.title,
       description: guide.excerpt,
       url: abs(`/${guide.slug}`),
       locale: 'tr_TR',

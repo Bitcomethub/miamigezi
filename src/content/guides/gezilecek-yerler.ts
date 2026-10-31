@@ -4,6 +4,7 @@ export const gezilecekYerler: Guide = {
   slug: 'gezilecek-yerler',
   number: '04',
   title: "Miami’de Gezilecek Yerler: Semt Semt Tam Liste",
+  seoTitle: "Miami’de Gezilecek Yerler: Semt Semt",
   navLabel: 'Gezilecek Yerler',
   question: "Miami’de mutlaka görülmesi gereken yerler hangileri?",
   excerpt:
