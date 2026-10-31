@@ -728,7 +728,8 @@
         "ucuz Miami seyahati"
       ],
       "angle": "Maliyeti düşüren davranışları (sezon dışı seçimler, otel dışındaki ücretler, ücretsiz halka açık alanlar, market alışverişi, ortak ulaşım) anlat. Hiçbir fiyat, yüzde veya 'günlük bütçe şu kadar' rakamı yazma. Hub rehberlerin (otel, yeme-içme, ulaşım) ana sorularını yeniden ifade etme; yalnızca tasarruf mantığı. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-10-31"
     },
     {
       "id": "luggage-rights",
