@@ -42,5 +42,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.3,
     },
+    {
+      url: abs('/gizlilik'),
+      lastModified: '2026-10-31',
+      changeFrequency: 'yearly' as const,
+      priority: 0.2,
+    },
+    {
+      url: abs('/kullanim-sartlari'),
+      lastModified: '2026-10-31',
+      changeFrequency: 'yearly' as const,
+      priority: 0.2,
+    },
   ];
 }

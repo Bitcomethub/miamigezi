@@ -81,6 +81,34 @@ export function SiteFooter() {
                   Hakkında
                 </Link>
               </li>
+              <li className="flex gap-3">
+                <span
+                  aria-hidden="true"
+                  className="tabular pt-[3px] font-display text-[0.6875rem] text-sun/75"
+                >
+                  ↗
+                </span>
+                <Link
+                  href="/gizlilik"
+                  className="text-small text-paper/78 no-underline transition-colors duration-200 hover:text-sun"
+                >
+                  Gizlilik
+                </Link>
+              </li>
+              <li className="flex gap-3">
+                <span
+                  aria-hidden="true"
+                  className="tabular pt-[3px] font-display text-[0.6875rem] text-sun/75"
+                >
+                  ↗
+                </span>
+                <Link
+                  href="/kullanim-sartlari"
+                  className="text-small text-paper/78 no-underline transition-colors duration-200 hover:text-sun"
+                >
+                  Kullanım Şartları
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>
