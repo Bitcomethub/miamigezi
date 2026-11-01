@@ -746,7 +746,8 @@
         "PIR bagaj raporu"
       ],
       "angle": "Bagaj gelmediğinde havalimanında havayolu bagaj masasına hemen başvurmayı (kayıp bagaj raporu), referans numarasını saklamayı, zorunlu masrafların fişini toplamayı ve sigortayla ilişkisini anlat. Tazminat tutarı/süre uydurma; havayolu ve yetkili makamın güncel kurallarına yönlendir. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-11-01"
     },
     {
       "id": "short-term-rental",
