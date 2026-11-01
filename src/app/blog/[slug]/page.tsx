@@ -6,7 +6,7 @@ import { Ledge } from '@/components/Ledge';
 import { Photo } from '@/components/Photo';
 import { postImage } from '@/content/images';
 import { abs } from '@/lib/site';
-import { blogPostingSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
+import { blogPostingSchema, breadcrumbSchema } from '@/lib/schema';
 
 export const dynamicParams = false;
 
@@ -58,7 +58,6 @@ export default async function BlogPostPage({
 
   const schema = [
     blogPostingSchema(post),
-    faqSchema(post.faqs),
     breadcrumbSchema([
       { name: 'Yazılar', path: '/blog' },
       { name: post.title, path: `/blog/${post.slug}` },

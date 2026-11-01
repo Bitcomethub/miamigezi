@@ -7,11 +7,7 @@ import { Ledge, Sunburst } from '@/components/Ledge';
 import { Photo } from '@/components/Photo';
 import { guideImage } from '@/content/images';
 import { abs, miamiliUrl } from '@/lib/site';
-import {
-  breadcrumbSchema,
-  faqSchema,
-  guideArticleSchema,
-} from '@/lib/schema';
+import { breadcrumbSchema, guideArticleSchema } from '@/lib/schema';
 
 // Kök seviyedeki dinamik segment. /blog ve /hakkinda gibi STATİK segmentler
 // eşleştiricide bunun önüne geçer, o yüzden çakışmaz. dynamicParams=false:
@@ -63,7 +59,6 @@ export default async function GuidePage({
   const image = guideImage(guide.slug);
   const schema = [
     guideArticleSchema(guide),
-    faqSchema(guide.faqs),
     breadcrumbSchema([{ name: guide.navLabel, path: `/${guide.slug}` }]),
   ];
 

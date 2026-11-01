@@ -109,6 +109,20 @@ export function SiteFooter() {
                   Kullanım Şartları
                 </Link>
               </li>
+              <li className="flex gap-3">
+                <span
+                  aria-hidden="true"
+                  className="tabular pt-[3px] font-display text-[0.6875rem] text-sun/75"
+                >
+                  ↗
+                </span>
+                <Link
+                  href="/site-haritasi"
+                  className="text-small text-paper/78 no-underline transition-colors duration-200 hover:text-sun"
+                >
+                  Site Haritası
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

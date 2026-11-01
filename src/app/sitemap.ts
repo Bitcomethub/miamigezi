@@ -5,7 +5,11 @@ import { abs } from '@/lib/site';
 
 // Sitemap tek bir yerden türer: GUIDES + ALL_POSTS. Yeni rehber ya da yeni
 // üretilmiş yazı otomatik girer; elle liste tutulmaz.
-export default function sitemap(): MetadataRoute.Sitemap {
+/**
+ * `/sitemap.xml` ve `/site-haritasi` AYNI listeyi kullanır: iki indeks
+ * ayrışamaz. Yeni rehber/yazı zaten GUIDES + ALL_POSTS'tan geliyor.
+ */
+export function sitemapEntries(): MetadataRoute.Sitemap {
   const newestGuide = GUIDES.reduce(
     (acc, g) => (g.updated > acc ? g.updated : acc),
     GUIDES[0].updated,
@@ -54,5 +58,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly' as const,
       priority: 0.2,
     },
+    {
+      url: abs('/site-haritasi'),
+      lastModified: newestGuide,
+      changeFrequency: 'monthly',
+      priority: 0.3,
+    },
   ];
+}
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  return sitemapEntries();
 }

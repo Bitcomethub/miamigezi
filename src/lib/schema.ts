@@ -24,6 +24,16 @@ export function organizationSchema() {
     // `subOrganization` yerine `brand` kullanılmıyor — miamigezi bağımsız
     // bir yayın markası, Organization'ın kendisi yayıncı.
     sameAs: [PUBLISHER.site],
+    // Sitenin GERÇEKTEN yayınladığı konular — rehber listesinden türetildi.
+    knowsAbout: [
+      'Miami seyahat rehberi',
+      'Miami plajları',
+      'Miami otel bölgeleri',
+      'Miami ulaşımı',
+      'Miami hava durumu',
+      'Miami alışverişi',
+      'ABD vizesi ve uçuş planlaması',
+    ],
   };
 }
 
@@ -53,18 +63,6 @@ export function breadcrumbSchema(trail: { name: string; path: string }[]) {
         item: abs(t.path),
       })),
     ],
-  };
-}
-
-export function faqSchema(faqs: { q: string; a: string }[]) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
   };
 }
 
