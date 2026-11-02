@@ -56,6 +56,10 @@ export default async function GuidePage({
   if (!guide) notFound();
 
   const related = getGuides(guide.related);
+  // Tek eylem: sayfanın tek butonu sıradaki rehbere götürür; kalan rehberler
+  // alttaki listede metin bağlantısı olarak kalır (aynı rehber iki kez
+  // gösterilmesin diye ilki listeden çıkarılır).
+  const [next, ...others] = related;
   const image = guideImage(guide.slug);
   const schema = [
     guideArticleSchema(guide),
@@ -223,10 +227,21 @@ export default async function GuidePage({
             {formatDate(guide.updated)}
           </time>
         </p>
+
+        {next ? (
+          <div className="mt-band">
+            <Link
+              href={`/${next.slug}`}
+              className="inline-flex bg-flamingo-deep px-6 py-3 font-display text-small font-semibold text-paper no-underline transition-colors duration-200 hover:bg-ink"
+            >
+              İlgili rehbere geç: {next.navLabel}
+            </Link>
+          </div>
+        ) : null}
       </div>
 
       {/* ── İlgili rehberler ─────────────────────────────────────────── */}
-      {related.length > 0 ? (
+      {others.length > 0 ? (
         <nav
           className="mx-auto mt-band max-w-[78rem] px-5 sm:px-8"
           aria-labelledby="ilgili"
@@ -239,7 +254,7 @@ export default async function GuidePage({
           </h2>
           <Ledge className="mt-3" tone="flamingo" />
           <ul className="mt-8">
-            {related.map((r) => (
+            {others.map((r) => (
               <li key={r.slug}>
                 <Link
                   href={`/${r.slug}`}
