@@ -764,7 +764,8 @@
         "Miami ev kiralama tatil"
       ],
       "angle": "Bölgeye göre kısa süreli kiralama kurallarının değişebildiğini, ilanın lisans/kayıt bilgisini sorma mantığını, temizlik ve depozito ücretlerinin toplam fiyatta nasıl göründüğünü ve otel alternatifiyle karar kriterlerini anlat. Hukuki hüküm verme, rakam yazma; şehir/ilçe resmî sayfasına yönlendir. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-11-02"
     },
     {
       "id": "sports-tickets",
