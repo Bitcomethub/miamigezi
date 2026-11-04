@@ -1,3 +1,4 @@
+import Script from "next/script";
 import type { Metadata, Viewport } from 'next';
 import { Archivo, Literata } from 'next/font/google';
 import './globals.css';
@@ -71,6 +72,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
         </main>
         <SiteFooter />
         <Analytics />
+        <Script src="/ph.js" strategy="afterInteractive" data-product="miamigezi" />
       </body>
     </html>
   );
