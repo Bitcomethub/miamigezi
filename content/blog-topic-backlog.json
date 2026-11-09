@@ -818,7 +818,8 @@
         "graffiti Miami"
       ],
       "angle": "Duvar resimlerinin sürekli değiştiğini, ücretli bahçe ile serbest sokak galerileri arasındaki farkı, yürüyüş için uygun zamanı ve fotoğraf nezaketini anlat. Giriş ücreti, saat veya sanatçı adı uydurma. Çevredeki kafe/galeri öner ama mekân adı uydurma. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-11-09"
     },
     {
       "id": "coral-gables",
