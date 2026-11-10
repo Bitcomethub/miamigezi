@@ -836,7 +836,8 @@
         "Miracle Mile"
       ],
       "angle": "Plajdan farklı bir gün: planlı şehir mimarisi, tarihi havuz (Venetian Pool) kavramı, yürüyüş caddeleri. Havuz giriş şartlarının mevsime göre değişebildiğini ve resmî siteden kontrol gerektiğini belirt. Fiyat/saat verme. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-11-10"
     },
     {
       "id": "biscayne-cruise",
