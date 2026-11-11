@@ -854,7 +854,8 @@
         "Miami deniz turu"
       ],
       "angle": "Koydaki ada ve yat bölgelerini görmenin tur mantığını, ses/rehber dilinin kontrolü ve iptal koşullarını anlat. Kiralama ve su sporları yazılarına girme; fiyat/süre uydurma, operatör adı uydurma. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-11-11"
     },
     {
       "id": "miami-apps",
