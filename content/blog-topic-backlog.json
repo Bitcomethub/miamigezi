@@ -890,7 +890,8 @@
         "gezi kartı mantıklı mı"
       ],
       "angle": "Kart almadan önce yapılması gereken karşılaştırmayı anlat: planlanan mekânların tek tek toplamı, geçerlilik süresi, rezervasyon zorunluluğu. Kartın kesin tasarruf sağladığı iddiasında bulunma; fiyat uydurma; resmî satıcı sayfasından güncel kapsama bak. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-11-13"
     },
     {
       "id": "heat-sun",
