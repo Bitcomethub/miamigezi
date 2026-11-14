@@ -908,7 +908,8 @@
         "güneş kremi tatil"
       ],
       "angle": "Genel tıbbi öneri değil, seyahat hazırlığı: öğle saatlerinden kaçınma, gölge/su, uygun giyim, güneş koruyucu. Belirtiler ağırsa acil hatta/doktora başvurmayı söyle. Teşhis, doz, UV indeksi sayısı verme; resmî sağlık kurumlarına yönlendir. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-11-14"
     },
     {
       "id": "power-adapter",
