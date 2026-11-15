@@ -605,7 +605,7 @@ function emitGithubOutput(key, value) {
 function selfTest() {
   const brandFacts = loadBrandFacts();
   const fixture = readJSON(PATHS.mockFixture);
-  const topic = readJSON(PATHS.backlog).topics[0];
+  const topic = readJSON(PATHS.backlog).topics.find((t) => t.id === 'visa-appointment') ?? readJSON(PATHS.backlog).topics[0]; // fixture bu konunun yazisi: kuyrugun basi degisince self-test kirilmasin (16 Kasim)
 
   const pass = validatePost(fixture, topic, brandFacts);
   if (pass.length) {
