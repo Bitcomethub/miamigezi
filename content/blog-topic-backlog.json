@@ -926,7 +926,8 @@
         "şarj adaptörü ABD"
       ],
       "angle": "ABD'de priz şeklinin ve şebeke geriliminin Türkiye'den farklı olduğunu, cihaz şarj cihazının etiketinde giriş aralığını kontrol etmenin önemini ve ısıtıcı/saç kurutma gibi cihazlarda dikkat edilecek noktayı anlat. Kesin voltaj değeri yerine etiket okuma mantığına odaklan. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-11-15"
     },
     {
       "id": "language",

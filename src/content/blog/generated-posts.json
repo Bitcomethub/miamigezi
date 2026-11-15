@@ -4860,5 +4860,97 @@
     ],
     "status": "published",
     "generated": true
+  },
+  {
+    "slug": "miamide-elektrik-prizi-ve-sarj-adaptoru",
+    "title": "Miami'de Elektrik Prizi ve Şarj Adaptörü: Hazırlık",
+    "question": "Türkiye’den Miami’ye giderken priz adaptörü ve voltaj için ne gerekir?",
+    "excerpt": "Türkiye'den Miami'ye giderken genellikle Amerikan prizine uyan bir fiş adaptörü gerekir; voltaj için ise şarj cihazının etiketindeki giriş aralığına bakmak şart. Isıtıcılı cihazlarda ekstra dikkat edin.",
+    "keywords": [
+      "ABD priz tipi",
+      "Miami adaptör",
+      "voltaj farkı",
+      "şarj adaptörü ABD",
+      "Miami'ye giderken priz adaptörü",
+      "ABD'de saç kurutma makinesi kullanımı",
+      "şarj cihazı etiketi okuma"
+    ],
+    "publishedAt": "2026-11-15",
+    "updatedAt": "2026-11-15",
+    "intro": [
+      "Türkiye'den Miami'ye giderken genellikle Amerikan prizine uyan bir priz adaptörü gerekir; voltaj için ise şarj cihazınızın etiketinde ABD şebekesini kapsayan bir giriş aralığı yazıp yazmadığına bakmanız yeterlidir. Telefon ve dizüstü şarj cihazlarının çoğu bu konuda sorun çıkarmaz, saç kurutma makinesi gibi ısıtıcılı cihazlar ise ayrı dikkat ister.",
+      "Bu yazı, priz şeklinin neden farklı olduğunu, etiketin nasıl okunacağını ve hangi cihazları evde bırakmanın daha güvenli olduğunu anlatır. Kesin voltaj değeri vermiyoruz; çünkü değişebilen teknik bilgiler için güncel doğrulama resmî kaynaktan ve cihaz üreticisinden yapılmalıdır. Bu içerik teknik ya da güvenlik uzmanlığının yerine geçmez."
+    ],
+    "sections": [
+      {
+        "heading": "ABD'de priz şekli Türkiye'den farklı mı?",
+        "body": [
+          "Evet, farklıdır. Türkiye'de yaygın olan yuvarlak iki pimli Avrupa tipi fiş, ABD'deki prizlere genellikle doğrudan girmez. ABD'de çoğunlukla iki yassı pimli, bazen üçüncü bir yuvarlak topraklama pimi olan prizler görülür.",
+          "Bu yüzden Türkiye'den getirdiğiniz şarj cihazlarını takabilmek için fişi prize uyduran bir priz adaptörüne ihtiyaç duyarsınız. Adaptör yalnızca fişin şeklini değiştirir; elektriğin gerilimini değiştirmez, bu fark çoğu kişinin karıştırdığı noktadır.",
+          "Adaptör seçerken Amerikan prizine sağlam oturan, sallanmayan bir model tercih edin. Dizüstü bilgisayar şarj kablosu topraklı (üç pimli) fişle geliyorsa adaptörün bunu karşılayıp karşılamadığına bakın. Telefon ve tablet şarj cihazlarının çoğu iki pimlidir ve bu konuda sorun çıkarmaz. Odada priz sayısı sınırlı olabileceği için çoklu USB çıkışlı bir adaptör işinizi kolaylaştırır; yine de eski ya da gevşek prizlerde fiş sallanıyorsa cihazı zorlamayın. Adaptörü kabin bagajınıza koyun; otele varır varmaz telefonu şarj etmeniz gerekebilir. Prizlerin ayrıntıları bölgeye ve binanın yaşına göre değişebilir. Bu nedenle yedek bir adaptör taşımak mantıklıdır."
+        ]
+      },
+      {
+        "heading": "Voltaj farkı cihazlarımı bozar mı?",
+        "body": [
+          "Bozabilir, ama her cihaz için geçerli değildir. ABD'deki şebeke gerilimi Türkiye'dekinden farklıdır ve bu farkı cihazın kendisi tolere edemiyorsa elektronik aksam zarar görebilir. Kesin değeri burada vermiyoruz; çünkü belirleyici olan ülkenin değeri değil, cihazınızın etiketinde yazan giriş aralığıdır.",
+          "Modern telefon, tablet, dizüstü bilgisayar, akıllı saat ve kamera şarj cihazlarının çoğu geniş giriş aralığıyla üretilir; yani farklı ülkelerdeki şebekelerde yalnızca fiş adaptörüyle çalışır. Buna karşılık eski tip ya da tek gerilime göre yapılmış cihazlar bu esnekliğe sahip olmayabilir.",
+          "Kuşkunuz varsa cihazı prize takmadan önce etiketi okuyun, kılavuza ya da üreticinin resmî destek sayfasına bakın. Etikette geniş bir aralık görüyorsanız adaptör yeter; tek bir değer yazıyorsa ve bu değer ABD şebekesini kapsamıyorsa cihazı denemeyin. Etiket yoksa ya da silinmişse cihazı kullanmayın. Bağlayıcı bilgi resmî kurumundur: şebeke gerilimiyle ilgili güncel ve kesin bilgiyi ABD'deki yetkili kurumlardan ya da cihaz üreticisinden doğrulayın. Bu yazı teknik tavsiye yerine geçmez."
+        ]
+      },
+      {
+        "heading": "Şarj cihazının etiketinde neyi okumalıyım?",
+        "body": [
+          "Şarj cihazının gövdesinde ya da fişin üzerinde küçük harflerle yazılmış bir giriş (input) satırı bulunur. Burada genellikle volt için V, frekans için Hz ve akım için A harfleri görürsünüz. Aranacak ifade, volt değerinin tek sayı değil bir aralık olarak yazılmasıdır.",
+          "Aralık ABD şebekesini de kapsıyorsa cihaz yalnızca fiş adaptörüyle çalışır. Çıkış (output) satırı ise cihazın telefona ya da dizüstüne verdiği gücü gösterir; bu satır şebeke farkıyla ilgili değildir ve değişmez. Frekans (Hz) ülkeler arasında farklı olabilir; etikette iki frekans birlikte yazıyorsa bu da olumlu bir işarettir.",
+          "Telefonunuzu sonradan aldığınız üçüncü taraf bir şarj başlığıyla şarj ediyorsanız onun etiketine de bakın; kablo değil başlık gerilim sınırını belirler. Etiket silikse fotoğrafını çekip üreticinin destek sayfasındaki model bilgisiyle karşılaştırın. Seyahatten önce evde, her cihazın etiketini tek tek okuyup not almak, Miami'de otel odasında telaşlanmaktan çok daha rahattır. Etiket okumak birkaç dakika sürer ve olası bir arızayı önler."
+        ]
+      },
+      {
+        "heading": "Saç kurutma makinesi ve ısıtıcı Miami'de kullanılır mı?",
+        "body": [
+          "Yüksek güç çeken ısıtıcılı cihazlar, şarj cihazlarından farklı davranır. Saç kurutma makinesi, saç düzleştirici, su ısıtıcısı ve ütü gibi cihazların çoğu tek bir gerilime göre yapılır; etiketinde geniş aralık yoksa yalnızca adaptörle prize takmak cihazı bozabilir, aşırı ısınma riski doğurabilir.",
+          "Bazı seyahat saç kurutma makinelerinde küçük bir gerilim seçici düğme bulunur; bu düğme ABD konumuna getirilmeden çalıştırılmamalıdır. Etikette böyle bir seçenek ya da geniş aralık yoksa en güvenli yol, bu cihazı yanınıza almak yerine Miami'de basit bir yerel model satın almak ya da otel odasındakini kullanmaktır.",
+          "Gerilim dönüştürücü (transformatör) kullanmayı düşünüyorsanız, dönüştürücünün gücünün cihazın gücünden yüksek olması gerekir ve ısıtıcı cihazlar için bu dönüştürücüler hacimli ve ağır olur. Basit bir fiş adaptörü gerilimi dönüştürmez; yalnızca şekli uyarlar. Emin değilseniz cihazı bavula koymayın. Güç değeri etikette W olarak yazılır; üreticinin destek sayfasından ya da bir elektrik teknisyeninden teyit alın. Hasarlı ya da gevşek fişleri hiç kullanmayın."
+        ]
+      },
+      {
+        "heading": "Miami seyahati öncesi şarj hazırlığı nasıl yapılır?",
+        "body": [
+          "Hazırlık üç adımda özetlenebilir: etiketleri okumak, uygun adaptörü almak ve yedek planı belirlemek. Bunu çıkıştan birkaç gün önce evde yapın; çünkü havalimanında ya da otelde bulacağınız adaptörün seçenekleri sınırlı olabilir.",
+          "Powerbank (taşınabilir şarj aleti) taşıyorsanız, uçuş kurallarını havayolunuzun ve ABD Ulaşım Güvenliği İdaresi'nin (TSA) resmî sayfalarından kontrol edin; bu kurallar değişebilir ve powerbank genellikle kabin bagajında taşınır. Ayrıca cihazlarınızın şarjını uçuşa binmeden önce doldurmak iyi bir alışkanlıktır."
+        ],
+        "list": [
+          "Etiket kontrolü: Her şarj cihazında giriş aralığını okuyun ve ABD şebekesini kapsayıp kapsamadığını not edin; kapsamayanları bavula koymayın.",
+          "Adaptör seçimi: Amerikan prizine oturan, mümkünse çoklu USB çıkışlı ve sağlam yapılı bir adaptör alın; birden fazla cihazınız varsa yedek bir tane daha düşünün.",
+          "Kablo ve başlık: Şarj kablolarını ve şarj başlıklarını aynı çantada toplayın; eksik kablo, adaptör kadar sorun yaratabilir ve yerel satın almak zaman alır.",
+          "Isıtıcı cihazlar: Saç kurutma makinesi gibi cihazları etiketi uygun değilse evde bırakın; otel odasında bulunabilir; bunu otelden önceden sorun."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Miami'de hangi priz tipi kullanılıyor?",
+        "a": "ABD'de genellikle iki yassı pimli, bazı prizlerde ek olarak yuvarlak topraklama pimi bulunan prizler kullanılır. Türkiye'deki yuvarlak pimli fişler doğrudan uymaz, bu yüzden priz adaptörü gerekir. Güncel ve bağlayıcı bilgi için resmî kurumlara ve cihaz üreticisine bakın."
+      },
+      {
+        "q": "Priz adaptörü voltajı da dönüştürür mü?",
+        "a": "Hayır, standart bir priz adaptörü yalnızca fişin şeklini prize uyarlar; gerilimi dönüştürmez. Cihazınızın etiketinde ABD şebekesini kapsayan bir giriş aralığı varsa adaptör yeterlidir. Aralık yoksa gerilim dönüştürücü ya da farklı bir cihaz gerekebilir; emin olmak için üreticiye danışın."
+      },
+      {
+        "q": "Telefon ve dizüstü şarj cihazları için dönüştürücü gerekir mi?",
+        "a": "Çoğu telefon, tablet ve dizüstü şarj cihazı geniş giriş aralığıyla üretildiği için dönüştürücü gerekmez; yalnızca fiş adaptörü yeter. Yine de her şarj cihazının etiketini kontrol edin, çünkü eski ya da özel cihazlar farklı olabilir. Şüphede üretici destek sayfasından model bilgisini doğrulayın."
+      },
+      {
+        "q": "Saç kurutma makinemi Miami'ye götürebilir miyim?",
+        "a": "Etiketinde ABD şebekesini kapsayan bir giriş aralığı ya da gerilim seçici düğme yoksa götürmemeniz daha güvenlidir. Yalnızca fiş adaptörü kullanmak cihazı bozabilir veya aşırı ısıtabilir. Alternatif olarak otelde saç kurutma makinesi olup olmadığını önceden sorabilir ya da Miami'de basit bir yerel model alabilirsiniz."
+      },
+      {
+        "q": "Priz adaptörünü nereden almalıyım?",
+        "a": "Çıkıştan önce Türkiye'de elektronik ürün satan mağazalardan almak seçenek açısından rahattır; Miami'de de mağazalarda bulunabilir ama seçenekler ve fiyatlar yere ve sezona göre değişir. Satın alırken Amerikan prizine uygunluğuna ve çoklu çıkış özelliğine bakın. Belirli bir fiyat vermiyoruz."
+      }
+    ],
+    "status": "published",
+    "generated": true
   }
 ]
