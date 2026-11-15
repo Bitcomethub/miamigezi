@@ -12,6 +12,91 @@
   ],
   "topics": [
     {
+      "id": "weather-december",
+      "slug": "miami-aralik-ayinda-hava-durumu",
+      "title": "Miami Aralık Ayı Hava Durumu: Ne Giyilir, Deniz Girilir mi?",
+      "question": "Miami'de aralık ayında hava nasıl, deniz girilir mi, ne giyilir?",
+      "category": "Etkinlik & Sezon",
+      "cluster": "sezon",
+      "priority": 0,
+      "keywords": [
+        "miami aralık hava durumu",
+        "miami aralık ayında hava",
+        "miami aralıkta ne giyilir",
+        "miami aralık deniz girilir mi"
+      ],
+      "angle": "İlk cümlede net cevap ver: aralık Miami'de kuru sezonun başı; gündüz yaklaşık 24-26 derece, nem düşük, yağmur az; deniz suyu serinlemiş ama plaj günü mümkün. Sonra aç: gündüz/gece farkı, soğuk cephe günlerinde gecenin 13-18 dereceye inme ihtimali, ne giyilir (katman mantığı, ince mont, mayo), plaj ve havuz konforu, yılbaşı haftası kalabalığı ve fiyat artışı (RAKAM VERME, genel eğilimi söyle), kasırga sezonunun 30 Kasım'da bittiğini belirt. Yuvarlak aralıklar kullan, 'uzun yıllar ortalaması, o yılın değerleri sapabilir' çerçevesini koy, NOAA/Ulusal Hava Servisi iklim normallerini kaynak olarak an, uydurma tek tek değer verme. Mevcut /hava-durumu rehberine iç link ver.",
+      "status": "pending"
+    },
+    {
+      "id": "weather-january",
+      "slug": "miami-ocak-ayinda-hava-durumu",
+      "title": "Miami Ocak Ayı Hava Durumu: Yılın En Serin Ayı Nasıl?",
+      "question": "Miami'de ocak ayında hava nasıl, yazlık mı kışlık mı giyilir?",
+      "category": "Etkinlik & Sezon",
+      "cluster": "sezon",
+      "priority": 0,
+      "keywords": [
+        "miami ocak hava durumu",
+        "miami ocak ayında hava",
+        "miami ocakta ne giyilir",
+        "miami ocak deniz"
+      ],
+      "angle": "İlk cümlede net cevap ver: ocak Miami'nin en serin ayı ama Türkiye'nin kışıyla kıyaslanmaz; gündüz yaklaşık 23-25 derece, kuru ve güneşli. Aç: soğuk cephe geçişlerinde gece sıcaklığının 10-13 dereceye inebildiği günler, deniz suyunun serin olması (mayo-plaj mümkün ama herkes için rahat değil), ne giyilir (katman, ince mont, mayo), yoğun sezon ve fiyatlar (RAKAM VERME), açık hava planları için en iyi saatler. Yuvarlak aralıklar kullan, 'uzun yıllar ortalaması, o yılın değerleri sapabilir' çerçevesini koy, NOAA/Ulusal Hava Servisi iklim normallerini kaynak olarak an, uydurma tek tek değer verme. Mevcut /hava-durumu rehberine iç link ver.",
+      "status": "pending"
+    },
+    {
+      "id": "weather-live",
+      "slug": "miami-hava-durumu-nereden-takip-edilir",
+      "title": "Miami Hava Durumu Nereden Takip Edilir? Güvenilir Kaynaklar",
+      "question": "Miami'de bugünkü ve haftalık hava durumu, kasırga uyarıları nereden takip edilir?",
+      "category": "Pratik Bilgi",
+      "cluster": "pratik",
+      "priority": 0,
+      "keywords": [
+        "miami hava durumu",
+        "miami hava tahmini",
+        "miami kasırga takibi",
+        "miami bugün hava nasıl"
+      ],
+      "angle": "İlk cümlede net cevap ver: Miami için resmî kaynak ABD Ulusal Hava Servisi (weather.gov, Miami ofisi), kasırgalar için Ulusal Kasırga Merkezi (nhc.noaa.gov); telefon uygulamaları bu verileri kullanır. Aç: günlük tahminde sıcaklıktan çok nem/hissedilen sıcaklığa ve yağış olasılığına bakmak, öğleden sonra sağanağını tahminde nasıl okuyacağın, kasırga sezonunda (1 Haziran-30 Kasım) uyarı seviyeleri (watch ile warning farkı), seyahat sigortası ve otel iptal koşullarını önceden okumak. Güncel sıcaklık veya yağış RAKAMI verme (bu yazı canlı veri değil, nereye bakılacağını anlatır). /hava-durumu rehberine iç link ver.",
+      "status": "pending"
+    },
+    {
+      "id": "stay-sobe-vs-brickell",
+      "slug": "miami-south-beach-mi-brickell-mi-nerede-kalinmali",
+      "title": "Miami'de Nerede Kalınır? South Beach mi, Brickell mi, Downtown mu?",
+      "question": "Miami'de nerede kalınır: South Beach, Brickell, Downtown ve Wynwood arasında nasıl seçilir?",
+      "category": "Pratik Bilgi",
+      "cluster": "pratik",
+      "priority": 0,
+      "keywords": [
+        "miami nerede kalınır",
+        "miami'de nerede kalınır",
+        "south beach mi brickell mi",
+        "miami otel bölgesi"
+      ],
+      "angle": "İlk cümlede net cevap ver: plaj ve gece hayatı için South Beach, iş/şehir ve yürüyerek restoran için Brickell/Downtown, sanat ve sokak sanatı için Wynwood; araba kiralamayacaksan konum belirleyicidir. Aç: her semtin kime uyduğu ve kime uymadığı, ulaşım (Metromover, Brightline, taksi, araç ihtiyacı), gürültü ve güvenlik algısını abartmadan genel çerçeve, ilk kez gelenler için öneri. RAKAM VERME (oda ücreti dönemden döneme değişir, 'aynı tarihte semtleri karşılaştırın' de), otel/marka adı önerme. /oteller rehberine iç link ver.",
+      "status": "pending"
+    },
+    {
+      "id": "stay-first-timer",
+      "slug": "miami-ilk-kez-gidenler-icin-konaklama-bolgesi",
+      "title": "Miami'ye İlk Kez Gidenler İçin Konaklama Bölgesi Önerisi",
+      "question": "Miami'ye ilk kez gidiyorum, hangi bölgede konaklamalıyım?",
+      "category": "Pratik Bilgi",
+      "cluster": "pratik",
+      "priority": 0,
+      "keywords": [
+        "miami ilk kez nerede kalınır",
+        "miami konaklama bölgesi",
+        "miami otel semt",
+        "miami nerede kalmalı"
+      ],
+      "angle": "İlk cümlede net cevap ver: ilk kez gidenler için çoğu seyahat tipinde Miami Beach (South Beach ve Mid-Beach) ya da Brickell en az sürtünmeli iki seçim; kararı seyahat tipi verir. Aç: 3 gün/5 gün gezi için bölge seçimi, araba kiralamadan gezilebilen bölgeler, havalimanı transferi (genel, dakika verme), aile/çift/arkadaş grubu için hangi bölge, ek otel ücretleri (resort fee) dikkat notu. RAKAM VERME. /oteller ve /ulasim rehberlerine iç link ver.",
+      "status": "pending"
+    },
+    {
       "id": "visa-appointment",
       "slug": "abd-turist-vizesi-randevu-sureci",
       "title": "ABD Turist Vizesi (B1/B2) Türkiye'den Nasıl Alınır?",
