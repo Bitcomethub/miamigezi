@@ -44,7 +44,8 @@
         "miami ocak deniz"
       ],
       "angle": "İlk cümlede net cevap ver: ocak Miami'nin en serin ayı ama Türkiye'nin kışıyla kıyaslanmaz; gündüz yaklaşık 23-25 derece, kuru ve güneşli. Aç: soğuk cephe geçişlerinde gece sıcaklığının 10-13 dereceye inebildiği günler, deniz suyunun serin olması (mayo-plaj mümkün ama herkes için rahat değil), ne giyilir (katman, ince mont, mayo), yoğun sezon ve fiyatlar (RAKAM VERME), açık hava planları için en iyi saatler. Yuvarlak aralıklar kullan, 'uzun yıllar ortalaması, o yılın değerleri sapabilir' çerçevesini koy, NOAA/Ulusal Hava Servisi iklim normallerini kaynak olarak an, uydurma tek tek değer verme. Mevcut /hava-durumu rehberine iç link ver.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-11-17"
     },
     {
       "id": "weather-live",
