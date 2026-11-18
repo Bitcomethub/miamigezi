@@ -62,7 +62,8 @@
         "miami bugün hava nasıl"
       ],
       "angle": "İlk cümlede net cevap ver: Miami için resmî kaynak ABD Ulusal Hava Servisi (weather.gov, Miami ofisi), kasırgalar için Ulusal Kasırga Merkezi (nhc.noaa.gov); telefon uygulamaları bu verileri kullanır. Aç: günlük tahminde sıcaklıktan çok nem/hissedilen sıcaklığa ve yağış olasılığına bakmak, öğleden sonra sağanağını tahminde nasıl okuyacağın, kasırga sezonunda (1 Haziran-30 Kasım) uyarı seviyeleri (watch ile warning farkı), seyahat sigortası ve otel iptal koşullarını önceden okumak. Güncel sıcaklık veya yağış RAKAMI verme (bu yazı canlı veri değil, nereye bakılacağını anlatır). /hava-durumu rehberine iç link ver.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-11-18"
     },
     {
       "id": "stay-sobe-vs-brickell",
