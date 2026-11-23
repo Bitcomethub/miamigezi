@@ -80,7 +80,8 @@
         "miami otel bölgesi"
       ],
       "angle": "İlk cümlede net cevap ver: plaj ve gece hayatı için South Beach, iş/şehir ve yürüyerek restoran için Brickell/Downtown, sanat ve sokak sanatı için Wynwood; araba kiralamayacaksan konum belirleyicidir. Aç: her semtin kime uyduğu ve kime uymadığı, ulaşım (Metromover, Brightline, taksi, araç ihtiyacı), gürültü ve güvenlik algısını abartmadan genel çerçeve, ilk kez gelenler için öneri. RAKAM VERME (oda ücreti dönemden döneme değişir, 'aynı tarihte semtleri karşılaştırın' de), otel/marka adı önerme. /oteller rehberine iç link ver.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-11-23"
     },
     {
       "id": "stay-first-timer",
