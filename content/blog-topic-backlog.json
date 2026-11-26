@@ -1034,7 +1034,8 @@
         "dil bariyeri seyahat"
       ],
       "angle": "Şehrin çok dilli yapısını, turizm sektöründe İngilizcenin genellikle yeterli olduğunu, İspanyolca kelimelerin bazı bölgelerde işe yaradığını ve çeviri uygulamalarının rolünü anlat. Nüfus/oran uydurma; kalıplaşmış hükümlerden kaçın. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-11-26"
     },
     {
       "id": "smoking-vape",
