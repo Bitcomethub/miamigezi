@@ -1052,7 +1052,8 @@
         "plaj sigara"
       ],
       "angle": "Kapalı mekân, restoran, otel odası ve bazı halka açık alanlardaki kısıtlamaların farklı olabildiğini; ceza tutarı veya madde numarası vermeden kavramsal anlat. Otelin kendi politikasını ve yerel belediye kurallarını kontrol etmeyi söyle. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-11-27"
     },
     {
       "id": "vegan",
