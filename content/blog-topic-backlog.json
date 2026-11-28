@@ -1070,7 +1070,8 @@
         "bitkisel beslenme tatil"
       ],
       "angle": "Menüde alerjen/içerik sorma pratiğini, 'plant-based' ifadesini, otel kahvaltısında sınırlı seçenek olabilmesini ve marketten tamamlama stratejisini anlat. Belirli restoran adı veya puan/öneri uydurma. Helal yazısının içeriğine girme. Sayı, oran, fiyat ya da tarih UYDURMA; değişebilen bilgi için güncel bilginin resmî kaynaktan doğrulanması gerektiğini söyle. Bağlayıcı bilgi resmî kurumundur cümlesi zorunlu.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-11-28"
     },
     {
       "id": "brunch",
